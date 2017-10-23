@@ -1,0 +1,16 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>16.0</Version>
+<LvVariant>
+<Name>Value</Name>
+<Cluster>
+<Name>Connection Settings</Name>
+<NumElts>1</NumElts>
+<Refnum>
+<Name>ILC Port</Name>
+<RefKind>VISA</RefKind>
+<Val></Val>
+</Refnum>
+</Cluster>
+</LvVariant>
+</LVData>
