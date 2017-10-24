@@ -1,6 +1,6 @@
 [submodule "common_configurationeditor"]
 	path = common_configurationeditor
-	url = https://stash.lsstcorp.org/scm/ts/common_configurationeditor.git
+	url = https://aclements@stash.lsstcorp.org/scm/ts/common_configurationeditor.git
 [submodule "common_configurationreader"]
 	path = common_configurationreader
-	url = https://stash.lsstcorp.org/scm/ts/common_configurationreader.git
+	url = https://aclements@stash.lsstcorp.org/scm/ts/common_configurationreader.git
