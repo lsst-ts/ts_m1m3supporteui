@@ -8,6 +8,7 @@
 	<Item Name="ConnectionSettings.ctl" Type="VI" URL="../ConnectionSettings.ctl"/>
 	<Item Name="HardwareSettings.ctl" Type="VI" URL="../HardwareSettings.ctl"/>
 	<Item Name="LogPath.ctl" Type="VI" URL="../LogPath.ctl"/>
+	<Item Name="M1M3 Support Events.ctl" Type="VI" URL="../M1M3 Support Events.ctl"/>
 	<Item Name="Publish Data Events.ctl" Type="VI" URL="../Publish Data Events.ctl"/>
 	<Item Name="StateTypes.ctl" Type="VI" URL="../StateTypes.ctl"/>
 	<Item Name="Subscribe Data Events.ctl" Type="VI" URL="../Subscribe Data Events.ctl"/>
