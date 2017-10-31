@@ -47,6 +47,9 @@
 			</Item>
 			<Item Name="Model.lvclass" Type="LVClass" URL="../Model/Model/Model.lvclass"/>
 		</Item>
+		<Item Name="SAL" Type="Folder">
+			<Item Name="SAL.lvclass" Type="LVClass" URL="../SAL/SAL.lvclass"/>
+		</Item>
 		<Item Name="Settings" Type="Folder">
 			<Item Name="Settings.lvclass" Type="LVClass" URL="../Settings/Settings.lvclass"/>
 		</Item>
