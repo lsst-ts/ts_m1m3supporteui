@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Item Name="CommandTypes.ctl" Type="VI" URL="../CommandTypes.ctl"/>
 	<Item Name="ConnectionSettings.ctl" Type="VI" URL="../ConnectionSettings.ctl"/>
+	<Item Name="Display Displacement Types.ctl" Type="VI" URL="../Display Displacement Types.ctl"/>
 	<Item Name="HardwareSettings.ctl" Type="VI" URL="../HardwareSettings.ctl"/>
 	<Item Name="LogPath.ctl" Type="VI" URL="../LogPath.ctl"/>
 	<Item Name="M1M3 Support Events.ctl" Type="VI" URL="../M1M3 Support Events.ctl"/>

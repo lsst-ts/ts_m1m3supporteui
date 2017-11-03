@@ -4,15 +4,19 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">369131520</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Utilities" Type="Folder">
+		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
+	</Item>
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
+	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
 	<Item Name="Fault View.vi" Type="VI" URL="../Fault View.vi"/>
 	<Item Name="Inclinometer Graph View.vi" Type="VI" URL="../Inclinometer Graph View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
+	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
 	<Item Name="Other Status.vi" Type="VI" URL="../Other Status.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
 	<Item Name="Set Control Visibility.vi" Type="VI" URL="../Set Control Visibility.vi"/>
 	<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
-	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
 </Library>
