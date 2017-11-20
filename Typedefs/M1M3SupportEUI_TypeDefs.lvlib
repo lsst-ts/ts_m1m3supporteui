@@ -12,7 +12,6 @@
 	<Item Name="M1M3 Support Events.ctl" Type="VI" URL="../M1M3 Support Events.ctl"/>
 	<Item Name="Publish Data Events.ctl" Type="VI" URL="../Publish Data Events.ctl"/>
 	<Item Name="StateTypes.ctl" Type="VI" URL="../StateTypes.ctl"/>
-	<Item Name="Subscribe Data Events.ctl" Type="VI" URL="../Subscribe Data Events.ctl"/>
 	<Item Name="TestLogTypes.ctl" Type="VI" URL="../TestLogTypes.ctl"/>
 	<Item Name="TestSettings.ctl" Type="VI" URL="../TestSettings.ctl"/>
 </Library>
