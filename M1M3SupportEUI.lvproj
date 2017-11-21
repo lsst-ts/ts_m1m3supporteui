@@ -37,7 +37,7 @@
 		</Item>
 		<Item Name="M1M3SupportEUI_TypeDefs.lvlib" Type="Library" URL="../Typedefs/M1M3SupportEUI_TypeDefs.lvlib"/>
 		<Item Name="M1M3SupportEUI_Views.lvlib" Type="Library" URL="../View/M1M3SupportEUI_Views.lvlib"/>
-		<Item Name="SALLV_m1m3.lvlib" Type="Library" URL="../../SALLV_m1m3/SALLV_m1m3.lvlib"/>
+		<Item Name="SALLV_m1m3.lvlib" Type="Library" URL="../SALLV_m1m3/SALLV_m1m3.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -93,6 +93,7 @@
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="SALLV_m1m3.so" Type="Document" URL="../../SALLV_m1m3/SALLV_m1m3.so"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
