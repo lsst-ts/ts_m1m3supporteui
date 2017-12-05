@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="16008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -20,11 +21,15 @@
 		<Item Name="Controller" Type="Folder">
 			<Item Name="Controller.lvclass" Type="LVClass" URL="../Controller/Controller.lvclass"/>
 		</Item>
-		<Item Name="Logging" Type="Folder">
-			<Item Name="InterfaceLog.lvclass" Type="LVClass" URL="../Logging/InterfaceLog.lvclass"/>
-		</Item>
-		<Item Name="M1M3 Support Events" Type="Folder">
-			<Item Name="M1M3 Support Events.lvclass" Type="LVClass" URL="../M1M3 Support Events/M1M3 Support Events.lvclass"/>
+		<Item Name="Model" Type="Folder">
+			<Item Name="Logging" Type="Folder">
+				<Item Name="InterfaceLogFactory.lvclass" Type="LVClass" URL="../Logging/InterfaceLogFactory.lvclass"/>
+				<Item Name="InterfaceLog.lvclass" Type="LVClass" URL="../Logging/InterfaceLog.lvclass"/>
+			</Item>
+			<Item Name="M1M3 Support Events" Type="Folder">
+				<Item Name="M1M3 Support Events.lvclass" Type="LVClass" URL="../M1M3 Support Events/M1M3 Support Events.lvclass"/>
+			</Item>
+			<Item Name="Model.lvclass" Type="LVClass" URL="../Model/Model.lvclass"/>
 		</Item>
 		<Item Name="SAL" Type="Folder">
 			<Item Name="SAL.lvclass" Type="LVClass" URL="../SAL/SAL.lvclass"/>

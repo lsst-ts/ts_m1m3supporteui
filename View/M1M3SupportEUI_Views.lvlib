@@ -5,11 +5,14 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Utilities" Type="Folder">
+		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
+		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 	</Item>
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
+	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
 	<Item Name="Inclinometer Graph View.vi" Type="VI" URL="../Inclinometer Graph View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
 	<Item Name="Other Status.vi" Type="VI" URL="../Other Status.vi"/>
