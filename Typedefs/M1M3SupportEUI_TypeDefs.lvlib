@@ -11,6 +11,7 @@
 	<Item Name="LogPath.ctl" Type="VI" URL="../LogPath.ctl"/>
 	<Item Name="M1M3 Support Events.ctl" Type="VI" URL="../M1M3 Support Events.ctl"/>
 	<Item Name="Publish Data Events.ctl" Type="VI" URL="../Publish Data Events.ctl"/>
+	<Item Name="SAL Connected.ctl" Type="VI" URL="../SAL Connected.ctl"/>
 	<Item Name="StateTypes.ctl" Type="VI" URL="../StateTypes.ctl"/>
 	<Item Name="TestLogTypes.ctl" Type="VI" URL="../TestLogTypes.ctl"/>
 	<Item Name="TestSettings.ctl" Type="VI" URL="../TestSettings.ctl"/>
