@@ -5,7 +5,7 @@
 <Name>Value</Name>
 <Path>
 <Name>Log Path</Name>
-<Val>/opt/CODE/ts_m1m3supporteui/log/</Val>
+<Val>/opt/CODE/log/</Val>
 </Path>
 </LvVariant>
 </LVData>

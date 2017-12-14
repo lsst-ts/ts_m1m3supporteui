@@ -13,6 +13,7 @@
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
+	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
 	<Item Name="Inclinometer Graph View.vi" Type="VI" URL="../Inclinometer Graph View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
 	<Item Name="Other Status.vi" Type="VI" URL="../Other Status.vi"/>
