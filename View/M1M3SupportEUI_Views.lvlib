@@ -9,10 +9,12 @@
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 	</Item>
+	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
+	<Item Name="FPGA Values View.vi" Type="VI" URL="../FPGA Values View.vi"/>
 	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
 	<Item Name="Inclinometer Graph View.vi" Type="VI" URL="../Inclinometer Graph View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
