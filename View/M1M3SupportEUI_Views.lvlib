@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
+		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 	</Item>
