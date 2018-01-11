@@ -98,7 +98,6 @@
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="SALLV_m1m3.so" Type="Document" URL="../../SALLV_m1m3/SALLV_m1m3.so"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="M1M3SupportEUIBuild" Type="EXE">
