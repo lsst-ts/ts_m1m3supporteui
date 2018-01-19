@@ -5,6 +5,7 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Utilities" Type="Folder">
+		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
@@ -15,6 +16,7 @@
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
+	<Item Name="FA Graphic View.vi" Type="VI" URL="../FA Graphic View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
 	<Item Name="FPGA Values View.vi" Type="VI" URL="../FPGA Values View.vi"/>
 	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
