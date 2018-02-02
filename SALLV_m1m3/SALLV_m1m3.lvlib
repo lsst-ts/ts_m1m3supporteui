@@ -16,6 +16,7 @@
 		<Item Name="InclinometerData.ctl" Type="VI" URL="../DataTypes/InclinometerData.ctl"/>
 		<Item Name="MirrorForceData.ctl" Type="VI" URL="../DataTypes/MirrorForceData.ctl"/>
 		<Item Name="OuterLoopData.ctl" Type="VI" URL="../DataTypes/OuterLoopData.ctl"/>
+		<Item Name="PowerSupplyData.ctl" Type="VI" URL="../DataTypes/PowerSupplyData.ctl"/>
 		<Item Name="ackcmd.ctl" Type="VI" URL="../DataTypes/ackcmd.ctl"/>
 		<Item Name="command.ctl" Type="VI" URL="../DataTypes/command.ctl"/>
 		<Item Name="command_AbortRaiseM1M3.ctl" Type="VI" URL="../DataTypes/command_AbortRaiseM1M3.ctl"/>
@@ -57,10 +58,16 @@
 		<Item Name="logevent_AccelerometerWarning.ctl" Type="VI" URL="../DataTypes/logevent_AccelerometerWarning.ctl"/>
 		<Item Name="logevent_AirSupplyStatus.ctl" Type="VI" URL="../DataTypes/logevent_AirSupplyStatus.ctl"/>
 		<Item Name="logevent_AirSupplyWarning.ctl" Type="VI" URL="../DataTypes/logevent_AirSupplyWarning.ctl"/>
+		<Item Name="logevent_AppliedAberrationForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedAberrationForces.ctl"/>
+		<Item Name="logevent_AppliedActiveOpticsForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedActiveOpticsForces.ctl"/>
+		<Item Name="logevent_AppliedAzimuthForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedAzimuthForces.ctl"/>
 		<Item Name="logevent_AppliedForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedForces.ctl"/>
+		<Item Name="logevent_AppliedOffsetForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedOffsetForces.ctl"/>
 		<Item Name="logevent_AppliedSettingsMatchStart.ctl" Type="VI" URL="../DataTypes/logevent_AppliedSettingsMatchStart.ctl"/>
+		<Item Name="logevent_AppliedStaticForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedStaticForces.ctl"/>
 		<Item Name="logevent_CellLightStatus.ctl" Type="VI" URL="../DataTypes/logevent_CellLightStatus.ctl"/>
 		<Item Name="logevent_CellLightWarning.ctl" Type="VI" URL="../DataTypes/logevent_CellLightWarning.ctl"/>
+		<Item Name="logevent_CommandRejectionWarning.ctl" Type="VI" URL="../DataTypes/logevent_CommandRejectionWarning.ctl"/>
 		<Item Name="logevent_DetailedState.ctl" Type="VI" URL="../DataTypes/logevent_DetailedState.ctl"/>
 		<Item Name="logevent_DisplacementSensorWarning.ctl" Type="VI" URL="../DataTypes/logevent_DisplacementSensorWarning.ctl"/>
 		<Item Name="logevent_ErrorCode.ctl" Type="VI" URL="../DataTypes/logevent_ErrorCode.ctl"/>
@@ -68,6 +75,7 @@
 		<Item Name="logevent_ForceActuatorForceWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorForceWarning.ctl"/>
 		<Item Name="logevent_ForceActuatorInfo.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorInfo.ctl"/>
 		<Item Name="logevent_ForceActuatorSetpointWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorSetpointWarning.ctl"/>
+		<Item Name="logevent_GyroWarning.ctl" Type="VI" URL="../DataTypes/logevent_GyroWarning.ctl"/>
 		<Item Name="logevent_HardpointActuatorInfo.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorInfo.ctl"/>
 		<Item Name="logevent_HardpointActuatorMotionState.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorMotionState.ctl"/>
 		<Item Name="logevent_HardpointMonitorInfo.ctl" Type="VI" URL="../DataTypes/logevent_HardpointMonitorInfo.ctl"/>
@@ -76,6 +84,7 @@
 		<Item Name="logevent_InterlockStatus.ctl" Type="VI" URL="../DataTypes/logevent_InterlockStatus.ctl"/>
 		<Item Name="logevent_InterlockWarning.ctl" Type="VI" URL="../DataTypes/logevent_InterlockWarning.ctl"/>
 		<Item Name="logevent_PowerStatus.ctl" Type="VI" URL="../DataTypes/logevent_PowerStatus.ctl"/>
+		<Item Name="logevent_PowerSupplyStatus.ctl" Type="VI" URL="../DataTypes/logevent_PowerSupplyStatus.ctl"/>
 		<Item Name="logevent_PowerWarning.ctl" Type="VI" URL="../DataTypes/logevent_PowerWarning.ctl"/>
 		<Item Name="logevent_SettingVersions.ctl" Type="VI" URL="../DataTypes/logevent_SettingVersions.ctl"/>
 		<Item Name="logevent_SettingsApplied.ctl" Type="VI" URL="../DataTypes/logevent_SettingsApplied.ctl"/>
@@ -166,6 +175,7 @@
 	<Item Name="m1m3_cancelCallback_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_InclinometerData.vi"/>
 	<Item Name="m1m3_cancelCallback_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_MirrorForceData.vi"/>
 	<Item Name="m1m3_cancelCallback_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_OuterLoopData.vi"/>
+	<Item Name="m1m3_cancelCallback_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_PowerSupplyData.vi"/>
 	<Item Name="m1m3_cancelCallback_ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_ackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_.vi"/>
 	<Item Name="m1m3_cancelCallback_command_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_AbortRaiseM1M3.vi"/>
@@ -242,10 +252,16 @@
 	<Item Name="m1m3_cancelCallback_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedAzimuthForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedStaticForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ErrorCode.vi"/>
@@ -253,6 +269,7 @@
 	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorInfo.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorInfo.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointMonitorInfo.vi"/>
@@ -261,6 +278,7 @@
 	<Item Name="m1m3_cancelCallback_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_InterlockWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_SettingsApplied.vi"/>
@@ -269,10 +287,16 @@
 	<Item Name="m1m3_getEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_getEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_getEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_getEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedAzimuthForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_getEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedStaticForces.vi"/>
 	<Item Name="m1m3_getEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_getEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_getEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_getEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_getEvent_DetailedState.vi"/>
 	<Item Name="m1m3_getEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_getEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_getEvent_ErrorCode.vi"/>
@@ -280,6 +304,7 @@
 	<Item Name="m1m3_getEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_getEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorInfo.vi"/>
 	<Item Name="m1m3_getEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_getEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_getEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorInfo.vi"/>
 	<Item Name="m1m3_getEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3_getEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointMonitorInfo.vi"/>
@@ -288,6 +313,7 @@
 	<Item Name="m1m3_getEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_getEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_InterlockWarning.vi"/>
 	<Item Name="m1m3_getEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_getEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_getEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerWarning.vi"/>
 	<Item Name="m1m3_getEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_getEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_getEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_getEvent_SettingsApplied.vi"/>
@@ -304,6 +330,7 @@
 	<Item Name="m1m3_getNextSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_InclinometerData.vi"/>
 	<Item Name="m1m3_getNextSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_getNextSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_getNextSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_PowerSupplyData.vi"/>
 	<Item Name="m1m3_getResponse_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_AbortRaiseM1M3.vi"/>
 	<Item Name="m1m3_getResponse_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAOSCorrectionByBendingModes.vi"/>
 	<Item Name="m1m3_getResponse_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAOSCorrectionByForces.vi"/>
@@ -351,6 +378,7 @@
 	<Item Name="m1m3_getSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_getSample_InclinometerData.vi"/>
 	<Item Name="m1m3_getSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_getSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_getSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_getSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_getSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_getSample_PowerSupplyData.vi"/>
 	<Item Name="m1m3_issueCommand_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_AbortRaiseM1M3.vi"/>
 	<Item Name="m1m3_issueCommand_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAOSCorrectionByBendingModes.vi"/>
 	<Item Name="m1m3_issueCommand_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAOSCorrectionByForces.vi"/>
@@ -389,10 +417,16 @@
 	<Item Name="m1m3_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedAzimuthForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedStaticForces.vi"/>
 	<Item Name="m1m3_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_logEvent_ErrorCode.vi"/>
@@ -400,6 +434,7 @@
 	<Item Name="m1m3_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorInfo.vi"/>
 	<Item Name="m1m3_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorInfo.vi"/>
 	<Item Name="m1m3_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointMonitorInfo.vi"/>
@@ -408,6 +443,7 @@
 	<Item Name="m1m3_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_InterlockWarning.vi"/>
 	<Item Name="m1m3_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerWarning.vi"/>
 	<Item Name="m1m3_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_logEvent_SettingsApplied.vi"/>
@@ -424,6 +460,7 @@
 	<Item Name="m1m3_putSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_putSample_InclinometerData.vi"/>
 	<Item Name="m1m3_putSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_putSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_putSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_putSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_putSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_putSample_PowerSupplyData.vi"/>
 	<Item Name="m1m3_registerCallback_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_AccelerometerData.vi"/>
 	<Item Name="m1m3_registerCallback_FPGAData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_FPGAData.vi"/>
 	<Item Name="m1m3_registerCallback_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_ForceActuatorData.vi"/>
@@ -436,6 +473,7 @@
 	<Item Name="m1m3_registerCallback_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_InclinometerData.vi"/>
 	<Item Name="m1m3_registerCallback_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_MirrorForceData.vi"/>
 	<Item Name="m1m3_registerCallback_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_OuterLoopData.vi"/>
+	<Item Name="m1m3_registerCallback_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_PowerSupplyData.vi"/>
 	<Item Name="m1m3_registerCallback_ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_ackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_.vi"/>
 	<Item Name="m1m3_registerCallback_command_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_AbortRaiseM1M3.vi"/>
@@ -512,10 +550,16 @@
 	<Item Name="m1m3_registerCallback_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedAzimuthForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedStaticForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ErrorCode.vi"/>
@@ -523,6 +567,7 @@
 	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorInfo.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorInfo.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointMonitorInfo.vi"/>
@@ -531,6 +576,7 @@
 	<Item Name="m1m3_registerCallback_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_InterlockWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_SettingsApplied.vi"/>
@@ -538,10 +584,16 @@
 	<Item Name="m1m3_salEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_salEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_salEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_salEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedAzimuthForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_salEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedStaticForces.vi"/>
 	<Item Name="m1m3_salEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_salEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_salEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_salEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_salEvent_DetailedState.vi"/>
 	<Item Name="m1m3_salEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_salEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_salEvent_ErrorCode.vi"/>
@@ -549,6 +601,7 @@
 	<Item Name="m1m3_salEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_salEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorInfo.vi"/>
 	<Item Name="m1m3_salEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_salEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_salEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorInfo.vi"/>
 	<Item Name="m1m3_salEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3_salEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointMonitorInfo.vi"/>
@@ -557,6 +610,7 @@
 	<Item Name="m1m3_salEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_salEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_InterlockWarning.vi"/>
 	<Item Name="m1m3_salEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_salEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_salEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerWarning.vi"/>
 	<Item Name="m1m3_salEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_salEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_salEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_salEvent_SettingsApplied.vi"/>
@@ -608,6 +662,7 @@
 	<Item Name="m1m3_salTelemetrySub_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_InclinometerData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_MirrorForceData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_OuterLoopData.vi"/>
+	<Item Name="m1m3_salTelemetrySub_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_PowerSupplyData.vi"/>
 	<Item Name="m1m3_waitForCompletion_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_AbortRaiseM1M3.vi"/>
 	<Item Name="m1m3_waitForCompletion_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAOSCorrectionByBendingModes.vi"/>
 	<Item Name="m1m3_waitForCompletion_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAOSCorrectionByForces.vi"/>
@@ -646,10 +701,16 @@
 	<Item Name="m1m3shmflushSamplesEventAccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAccelerometerWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventAirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAirSupplyStatus.vi"/>
 	<Item Name="m1m3shmflushSamplesEventAirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAirSupplyWarning.vi"/>
+	<Item Name="m1m3shmflushSamplesEventAppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedAberrationForces.vi"/>
+	<Item Name="m1m3shmflushSamplesEventAppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3shmflushSamplesEventAppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedAzimuthForces.vi"/>
 	<Item Name="m1m3shmflushSamplesEventAppliedForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedForces.vi"/>
+	<Item Name="m1m3shmflushSamplesEventAppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedOffsetForces.vi"/>
 	<Item Name="m1m3shmflushSamplesEventAppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3shmflushSamplesEventAppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedStaticForces.vi"/>
 	<Item Name="m1m3shmflushSamplesEventCellLightStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCellLightStatus.vi"/>
 	<Item Name="m1m3shmflushSamplesEventCellLightWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCellLightWarning.vi"/>
+	<Item Name="m1m3shmflushSamplesEventCommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCommandRejectionWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventDetailedState.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventDetailedState.vi"/>
 	<Item Name="m1m3shmflushSamplesEventDisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventDisplacementSensorWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventErrorCode.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventErrorCode.vi"/>
@@ -657,6 +718,7 @@
 	<Item Name="m1m3shmflushSamplesEventForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorInfo.vi"/>
 	<Item Name="m1m3shmflushSamplesEventForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3shmflushSamplesEventGyroWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventGyroWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventHardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointActuatorInfo.vi"/>
 	<Item Name="m1m3shmflushSamplesEventHardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointActuatorMotionState.vi"/>
 	<Item Name="m1m3shmflushSamplesEventHardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointMonitorInfo.vi"/>
@@ -665,6 +727,7 @@
 	<Item Name="m1m3shmflushSamplesEventInterlockStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventInterlockStatus.vi"/>
 	<Item Name="m1m3shmflushSamplesEventInterlockWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventInterlockWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventPowerStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerStatus.vi"/>
+	<Item Name="m1m3shmflushSamplesEventPowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerSupplyStatus.vi"/>
 	<Item Name="m1m3shmflushSamplesEventPowerWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerWarning.vi"/>
 	<Item Name="m1m3shmflushSamplesEventSettingVersions.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventSettingVersions.vi"/>
 	<Item Name="m1m3shmflushSamplesEventSettingsApplied.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventSettingsApplied.vi"/>
