@@ -29,6 +29,9 @@
 			<Item Name="M1M3 Support Events" Type="Folder">
 				<Item Name="M1M3 Support Events.lvclass" Type="LVClass" URL="../M1M3 Support Events/M1M3 Support Events.lvclass"/>
 			</Item>
+			<Item Name="EUI Events" Type="Folder">
+				<Item Name="EUI Events.lvclass" Type="LVClass" URL="../EUI Events/EUI Events.lvclass"/>
+			</Item>
 			<Item Name="Model.lvclass" Type="LVClass" URL="../Model/Model.lvclass"/>
 		</Item>
 		<Item Name="SAL" Type="Folder">
