@@ -27,6 +27,7 @@
 		<Item Name="ObtainControlNames.vi" Type="VI" URL="../Utilities/ObtainControlNames.vi"/>
 		<Item Name="PlaceDataInControls.vi" Type="VI" URL="../Utilities/PlaceDataInControls.vi"/>
 		<Item Name="PullValuesFromControls.vi" Type="VI" URL="../Utilities/PullValuesFromControls.vi"/>
+		<Item Name="SingleArrayToString.vi" Type="VI" URL="../Utilities/SingleArrayToString.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
 		<Item Name="Turn Power Off Command.vi" Type="VI" URL="../Turn Power Off Command.vi"/>
