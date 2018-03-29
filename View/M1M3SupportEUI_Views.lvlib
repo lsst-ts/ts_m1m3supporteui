@@ -12,6 +12,7 @@
 		<Item Name="Data Type to FA Array.vi" Type="VI" URL="../Utilities/Data Type to FA Array.vi"/>
 		<Item Name="DataTypeData.vi" Type="VI" URL="../Utilities/DataTypeData.vi"/>
 		<Item Name="FA Data Type List.vi" Type="VI" URL="../Utilities/FA Data Type List.vi"/>
+		<Item Name="FA Field Types.vi" Type="VI" URL="../FA Field Types.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="FAValuesXYZC.vi" Type="VI" URL="../FAValuesXYZC.vi"/>
 		<Item Name="GenerateControlList.vi" Type="VI" URL="../Utilities/GenerateControlList.vi"/>
