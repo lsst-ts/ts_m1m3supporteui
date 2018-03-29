@@ -120,6 +120,7 @@
 				<Item Name="3DMathPlot Action String.vi" Type="VI" URL="/&lt;vilib&gt;/Math Plots/3D Math Plots/3D Plot/Action String/3DMathPlot Action String.vi"/>
 				<Item Name="Version To Dotted String.vi" Type="VI" URL="/&lt;vilib&gt;/_xctls/Version To Dotted String.vi"/>
 			</Item>
+			<Item Name="Send M1M3 State Event.vi" Type="VI" URL="../M1M3 Support Events/Public/Send M1M3 State Event.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="M1M3SupportEUIBuild" Type="EXE">
