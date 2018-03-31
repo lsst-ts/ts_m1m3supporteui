@@ -38,6 +38,7 @@ SAL__CMD_COMPLETE=303
 # Initializing SAL
 mgr = SAL_m1m3()
 vmsMgr = SAL_vms()
+powerArray = [False] * 8
 
 def init(mgr, vmsMgr):
   print("Initializing SAL Manager... (may take a while)")
@@ -80,8 +81,12 @@ def init(mgr, vmsMgr):
   # Force Actuator Commands
   forceActuatorCommands = []
   forceActuatorCommands.append("m1m3_command_AbortProfile")
-  forceActuatorCommands.append("m1m3_command_ApplyAberrationForceByBendingModes")
+  forceActuatorCommands.append("m1m3_command_ApplyOffsetForces")
+  forceActuatorCommands.append("m1m3_command_ApplyAberrationForces")
+  forceActuatorCommands.append("m1m3_command_ApplyActiveOpticForces")
+  forceActuatorCommands.append("m1m3_command_ApplyAberrationForcesByBendingModes")
   forceActuatorCommands.append("m1m3_command_ApplyActiveOpticForcesByBendingModes")
+  forceActuatorCommands.append("m1m3_command_ClearOffsetForces")
   forceActuatorCommands.append("m1m3_command_ClearAberrationForces")
   forceActuatorCommands.append("m1m3_command_ClearActiveOpticForces")
   forceActuatorCommands.append("m1m3_command_RunMirrorForceProfile")
@@ -275,18 +280,22 @@ def processCommands(event, waittime):
   turnAirOnData = m1m3_command_TurnAirOnC()
 
   abortProfileData= m1m3_command_AbortProfileC()
+  applyOffsetForcesData = m1m3_command_ApplyOffsetForcesC()
+  applyAberrationForcesData = m1m3_command_ApplyAberrationForcesC()
+  applyActiveOpticForcesData = m1m3_command_ApplyActiveOpticForcesC()
   applyAberrationForcesByBendingModesData = m1m3_command_ApplyAberrationForcesByBendingModesC()
   applyActiveOpticForcesByBendingModesData = m1m3_command_ApplyActiveOpticForcesByBendingModesC()
+  clearOffsetForcesData = m1m3_command_ClearOffsetForcesC()
   clearAberrationForcesData = m1m3_command_ClearAberrationForcesC()
   clearActiveOpticForcesData = m1m3_command_ClearActiveOpticForcesC()
   runMirrorForceProfileData = m1m3_command_RunMirrorForceProfileC()
   testForceActuatorData = m1m3_command_TestForceActuatorC()
 
   resetPIDData = m1m3_command_ResetPIDC()
-  setThermalSetpointData = m1m3_command_SetThermalSetpointC()
   turnPowerOffData = m1m3_command_TurnPowerOffC()
   turnPowerOnData = m1m3_command_TurnPowerOnC()
   updatePIDData = m1m3_command_UpdatePIDC()
+  setThermalSetpointData = m1m3_command_SetThermalSetpointC()
 
   print("m1m3 test controller ready")
 
@@ -620,6 +629,14 @@ def processCommands(event, waittime):
       mgr.ackCommand_RunMirrorForceProfile(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
     #########################
+    # check for Clear Offset Forces
+    cmdId = mgr.acceptCommand_ClearOffsetForces(clearOffsetForcesData)
+    if cmdId > 0:
+      print("Clear Offset Forces Command Executed")
+      time.sleep(0.001)
+      mgr.ackCommand_ClearOffsetForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
     # check for Clear Aberration Forces
     cmdId = mgr.acceptCommand_ClearAberrationForces(clearAberrationForcesData)
     if cmdId > 0:
@@ -636,11 +653,40 @@ def processCommands(event, waittime):
       mgr.ackCommand_ClearActiveOpticForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
     #########################
+    # check for Apply Offset Forces 
+    cmdId = mgr.acceptCommand_ApplyOffsetForces(applyOffsetForcesData)
+    if cmdId > 0:
+      print("Apply Offset Forces Command Executed")
+      print("X Forces: " + str(list(applyOffsetForcesData.XForces)))
+      print("Y Forces: " + str(list(applyOffsetForcesData.YForces)))
+      print("Z Forces: " + str(list(applyOffsetForcesData.ZForces)))
+      time.sleep(0.001)
+      mgr.ackCommand_ApplyOffsetForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Apply Aberration Forces
+    cmdId = mgr.acceptCommand_ApplyAberrationForces(applyAberrationForcesData)
+    if cmdId > 0:
+      print("Apply Aberration Forces Command Executed")
+      print("Z Forces: " + str(list(applyAberrationForcesData.ZForces)))
+      time.sleep(0.001)
+      mgr.ackCommand_ApplyAberrationForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Apply Active Optic Forces 
+    cmdId = mgr.acceptCommand_ApplyActiveOpticForces(applyActiveOpticForcesData)
+    if cmdId > 0:
+      print("Apply Active Optic Forces Command Executed")
+      print("Z Forces: " + str(list(applyActiveOpticForcesData.ZForces)))
+      time.sleep(0.001)
+      mgr.ackCommand_ApplyActiveOpticForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
     # check for Apply Aberration Forces by Bending Modes
     cmdId = mgr.acceptCommand_ApplyAberrationForcesByBendingModes(applyAberrationForcesByBendingModesData)
     if cmdId > 0:
       print("Apply Aberration Forces By Bending Modes Command Executed")
-      print(str(list(applyAberrationForcesByBendingModesData.Coefficients)))
+      print("Coefficients: " + str(list(applyAberrationForcesByBendingModesData.Coefficients)))
       time.sleep(0.001)
       mgr.ackCommand_ApplyAberrationForcesByBendingModes(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
@@ -681,14 +727,33 @@ def processCommands(event, waittime):
     # check for Turn Power On
     cmdId = mgr.acceptCommand_TurnPowerOn(turnPowerOnData)
     if cmdId > 0:
-      print("TurnPowerNetworkAOn = " + str(turnPowerOnData.TurnPowerNetworkAOn))
-      print("TurnPowerNetworkBOn = " + str(turnPowerOnData.TurnPowerNetworkBOn))
-      print("TurnPowerNetworkCOn = " + str(turnPowerOnData.TurnPowerNetworkCOn))
-      print("TurnPowerNetworkDOn = " + str(turnPowerOnData.TurnPowerNetworkDOn))
-      print("TurnAuxPowerNetworkAOn = " + str(turnPowerOnData.TurnAuxPowerNetworkAOn))
-      print("TurnAuxPowerNetworkBOn = " + str(turnPowerOnData.TurnAuxPowerNetworkBOn))
-      print("TurnAuxPowerNetworkCOn = " + str(turnPowerOnData.TurnAuxPowerNetworkCOn))
-      print("TurnAuxPowerNetworkDOn = " + str(turnPowerOnData.TurnAuxPowerNetworkDOn))
+      if (turnPowerOnData.TurnPowerNetworkAOn):
+        powerArray[0] = True
+      if (turnPowerOnData.TurnPowerNetworkBOn):
+        powerArray[1] = True
+      if (turnPowerOnData.TurnPowerNetworkCOn):
+        powerArray[2] = True
+      if (turnPowerOnData.TurnPowerNetworkDOn):
+        powerArray[3] = True
+      if (turnPowerOnData.TurnAuxPowerNetworkAOn):
+        powerArray[4] = True
+      if (turnPowerOnData.TurnAuxPowerNetworkBOn):
+        powerArray[5] = True
+      if (turnPowerOnData.TurnAuxPowerNetworkCOn):
+        powerArray[6] = True
+      if (turnPowerOnData.TurnAuxPowerNetworkDOn):
+        powerArray[7] = True
+ 
+      print("Turning Power On:")
+      print("\tPowerNetworkA = " + str(powerArray[0]))
+      print("\tPowerNetworkB = " + str(powerArray[1]))
+      print("\tPowerNetworkC = " + str(powerArray[2]))
+      print("\tPowerNetworkD = " + str(powerArray[3]))
+      print("\tAuxPowerNetworkA = " + str(powerArray[4]))
+      print("\tAuxPowerNetworkB = " + str(powerArray[5]))
+      print("\tAuxPowerNetworkC = " + str(powerArray[6]))
+      print("\tAuxPowerNetworkD = " + str(powerArray[7]))
+
       time.sleep(0.001)
       mgr.ackCommand_TurnPowerOn(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
@@ -696,14 +761,33 @@ def processCommands(event, waittime):
     # check for Turn Power Off
     cmdId = mgr.acceptCommand_TurnPowerOff(turnPowerOffData)
     if cmdId > 0:
-      print("TurnPowerNetworkAOff = " + str(turnPowerOffData.TurnPowerNetworkAOff))
-      print("TurnPowerNetworkBOff = " + str(turnPowerOffData.TurnPowerNetworkBOff))
-      print("TurnPowerNetworkCOff = " + str(turnPowerOffData.TurnPowerNetworkCOff))
-      print("TurnPowerNetworkDOff = " + str(turnPowerOffData.TurnPowerNetworkDOff))
-      print("TurnAuxPowerNetworkAOff = " + str(turnPowerOffData.TurnAuxPowerNetworkAOff))
-      print("TurnAuxPowerNetworkBOff = " + str(turnPowerOffData.TurnAuxPowerNetworkBOff))
-      print("TurnAuxPowerNetworkCOff = " + str(turnPowerOffData.TurnAuxPowerNetworkCOff))
-      print("TurnAuxPowerNetworkDOff = " + str(turnPowerOffData.TurnAuxPowerNetworkDOff))
+      if (turnPowerOffData.TurnPowerNetworkAOff):
+        powerArray[0] = False
+      if (turnPowerOffData.TurnPowerNetworkBOff):
+        powerArray[1] = False
+      if (turnPowerOffData.TurnPowerNetworkCOff):
+        powerArray[2] = False
+      if (turnPowerOffData.TurnPowerNetworkDOff):
+        powerArray[3] = False
+      if (turnPowerOffData.TurnAuxPowerNetworkAOff):
+        powerArray[4] = False
+      if (turnPowerOffData.TurnAuxPowerNetworkAOff):
+        powerArray[5] = False
+      if (turnPowerOffData.TurnAuxPowerNetworkAOff):
+        powerArray[6] = False
+      if (turnPowerOffData.TurnAuxPowerNetworkAOff):
+        powerArray[7] = False
+      
+      print("Turning Power Off:")
+      print("\tPowerNetworkA = " + str(powerArray[0]))
+      print("\tPowerNetworkB = " + str(powerArray[1]))
+      print("\tPowerNetworkC = " + str(powerArray[2]))
+      print("\tPowerNetworkD = " + str(powerArray[3]))
+      print("\tAuxPowerNetworkA = " + str(powerArray[4]))
+      print("\tAuxPowerNetworkB = " + str(powerArray[5]))
+      print("\tAuxPowerNetworkC = " + str(powerArray[6]))
+      print("\tAuxPowerNetworkD = " + str(powerArray[7]))
+
       time.sleep(0.001)
       mgr.ackCommand_TurnPowerOff(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
@@ -2262,7 +2346,7 @@ def generateMiscEvents(event, waittime):
   print("Misc Events Thread shutdown complete.")
 
 ############################################################
-# Power Telemetery
+# Power Commands, Events & Telemetery
 def generatePowerTelemetryEvents(event, waittime):
   priority = 10
 
@@ -2292,10 +2376,24 @@ def generatePowerTelemetryEvents(event, waittime):
 
     powerSupplyData = m1m3_PowerSupplyDataC()
     powerSupplyData.Timestamp = timestamp
-    powerSupplyData.PowerNetworkACurrent = random.uniform(0.0, 20.0)
-    powerSupplyData.PowerNetworkBCurrent = random.uniform(0.0, 20.0)
-    powerSupplyData.PowerNetworkCCurrent = random.uniform(0.0, 20.0)
-    powerSupplyData.PowerNetworkDCurrent = random.uniform(0.0, 20.0)
+
+    if (powerArray[0] == True):
+      powerSupplyData.PowerNetworkACurrent = random.uniform(0.0, 20.0)
+    else:
+      powerSupplyData.PowerNetworkACurrent = 0.0
+    if (powerArray[1] == True):
+      powerSupplyData.PowerNetworkBCurrent = random.uniform(0.0, 20.0)
+    else:
+      powerSupplyData.PowerNetworkBCurrent = 0.0
+    if (powerArray[2] == True):
+      powerSupplyData.PowerNetworkCCurrent = random.uniform(0.0, 20.0)
+    else:
+      powerSupplyData.PowerNetworkCCurrent = 0.0
+    if (powerArray[3] == True):
+      powerSupplyData.PowerNetworkDCurrent = random.uniform(0.0, 20.0)
+    else:
+      powerSupplyData.PowerNetworkDCurrent = 0.0
+
     powerSupplyData.LightPowerNetworkCurrent = random.uniform(0.0, 20.0)
     powerSupplyData.ControlsPowerNetworkCurrent = random.uniform(0.0, 20.0)
     retval = mgr.putSample_PowerSupplyData(powerSupplyData)
@@ -2367,21 +2465,21 @@ def generatePowerTelemetryEvents(event, waittime):
 
     powerStatusData = m1m3_logevent_PowerStatusC()
     powerStatusData.Timestamp = timestamp
-    powerStatusData.PowerNetworkACommandedOn = generateBoolean()
+    powerStatusData.PowerNetworkACommandedOn = powerArray[0]
     powerStatusData.PowerNetworkAOutputOn = generateBoolean()
-    powerStatusData.PowerNetworkBCommandedOn = generateBoolean()
+    powerStatusData.PowerNetworkBCommandedOn = powerArray[1]
     powerStatusData.PowerNetworkBOutputOn = generateBoolean()
-    powerStatusData.PowerNetworkCCommandedOn = generateBoolean()
+    powerStatusData.PowerNetworkCCommandedOn = powerArray[2]
     powerStatusData.PowerNetworkCOutputOn = generateBoolean()
-    powerStatusData.PowerNetworkDCommandedOn = generateBoolean()
+    powerStatusData.PowerNetworkDCommandedOn = powerArray[3]
     powerStatusData.PowerNetworkDOutputOn = generateBoolean()
-    powerStatusData.AuxPowerNetworkACommandedOn = generateBoolean()
+    powerStatusData.AuxPowerNetworkACommandedOn = powerArray[4]
     powerStatusData.AuxPowerNetworkAOutputOn = generateBoolean()
-    powerStatusData.AuxPowerNetworkBCommandedOn = generateBoolean()
+    powerStatusData.AuxPowerNetworkBCommandedOn = powerArray[5]
     powerStatusData.AuxPowerNetworkBOutputOn = generateBoolean()
-    powerStatusData.AuxPowerNetworkCCommandedOn = generateBoolean()
+    powerStatusData.AuxPowerNetworkCCommandedOn = powerArray[6]
     powerStatusData.AuxPowerNetworkCOutputOn = generateBoolean()
-    powerStatusData.AuxPowerNetworkDCommandedOn = generateBoolean()
+    powerStatusData.AuxPowerNetworkDCommandedOn = powerArray[7]
     powerStatusData.AuxPowerNetworkDOutputOn = generateBoolean()
     powerStatusData.priority = priority
     mgr.logEvent_PowerStatus(powerStatusData, priority)
@@ -2400,7 +2498,7 @@ def generatePowerTelemetryEvents(event, waittime):
     PowerWarningData.priority = priority
     mgr.logEvent_PowerWarning(PowerWarningData, priority)
 
-    time.sleep(random.randint(1, 5))
+    time.sleep(0.5) #random.randint(1, 5))
     event.wait(waittime)
   print("Power Thread shutdown complete.")
 

@@ -37,6 +37,9 @@
 		<Item Name="Turn Power On Command.vi" Type="VI" URL="../Turn Power On Command.vi"/>
 		<Item Name="Variant Array to String Array.vi" Type="VI" URL="../Utilities/Variant Array to String Array.vi"/>
 		<Item Name="VariantTest.vi" Type="VI" URL="../Utilities/VariantTest.vi"/>
+		<Item Name="X Cluster Values.vi" Type="VI" URL="../Utilities/X Cluster Values.vi"/>
+		<Item Name="Y Cluster Values.vi" Type="VI" URL="../Utilities/Y Cluster Values.vi"/>
+		<Item Name="Z Cluster Values.vi" Type="VI" URL="../Utilities/Z Cluster Values.vi"/>
 	</Item>
 	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
 	<Item Name="Air Control View.vi" Type="VI" URL="../Air Control View.vi"/>
