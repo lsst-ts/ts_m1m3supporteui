@@ -5,40 +5,43 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="DataTypes" Type="Folder">
 		<Item Name="AccelerometerData.ctl" Type="VI" URL="../DataTypes/AccelerometerData.ctl"/>
-		<Item Name="FPGAData.ctl" Type="VI" URL="../DataTypes/FPGAData.ctl"/>
 		<Item Name="ForceActuatorData.ctl" Type="VI" URL="../DataTypes/ForceActuatorData.ctl"/>
-		<Item Name="ForceActuatorStatus.ctl" Type="VI" URL="../DataTypes/ForceActuatorStatus.ctl"/>
 		<Item Name="GyroData.ctl" Type="VI" URL="../DataTypes/GyroData.ctl"/>
-		<Item Name="HardpointData.ctl" Type="VI" URL="../DataTypes/HardpointData.ctl"/>
-		<Item Name="HardpointMonitorStatus.ctl" Type="VI" URL="../DataTypes/HardpointMonitorStatus.ctl"/>
-		<Item Name="HardpointStatus.ctl" Type="VI" URL="../DataTypes/HardpointStatus.ctl"/>
+		<Item Name="HardpointActuatorData.ctl" Type="VI" URL="../DataTypes/HardpointActuatorData.ctl"/>
+		<Item Name="HardpointMonitorData.ctl" Type="VI" URL="../DataTypes/HardpointMonitorData.ctl"/>
 		<Item Name="IMSData.ctl" Type="VI" URL="../DataTypes/IMSData.ctl"/>
 		<Item Name="InclinometerData.ctl" Type="VI" URL="../DataTypes/InclinometerData.ctl"/>
-		<Item Name="MirrorForceData.ctl" Type="VI" URL="../DataTypes/MirrorForceData.ctl"/>
 		<Item Name="OuterLoopData.ctl" Type="VI" URL="../DataTypes/OuterLoopData.ctl"/>
+		<Item Name="PIDData.ctl" Type="VI" URL="../DataTypes/PIDData.ctl"/>
 		<Item Name="PowerSupplyData.ctl" Type="VI" URL="../DataTypes/PowerSupplyData.ctl"/>
 		<Item Name="ackcmd.ctl" Type="VI" URL="../DataTypes/ackcmd.ctl"/>
 		<Item Name="command.ctl" Type="VI" URL="../DataTypes/command.ctl"/>
+		<Item Name="command_AbortProfile.ctl" Type="VI" URL="../DataTypes/command_AbortProfile.ctl"/>
 		<Item Name="command_AbortRaiseM1M3.ctl" Type="VI" URL="../DataTypes/command_AbortRaiseM1M3.ctl"/>
-		<Item Name="command_ApplyAOSCorrectionByBendingModes.ctl" Type="VI" URL="../DataTypes/command_ApplyAOSCorrectionByBendingModes.ctl"/>
-		<Item Name="command_ApplyAOSCorrectionByForces.ctl" Type="VI" URL="../DataTypes/command_ApplyAOSCorrectionByForces.ctl"/>
-		<Item Name="command_ApplyAberrationByBendingModes.ctl" Type="VI" URL="../DataTypes/command_ApplyAberrationByBendingModes.ctl"/>
-		<Item Name="command_ApplyAberrationByForces.ctl" Type="VI" URL="../DataTypes/command_ApplyAberrationByForces.ctl"/>
+		<Item Name="command_ApplyAberrationForces.ctl" Type="VI" URL="../DataTypes/command_ApplyAberrationForces.ctl"/>
+		<Item Name="command_ApplyAberrationForcesByBendingModes.ctl" Type="VI" URL="../DataTypes/command_ApplyAberrationForcesByBendingModes.ctl"/>
+		<Item Name="command_ApplyActiveOpticForces.ctl" Type="VI" URL="../DataTypes/command_ApplyActiveOpticForces.ctl"/>
+		<Item Name="command_ApplyActiveOpticForcesByBendingModes.ctl" Type="VI" URL="../DataTypes/command_ApplyActiveOpticForcesByBendingModes.ctl"/>
 		<Item Name="command_ApplyOffsetForces.ctl" Type="VI" URL="../DataTypes/command_ApplyOffsetForces.ctl"/>
-		<Item Name="command_ClearAOSCorrection.ctl" Type="VI" URL="../DataTypes/command_ClearAOSCorrection.ctl"/>
-		<Item Name="command_ClearAberration.ctl" Type="VI" URL="../DataTypes/command_ClearAberration.ctl"/>
+		<Item Name="command_ApplyOffsetForcesByMirrorForce.ctl" Type="VI" URL="../DataTypes/command_ApplyOffsetForcesByMirrorForce.ctl"/>
+		<Item Name="command_ClearAberrationForces.ctl" Type="VI" URL="../DataTypes/command_ClearAberrationForces.ctl"/>
+		<Item Name="command_ClearActiveOpticForces.ctl" Type="VI" URL="../DataTypes/command_ClearActiveOpticForces.ctl"/>
 		<Item Name="command_ClearOffsetForces.ctl" Type="VI" URL="../DataTypes/command_ClearOffsetForces.ctl"/>
 		<Item Name="command_Disable.ctl" Type="VI" URL="../DataTypes/command_Disable.ctl"/>
 		<Item Name="command_DisableHardpointChase.ctl" Type="VI" URL="../DataTypes/command_DisableHardpointChase.ctl"/>
+		<Item Name="command_DisableHardpointCorrections.ctl" Type="VI" URL="../DataTypes/command_DisableHardpointCorrections.ctl"/>
 		<Item Name="command_Enable.ctl" Type="VI" URL="../DataTypes/command_Enable.ctl"/>
 		<Item Name="command_EnableHardpointChase.ctl" Type="VI" URL="../DataTypes/command_EnableHardpointChase.ctl"/>
+		<Item Name="command_EnableHardpointCorrections.ctl" Type="VI" URL="../DataTypes/command_EnableHardpointCorrections.ctl"/>
 		<Item Name="command_EnterEngineering.ctl" Type="VI" URL="../DataTypes/command_EnterEngineering.ctl"/>
 		<Item Name="command_ExitEngineering.ctl" Type="VI" URL="../DataTypes/command_ExitEngineering.ctl"/>
 		<Item Name="command_LowerM1M3.ctl" Type="VI" URL="../DataTypes/command_LowerM1M3.ctl"/>
 		<Item Name="command_MoveHardpointActuators.ctl" Type="VI" URL="../DataTypes/command_MoveHardpointActuators.ctl"/>
-		<Item Name="command_None.ctl" Type="VI" URL="../DataTypes/command_None.ctl"/>
 		<Item Name="command_PositionM1M3.ctl" Type="VI" URL="../DataTypes/command_PositionM1M3.ctl"/>
 		<Item Name="command_RaiseM1M3.ctl" Type="VI" URL="../DataTypes/command_RaiseM1M3.ctl"/>
+		<Item Name="command_ResetPID.ctl" Type="VI" URL="../DataTypes/command_ResetPID.ctl"/>
+		<Item Name="command_RunMirrorForceProfile.ctl" Type="VI" URL="../DataTypes/command_RunMirrorForceProfile.ctl"/>
+		<Item Name="command_SetThermalSetpoint.ctl" Type="VI" URL="../DataTypes/command_SetThermalSetpoint.ctl"/>
 		<Item Name="command_Shutdown.ctl" Type="VI" URL="../DataTypes/command_Shutdown.ctl"/>
 		<Item Name="command_Standby.ctl" Type="VI" URL="../DataTypes/command_Standby.ctl"/>
 		<Item Name="command_Start.ctl" Type="VI" URL="../DataTypes/command_Start.ctl"/>
@@ -53,39 +56,62 @@
 		<Item Name="command_TurnLightsOn.ctl" Type="VI" URL="../DataTypes/command_TurnLightsOn.ctl"/>
 		<Item Name="command_TurnPowerOff.ctl" Type="VI" URL="../DataTypes/command_TurnPowerOff.ctl"/>
 		<Item Name="command_TurnPowerOn.ctl" Type="VI" URL="../DataTypes/command_TurnPowerOn.ctl"/>
-		<Item Name="command_UncontrolledLowerM1M3.ctl" Type="VI" URL="../DataTypes/command_UncontrolledLowerM1M3.ctl"/>
+		<Item Name="command_UpdatePID.ctl" Type="VI" URL="../DataTypes/command_UpdatePID.ctl"/>
 		<Item Name="logevent.ctl" Type="VI" URL="../DataTypes/logevent.ctl"/>
 		<Item Name="logevent_AccelerometerWarning.ctl" Type="VI" URL="../DataTypes/logevent_AccelerometerWarning.ctl"/>
 		<Item Name="logevent_AirSupplyStatus.ctl" Type="VI" URL="../DataTypes/logevent_AirSupplyStatus.ctl"/>
 		<Item Name="logevent_AirSupplyWarning.ctl" Type="VI" URL="../DataTypes/logevent_AirSupplyWarning.ctl"/>
 		<Item Name="logevent_AppliedAberrationForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedAberrationForces.ctl"/>
-		<Item Name="logevent_AppliedActiveOpticsForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedActiveOpticsForces.ctl"/>
+		<Item Name="logevent_AppliedAccelerationForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedAccelerationForces.ctl"/>
+		<Item Name="logevent_AppliedActiveOpticForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedActiveOpticForces.ctl"/>
 		<Item Name="logevent_AppliedAzimuthForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedAzimuthForces.ctl"/>
+		<Item Name="logevent_AppliedBalanceForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedBalanceForces.ctl"/>
+		<Item Name="logevent_AppliedCylinderForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedCylinderForces.ctl"/>
+		<Item Name="logevent_AppliedElevationForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedElevationForces.ctl"/>
 		<Item Name="logevent_AppliedForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedForces.ctl"/>
 		<Item Name="logevent_AppliedOffsetForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedOffsetForces.ctl"/>
 		<Item Name="logevent_AppliedSettingsMatchStart.ctl" Type="VI" URL="../DataTypes/logevent_AppliedSettingsMatchStart.ctl"/>
 		<Item Name="logevent_AppliedStaticForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedStaticForces.ctl"/>
+		<Item Name="logevent_AppliedThermalForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedThermalForces.ctl"/>
+		<Item Name="logevent_AppliedVelocityForces.ctl" Type="VI" URL="../DataTypes/logevent_AppliedVelocityForces.ctl"/>
 		<Item Name="logevent_CellLightStatus.ctl" Type="VI" URL="../DataTypes/logevent_CellLightStatus.ctl"/>
 		<Item Name="logevent_CellLightWarning.ctl" Type="VI" URL="../DataTypes/logevent_CellLightWarning.ctl"/>
 		<Item Name="logevent_CommandRejectionWarning.ctl" Type="VI" URL="../DataTypes/logevent_CommandRejectionWarning.ctl"/>
 		<Item Name="logevent_DetailedState.ctl" Type="VI" URL="../DataTypes/logevent_DetailedState.ctl"/>
 		<Item Name="logevent_DisplacementSensorWarning.ctl" Type="VI" URL="../DataTypes/logevent_DisplacementSensorWarning.ctl"/>
 		<Item Name="logevent_ErrorCode.ctl" Type="VI" URL="../DataTypes/logevent_ErrorCode.ctl"/>
-		<Item Name="logevent_ForceActuatorDataRejection.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorDataRejection.ctl"/>
 		<Item Name="logevent_ForceActuatorForceWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorForceWarning.ctl"/>
 		<Item Name="logevent_ForceActuatorInfo.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorInfo.ctl"/>
-		<Item Name="logevent_ForceActuatorSetpointWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorSetpointWarning.ctl"/>
+		<Item Name="logevent_ForceActuatorState.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorState.ctl"/>
+		<Item Name="logevent_ForceActuatorWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceActuatorWarning.ctl"/>
+		<Item Name="logevent_ForceSetpointWarning.ctl" Type="VI" URL="../DataTypes/logevent_ForceSetpointWarning.ctl"/>
 		<Item Name="logevent_GyroWarning.ctl" Type="VI" URL="../DataTypes/logevent_GyroWarning.ctl"/>
 		<Item Name="logevent_HardpointActuatorInfo.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorInfo.ctl"/>
-		<Item Name="logevent_HardpointActuatorMotionState.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorMotionState.ctl"/>
+		<Item Name="logevent_HardpointActuatorState.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorState.ctl"/>
+		<Item Name="logevent_HardpointActuatorWarning.ctl" Type="VI" URL="../DataTypes/logevent_HardpointActuatorWarning.ctl"/>
 		<Item Name="logevent_HardpointMonitorInfo.ctl" Type="VI" URL="../DataTypes/logevent_HardpointMonitorInfo.ctl"/>
+		<Item Name="logevent_HardpointMonitorState.ctl" Type="VI" URL="../DataTypes/logevent_HardpointMonitorState.ctl"/>
+		<Item Name="logevent_HardpointMonitorWarning.ctl" Type="VI" URL="../DataTypes/logevent_HardpointMonitorWarning.ctl"/>
 		<Item Name="logevent_ILCWarning.ctl" Type="VI" URL="../DataTypes/logevent_ILCWarning.ctl"/>
 		<Item Name="logevent_InclinometerSensorWarning.ctl" Type="VI" URL="../DataTypes/logevent_InclinometerSensorWarning.ctl"/>
 		<Item Name="logevent_InterlockStatus.ctl" Type="VI" URL="../DataTypes/logevent_InterlockStatus.ctl"/>
 		<Item Name="logevent_InterlockWarning.ctl" Type="VI" URL="../DataTypes/logevent_InterlockWarning.ctl"/>
+		<Item Name="logevent_PIDInfo.ctl" Type="VI" URL="../DataTypes/logevent_PIDInfo.ctl"/>
 		<Item Name="logevent_PowerStatus.ctl" Type="VI" URL="../DataTypes/logevent_PowerStatus.ctl"/>
 		<Item Name="logevent_PowerSupplyStatus.ctl" Type="VI" URL="../DataTypes/logevent_PowerSupplyStatus.ctl"/>
 		<Item Name="logevent_PowerWarning.ctl" Type="VI" URL="../DataTypes/logevent_PowerWarning.ctl"/>
+		<Item Name="logevent_RejectedAberrationForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedAberrationForces.ctl"/>
+		<Item Name="logevent_RejectedAccelerationForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedAccelerationForces.ctl"/>
+		<Item Name="logevent_RejectedActiveOpticForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedActiveOpticForces.ctl"/>
+		<Item Name="logevent_RejectedAzimuthForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedAzimuthForces.ctl"/>
+		<Item Name="logevent_RejectedBalanceForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedBalanceForces.ctl"/>
+		<Item Name="logevent_RejectedCylinderForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedCylinderForces.ctl"/>
+		<Item Name="logevent_RejectedElevationForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedElevationForces.ctl"/>
+		<Item Name="logevent_RejectedForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedForces.ctl"/>
+		<Item Name="logevent_RejectedOffsetForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedOffsetForces.ctl"/>
+		<Item Name="logevent_RejectedStaticForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedStaticForces.ctl"/>
+		<Item Name="logevent_RejectedThermalForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedThermalForces.ctl"/>
+		<Item Name="logevent_RejectedVelocityForces.ctl" Type="VI" URL="../DataTypes/logevent_RejectedVelocityForces.ctl"/>
 		<Item Name="logevent_SettingVersions.ctl" Type="VI" URL="../DataTypes/logevent_SettingVersions.ctl"/>
 		<Item Name="logevent_SettingsApplied.ctl" Type="VI" URL="../DataTypes/logevent_SettingsApplied.ctl"/>
 		<Item Name="logevent_SummaryState.ctl" Type="VI" URL="../DataTypes/logevent_SummaryState.ctl"/>
@@ -93,26 +119,32 @@
 	<Item Name="SALLV_m1m3.so" Type="Document" URL="../SALLV_m1m3.so"/>
 	<Item Name="m1m3_Connect.vi" Type="VI" URL="../VIs/m1m3_Connect.vi"/>
 	<Item Name="m1m3_Release.vi" Type="VI" URL="../VIs/m1m3_Release.vi"/>
+	<Item Name="m1m3_acceptCommand_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_AbortProfile.vi"/>
 	<Item Name="m1m3_acceptCommand_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_acceptCommand_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_acceptCommand_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_acceptCommand_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_acceptCommand_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_acceptCommand_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_acceptCommand_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_acceptCommand_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_acceptCommand_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_acceptCommand_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_acceptCommand_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_acceptCommand_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ClearAberration.vi"/>
+	<Item Name="m1m3_acceptCommand_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_acceptCommand_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_acceptCommand_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_acceptCommand_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_acceptCommand_Disable.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_Disable.vi"/>
 	<Item Name="m1m3_acceptCommand_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_acceptCommand_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_acceptCommand_Enable.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_Enable.vi"/>
 	<Item Name="m1m3_acceptCommand_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_acceptCommand_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_acceptCommand_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_EnterEngineering.vi"/>
 	<Item Name="m1m3_acceptCommand_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ExitEngineering.vi"/>
 	<Item Name="m1m3_acceptCommand_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_LowerM1M3.vi"/>
 	<Item Name="m1m3_acceptCommand_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_acceptCommand_None.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_None.vi"/>
 	<Item Name="m1m3_acceptCommand_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_PositionM1M3.vi"/>
 	<Item Name="m1m3_acceptCommand_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_RaiseM1M3.vi"/>
+	<Item Name="m1m3_acceptCommand_ResetPID.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_ResetPID.vi"/>
+	<Item Name="m1m3_acceptCommand_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_acceptCommand_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_acceptCommand_Shutdown.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_Shutdown.vi"/>
 	<Item Name="m1m3_acceptCommand_Standby.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_Standby.vi"/>
 	<Item Name="m1m3_acceptCommand_Start.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_Start.vi"/>
@@ -127,27 +159,33 @@
 	<Item Name="m1m3_acceptCommand_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_TurnLightsOn.vi"/>
 	<Item Name="m1m3_acceptCommand_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_TurnPowerOff.vi"/>
 	<Item Name="m1m3_acceptCommand_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_TurnPowerOn.vi"/>
-	<Item Name="m1m3_acceptCommand_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_UncontrolledLowerM1M3.vi"/>
+	<Item Name="m1m3_acceptCommand_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_acceptCommand_UpdatePID.vi"/>
+	<Item Name="m1m3_ackCommand_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_ackCommand_AbortProfile.vi"/>
 	<Item Name="m1m3_ackCommand_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_ackCommand_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_ackCommand_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_ackCommand_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_ackCommand_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_ackCommand_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_ackCommand_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_ackCommand_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_ackCommand_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_ackCommand_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_ackCommand_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_ackCommand_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_ackCommand_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ClearAberration.vi"/>
+	<Item Name="m1m3_ackCommand_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_ackCommand_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_ackCommand_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_ackCommand_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_ackCommand_Disable.vi" Type="VI" URL="../VIs/m1m3_ackCommand_Disable.vi"/>
 	<Item Name="m1m3_ackCommand_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_ackCommand_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_ackCommand_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_ackCommand_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_ackCommand_Enable.vi" Type="VI" URL="../VIs/m1m3_ackCommand_Enable.vi"/>
 	<Item Name="m1m3_ackCommand_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_ackCommand_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_ackCommand_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_ackCommand_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_ackCommand_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_ackCommand_EnterEngineering.vi"/>
 	<Item Name="m1m3_ackCommand_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ExitEngineering.vi"/>
 	<Item Name="m1m3_ackCommand_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_ackCommand_LowerM1M3.vi"/>
 	<Item Name="m1m3_ackCommand_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_ackCommand_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_ackCommand_None.vi" Type="VI" URL="../VIs/m1m3_ackCommand_None.vi"/>
 	<Item Name="m1m3_ackCommand_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_ackCommand_PositionM1M3.vi"/>
 	<Item Name="m1m3_ackCommand_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_ackCommand_RaiseM1M3.vi"/>
+	<Item Name="m1m3_ackCommand_ResetPID.vi" Type="VI" URL="../VIs/m1m3_ackCommand_ResetPID.vi"/>
+	<Item Name="m1m3_ackCommand_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_ackCommand_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_ackCommand_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_ackCommand_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_ackCommand_Shutdown.vi" Type="VI" URL="../VIs/m1m3_ackCommand_Shutdown.vi"/>
 	<Item Name="m1m3_ackCommand_Standby.vi" Type="VI" URL="../VIs/m1m3_ackCommand_Standby.vi"/>
 	<Item Name="m1m3_ackCommand_Start.vi" Type="VI" URL="../VIs/m1m3_ackCommand_Start.vi"/>
@@ -162,47 +200,52 @@
 	<Item Name="m1m3_ackCommand_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_ackCommand_TurnLightsOn.vi"/>
 	<Item Name="m1m3_ackCommand_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_ackCommand_TurnPowerOff.vi"/>
 	<Item Name="m1m3_ackCommand_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_ackCommand_TurnPowerOn.vi"/>
-	<Item Name="m1m3_ackCommand_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_ackCommand_UncontrolledLowerM1M3.vi"/>
+	<Item Name="m1m3_ackCommand_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_ackCommand_UpdatePID.vi"/>
 	<Item Name="m1m3_cancelCallback_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_AccelerometerData.vi"/>
-	<Item Name="m1m3_cancelCallback_FPGAData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_FPGAData.vi"/>
 	<Item Name="m1m3_cancelCallback_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_ForceActuatorData.vi"/>
-	<Item Name="m1m3_cancelCallback_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_GyroData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_GyroData.vi"/>
-	<Item Name="m1m3_cancelCallback_HardpointData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_HardpointData.vi"/>
-	<Item Name="m1m3_cancelCallback_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_cancelCallback_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_HardpointStatus.vi"/>
+	<Item Name="m1m3_cancelCallback_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_cancelCallback_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_cancelCallback_IMSData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_IMSData.vi"/>
 	<Item Name="m1m3_cancelCallback_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_InclinometerData.vi"/>
-	<Item Name="m1m3_cancelCallback_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_MirrorForceData.vi"/>
 	<Item Name="m1m3_cancelCallback_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_OuterLoopData.vi"/>
+	<Item Name="m1m3_cancelCallback_PIDData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_PIDData.vi"/>
 	<Item Name="m1m3_cancelCallback_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_PowerSupplyData.vi"/>
 	<Item Name="m1m3_cancelCallback_ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_ackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_.vi"/>
+	<Item Name="m1m3_cancelCallback_command_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_AbortProfile.vi"/>
+	<Item Name="m1m3_cancelCallback_command_AbortProfileackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_AbortProfileackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_AbortRaiseM1M3.vi"/>
 	<Item Name="m1m3_cancelCallback_command_AbortRaiseM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_AbortRaiseM1M3ackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAOSCorrectionByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAOSCorrectionByBendingModesackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAOSCorrectionByForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAOSCorrectionByForcesackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAberrationByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationByBendingModesackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationByForces.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ApplyAberrationByForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationByForcesackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyAberrationForcesByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationForcesByBendingModesackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyAberrationForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyAberrationForcesackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyActiveOpticForcesByBendingModes.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyActiveOpticForcesByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyActiveOpticForcesByBendingModesackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyActiveOpticForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyActiveOpticForcesackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyOffsetForces.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ApplyOffsetForcesByMirrorForceackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyOffsetForcesByMirrorForceackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_ApplyOffsetForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ApplyOffsetForcesackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ClearAOSCorrectionackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAOSCorrectionackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAberration.vi"/>
-	<Item Name="m1m3_cancelCallback_command_ClearAberrationackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAberrationackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ClearAberrationForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearAberrationForcesackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearActiveOpticForces.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ClearActiveOpticForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearActiveOpticForcesackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_cancelCallback_command_ClearOffsetForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ClearOffsetForcesackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Disable.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Disable.vi"/>
 	<Item Name="m1m3_cancelCallback_command_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_DisableHardpointChase.vi"/>
 	<Item Name="m1m3_cancelCallback_command_DisableHardpointChaseackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_DisableHardpointChaseackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_DisableHardpointCorrections.vi"/>
+	<Item Name="m1m3_cancelCallback_command_DisableHardpointCorrectionsackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_DisableHardpointCorrectionsackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Disableackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Disableackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Enable.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Enable.vi"/>
 	<Item Name="m1m3_cancelCallback_command_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnableHardpointChase.vi"/>
 	<Item Name="m1m3_cancelCallback_command_EnableHardpointChaseackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnableHardpointChaseackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnableHardpointCorrections.vi"/>
+	<Item Name="m1m3_cancelCallback_command_EnableHardpointCorrectionsackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnableHardpointCorrectionsackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Enableackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Enableackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnterEngineering.vi"/>
 	<Item Name="m1m3_cancelCallback_command_EnterEngineeringackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_EnterEngineeringackcmd.vi"/>
@@ -212,12 +255,16 @@
 	<Item Name="m1m3_cancelCallback_command_LowerM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_LowerM1M3ackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_MoveHardpointActuators.vi"/>
 	<Item Name="m1m3_cancelCallback_command_MoveHardpointActuatorsackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_MoveHardpointActuatorsackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_None.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_None.vi"/>
-	<Item Name="m1m3_cancelCallback_command_Noneackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Noneackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_PositionM1M3.vi"/>
 	<Item Name="m1m3_cancelCallback_command_PositionM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_PositionM1M3ackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_RaiseM1M3.vi"/>
 	<Item Name="m1m3_cancelCallback_command_RaiseM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_RaiseM1M3ackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ResetPID.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ResetPID.vi"/>
+	<Item Name="m1m3_cancelCallback_command_ResetPIDackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_ResetPIDackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_cancelCallback_command_RunMirrorForceProfileackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_RunMirrorForceProfileackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_SetThermalSetpoint.vi"/>
+	<Item Name="m1m3_cancelCallback_command_SetThermalSetpointackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_SetThermalSetpointackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Shutdown.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Shutdown.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Shutdownackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Shutdownackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_Standby.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_Standby.vi"/>
@@ -246,111 +293,218 @@
 	<Item Name="m1m3_cancelCallback_command_TurnPowerOffackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_TurnPowerOffackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_command_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_TurnPowerOn.vi"/>
 	<Item Name="m1m3_cancelCallback_command_TurnPowerOnackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_TurnPowerOnackcmd.vi"/>
-	<Item Name="m1m3_cancelCallback_command_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_UncontrolledLowerM1M3.vi"/>
-	<Item Name="m1m3_cancelCallback_command_UncontrolledLowerM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_UncontrolledLowerM1M3ackcmd.vi"/>
+	<Item Name="m1m3_cancelCallback_command_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_UpdatePID.vi"/>
+	<Item Name="m1m3_cancelCallback_command_UpdatePIDackcmd.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_command_UpdatePIDackcmd.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AirSupplyWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedAberrationForces.vi"/>
-	<Item Name="m1m3_cancelCallback_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedActiveOpticForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedElevationForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedSettingsMatchStart.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_AppliedVelocityForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CellLightWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ErrorCode.vi"/>
-	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorDataRejection.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorInfo.vi"/>
-	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ForceSetpointWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorInfo.vi"/>
-	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorMotionState.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointActuatorWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_HardpointMonitorWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_ILCWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_InclinometerSensorWarning.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PIDInfo.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_cancelCallback_logEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_RejectedVelocityForces.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_SettingsApplied.vi"/>
 	<Item Name="m1m3_cancelCallback_logEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_cancelCallback_logEvent_SummaryState.vi"/>
 	<Item Name="m1m3_checkCallbacks.vi" Type="VI" URL="../VIs/m1m3_checkCallbacks.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AccelerometerWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AirSupplyStatus.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AirSupplyWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedAberrationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedActiveOpticForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedElevationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedOffsetForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedSettingsMatchStart.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_AppliedVelocityForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_CellLightStatus.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_CellLightWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_CommandRejectionWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_DetailedState.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_DisplacementSensorWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ErrorCode.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ForceActuatorForceWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ForceActuatorInfo.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ForceSetpointWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_GyroWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointActuatorInfo.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointActuatorWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_HardpointMonitorWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_ILCWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_InclinometerSensorWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_InterlockStatus.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_PIDInfo.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_PowerStatus.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_PowerSupplyStatus.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_RejectedVelocityForces.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_SettingVersions.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_SettingsApplied.vi"/>
+	<Item Name="m1m3_flushSamplesEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_flushSamplesEvent_SummaryState.vi"/>
+	<Item Name="m1m3_getCurrentTime.vi" Type="VI" URL="../VIs/m1m3_getCurrentTime.vi"/>
 	<Item Name="m1m3_getEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_getEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_getEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_AirSupplyWarning.vi"/>
 	<Item Name="m1m3_getEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedAberrationForces.vi"/>
-	<Item Name="m1m3_getEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedActiveOpticForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedElevationForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_getEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedSettingsMatchStart.vi"/>
 	<Item Name="m1m3_getEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_getEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_AppliedVelocityForces.vi"/>
 	<Item Name="m1m3_getEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_getEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_CellLightWarning.vi"/>
 	<Item Name="m1m3_getEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_getEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_getEvent_DetailedState.vi"/>
 	<Item Name="m1m3_getEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_getEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_getEvent_ErrorCode.vi"/>
-	<Item Name="m1m3_getEvent_ForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorDataRejection.vi"/>
 	<Item Name="m1m3_getEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_getEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorInfo.vi"/>
-	<Item Name="m1m3_getEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_getEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_getEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_getEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ForceSetpointWarning.vi"/>
 	<Item Name="m1m3_getEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_getEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorInfo.vi"/>
-	<Item Name="m1m3_getEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorMotionState.vi"/>
+	<Item Name="m1m3_getEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_getEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointActuatorWarning.vi"/>
 	<Item Name="m1m3_getEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_getEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_getEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_HardpointMonitorWarning.vi"/>
 	<Item Name="m1m3_getEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_ILCWarning.vi"/>
 	<Item Name="m1m3_getEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_InclinometerSensorWarning.vi"/>
 	<Item Name="m1m3_getEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_getEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_getEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_getEvent_PIDInfo.vi"/>
 	<Item Name="m1m3_getEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerStatus.vi"/>
 	<Item Name="m1m3_getEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_getEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_getEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_getEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_getEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_getEvent_RejectedVelocityForces.vi"/>
 	<Item Name="m1m3_getEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_getEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_getEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_getEvent_SettingsApplied.vi"/>
 	<Item Name="m1m3_getEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_getEvent_SummaryState.vi"/>
 	<Item Name="m1m3_getNextSample_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_AccelerometerData.vi"/>
-	<Item Name="m1m3_getNextSample_FPGAData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_FPGAData.vi"/>
 	<Item Name="m1m3_getNextSample_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_ForceActuatorData.vi"/>
-	<Item Name="m1m3_getNextSample_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_getNextSample_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_getNextSample_GyroData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_GyroData.vi"/>
-	<Item Name="m1m3_getNextSample_HardpointData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_HardpointData.vi"/>
-	<Item Name="m1m3_getNextSample_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_getNextSample_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_getNextSample_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_getNextSample_HardpointStatus.vi"/>
+	<Item Name="m1m3_getNextSample_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_getNextSample_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_getNextSample_IMSData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_IMSData.vi"/>
 	<Item Name="m1m3_getNextSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_InclinometerData.vi"/>
-	<Item Name="m1m3_getNextSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_getNextSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_getNextSample_PIDData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_PIDData.vi"/>
 	<Item Name="m1m3_getNextSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_getNextSample_PowerSupplyData.vi"/>
+	<Item Name="m1m3_getResponse_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_getResponse_AbortProfile.vi"/>
 	<Item Name="m1m3_getResponse_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_getResponse_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_getResponse_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_getResponse_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_getResponse_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_getResponse_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_getResponse_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_getResponse_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_getResponse_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_getResponse_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_getResponse_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_getResponse_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_getResponse_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_getResponse_ClearAberration.vi"/>
+	<Item Name="m1m3_getResponse_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_getResponse_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_getResponse_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_getResponse_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_getResponse_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_getResponse_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_getResponse_Disable.vi" Type="VI" URL="../VIs/m1m3_getResponse_Disable.vi"/>
 	<Item Name="m1m3_getResponse_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_getResponse_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_getResponse_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_getResponse_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_getResponse_Enable.vi" Type="VI" URL="../VIs/m1m3_getResponse_Enable.vi"/>
 	<Item Name="m1m3_getResponse_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_getResponse_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_getResponse_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_getResponse_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_getResponse_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_getResponse_EnterEngineering.vi"/>
 	<Item Name="m1m3_getResponse_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_getResponse_ExitEngineering.vi"/>
 	<Item Name="m1m3_getResponse_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_LowerM1M3.vi"/>
 	<Item Name="m1m3_getResponse_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_getResponse_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_getResponse_None.vi" Type="VI" URL="../VIs/m1m3_getResponse_None.vi"/>
 	<Item Name="m1m3_getResponse_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_PositionM1M3.vi"/>
 	<Item Name="m1m3_getResponse_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_RaiseM1M3.vi"/>
+	<Item Name="m1m3_getResponse_ResetPID.vi" Type="VI" URL="../VIs/m1m3_getResponse_ResetPID.vi"/>
+	<Item Name="m1m3_getResponse_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_getResponse_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_getResponse_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_getResponse_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_getResponse_Shutdown.vi" Type="VI" URL="../VIs/m1m3_getResponse_Shutdown.vi"/>
 	<Item Name="m1m3_getResponse_Standby.vi" Type="VI" URL="../VIs/m1m3_getResponse_Standby.vi"/>
 	<Item Name="m1m3_getResponse_Start.vi" Type="VI" URL="../VIs/m1m3_getResponse_Start.vi"/>
@@ -365,40 +519,43 @@
 	<Item Name="m1m3_getResponse_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_getResponse_TurnLightsOn.vi"/>
 	<Item Name="m1m3_getResponse_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_getResponse_TurnPowerOff.vi"/>
 	<Item Name="m1m3_getResponse_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_getResponse_TurnPowerOn.vi"/>
-	<Item Name="m1m3_getResponse_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_getResponse_UncontrolledLowerM1M3.vi"/>
+	<Item Name="m1m3_getResponse_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_getResponse_UpdatePID.vi"/>
 	<Item Name="m1m3_getSample_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_getSample_AccelerometerData.vi"/>
-	<Item Name="m1m3_getSample_FPGAData.vi" Type="VI" URL="../VIs/m1m3_getSample_FPGAData.vi"/>
 	<Item Name="m1m3_getSample_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_getSample_ForceActuatorData.vi"/>
-	<Item Name="m1m3_getSample_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_getSample_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_getSample_GyroData.vi" Type="VI" URL="../VIs/m1m3_getSample_GyroData.vi"/>
-	<Item Name="m1m3_getSample_HardpointData.vi" Type="VI" URL="../VIs/m1m3_getSample_HardpointData.vi"/>
-	<Item Name="m1m3_getSample_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_getSample_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_getSample_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_getSample_HardpointStatus.vi"/>
+	<Item Name="m1m3_getSample_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_getSample_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_getSample_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_getSample_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_getSample_IMSData.vi" Type="VI" URL="../VIs/m1m3_getSample_IMSData.vi"/>
 	<Item Name="m1m3_getSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_getSample_InclinometerData.vi"/>
-	<Item Name="m1m3_getSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_getSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_getSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_getSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_getSample_PIDData.vi" Type="VI" URL="../VIs/m1m3_getSample_PIDData.vi"/>
 	<Item Name="m1m3_getSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_getSample_PowerSupplyData.vi"/>
+	<Item Name="m1m3_issueCommand_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_issueCommand_AbortProfile.vi"/>
 	<Item Name="m1m3_issueCommand_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_issueCommand_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_issueCommand_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_issueCommand_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_issueCommand_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_issueCommand_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_issueCommand_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_issueCommand_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_issueCommand_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_issueCommand_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_issueCommand_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_issueCommand_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ClearAberration.vi"/>
+	<Item Name="m1m3_issueCommand_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_issueCommand_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_issueCommand_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_issueCommand_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_issueCommand_Disable.vi" Type="VI" URL="../VIs/m1m3_issueCommand_Disable.vi"/>
 	<Item Name="m1m3_issueCommand_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_issueCommand_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_issueCommand_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_issueCommand_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_issueCommand_Enable.vi" Type="VI" URL="../VIs/m1m3_issueCommand_Enable.vi"/>
 	<Item Name="m1m3_issueCommand_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_issueCommand_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_issueCommand_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_issueCommand_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_issueCommand_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_issueCommand_EnterEngineering.vi"/>
 	<Item Name="m1m3_issueCommand_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ExitEngineering.vi"/>
 	<Item Name="m1m3_issueCommand_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_LowerM1M3.vi"/>
 	<Item Name="m1m3_issueCommand_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_issueCommand_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_issueCommand_None.vi" Type="VI" URL="../VIs/m1m3_issueCommand_None.vi"/>
 	<Item Name="m1m3_issueCommand_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_PositionM1M3.vi"/>
 	<Item Name="m1m3_issueCommand_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_RaiseM1M3.vi"/>
+	<Item Name="m1m3_issueCommand_ResetPID.vi" Type="VI" URL="../VIs/m1m3_issueCommand_ResetPID.vi"/>
+	<Item Name="m1m3_issueCommand_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_issueCommand_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_issueCommand_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_issueCommand_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_issueCommand_Shutdown.vi" Type="VI" URL="../VIs/m1m3_issueCommand_Shutdown.vi"/>
 	<Item Name="m1m3_issueCommand_Standby.vi" Type="VI" URL="../VIs/m1m3_issueCommand_Standby.vi"/>
 	<Item Name="m1m3_issueCommand_Start.vi" Type="VI" URL="../VIs/m1m3_issueCommand_Start.vi"/>
@@ -413,94 +570,160 @@
 	<Item Name="m1m3_issueCommand_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_issueCommand_TurnLightsOn.vi"/>
 	<Item Name="m1m3_issueCommand_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_issueCommand_TurnPowerOff.vi"/>
 	<Item Name="m1m3_issueCommand_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_issueCommand_TurnPowerOn.vi"/>
-	<Item Name="m1m3_issueCommand_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_issueCommand_UncontrolledLowerM1M3.vi"/>
+	<Item Name="m1m3_issueCommand_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_issueCommand_UpdatePID.vi"/>
 	<Item Name="m1m3_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_AirSupplyWarning.vi"/>
 	<Item Name="m1m3_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedAberrationForces.vi"/>
-	<Item Name="m1m3_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedActiveOpticForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedElevationForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedSettingsMatchStart.vi"/>
 	<Item Name="m1m3_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_logEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_AppliedVelocityForces.vi"/>
 	<Item Name="m1m3_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_CellLightWarning.vi"/>
 	<Item Name="m1m3_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_logEvent_ErrorCode.vi"/>
-	<Item Name="m1m3_logEvent_ForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorDataRejection.vi"/>
 	<Item Name="m1m3_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorInfo.vi"/>
-	<Item Name="m1m3_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_logEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_logEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_logEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ForceSetpointWarning.vi"/>
 	<Item Name="m1m3_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorInfo.vi"/>
-	<Item Name="m1m3_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorMotionState.vi"/>
+	<Item Name="m1m3_logEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_logEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointActuatorWarning.vi"/>
 	<Item Name="m1m3_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_logEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_logEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_HardpointMonitorWarning.vi"/>
 	<Item Name="m1m3_logEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_ILCWarning.vi"/>
 	<Item Name="m1m3_logEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_InclinometerSensorWarning.vi"/>
 	<Item Name="m1m3_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_logEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_logEvent_PIDInfo.vi"/>
 	<Item Name="m1m3_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerStatus.vi"/>
 	<Item Name="m1m3_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_logEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_logEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_logEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_logEvent_RejectedVelocityForces.vi"/>
 	<Item Name="m1m3_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_logEvent_SettingsApplied.vi"/>
 	<Item Name="m1m3_logEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_logEvent_SummaryState.vi"/>
+	<Item Name="m1m3_monitorCommand_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_AbortProfile.vi"/>
+	<Item Name="m1m3_monitorCommand_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_AbortRaiseM1M3.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyActiveOpticForcesByBendingModes.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyOffsetForces.vi"/>
+	<Item Name="m1m3_monitorCommand_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_monitorCommand_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_monitorCommand_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ClearActiveOpticForces.vi"/>
+	<Item Name="m1m3_monitorCommand_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ClearOffsetForces.vi"/>
+	<Item Name="m1m3_monitorCommand_Disable.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_Disable.vi"/>
+	<Item Name="m1m3_monitorCommand_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_monitorCommand_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_DisableHardpointCorrections.vi"/>
+	<Item Name="m1m3_monitorCommand_Enable.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_Enable.vi"/>
+	<Item Name="m1m3_monitorCommand_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_monitorCommand_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_EnableHardpointCorrections.vi"/>
+	<Item Name="m1m3_monitorCommand_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_EnterEngineering.vi"/>
+	<Item Name="m1m3_monitorCommand_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ExitEngineering.vi"/>
+	<Item Name="m1m3_monitorCommand_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_LowerM1M3.vi"/>
+	<Item Name="m1m3_monitorCommand_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_MoveHardpointActuators.vi"/>
+	<Item Name="m1m3_monitorCommand_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_PositionM1M3.vi"/>
+	<Item Name="m1m3_monitorCommand_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_RaiseM1M3.vi"/>
+	<Item Name="m1m3_monitorCommand_ResetPID.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_ResetPID.vi"/>
+	<Item Name="m1m3_monitorCommand_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_monitorCommand_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_SetThermalSetpoint.vi"/>
+	<Item Name="m1m3_monitorCommand_Shutdown.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_Shutdown.vi"/>
+	<Item Name="m1m3_monitorCommand_Standby.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_Standby.vi"/>
+	<Item Name="m1m3_monitorCommand_Start.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_Start.vi"/>
+	<Item Name="m1m3_monitorCommand_StopHardpointMotion.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_StopHardpointMotion.vi"/>
+	<Item Name="m1m3_monitorCommand_TestAir.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TestAir.vi"/>
+	<Item Name="m1m3_monitorCommand_TestForceActuator.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TestForceActuator.vi"/>
+	<Item Name="m1m3_monitorCommand_TestHardpoint.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TestHardpoint.vi"/>
+	<Item Name="m1m3_monitorCommand_TranslateM1M3.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TranslateM1M3.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnAirOff.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnAirOff.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnAirOn.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnAirOn.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnLightsOff.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnLightsOff.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnLightsOn.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnPowerOff.vi"/>
+	<Item Name="m1m3_monitorCommand_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_TurnPowerOn.vi"/>
+	<Item Name="m1m3_monitorCommand_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_monitorCommand_UpdatePID.vi"/>
 	<Item Name="m1m3_putSample_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_putSample_AccelerometerData.vi"/>
-	<Item Name="m1m3_putSample_FPGAData.vi" Type="VI" URL="../VIs/m1m3_putSample_FPGAData.vi"/>
 	<Item Name="m1m3_putSample_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_putSample_ForceActuatorData.vi"/>
-	<Item Name="m1m3_putSample_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_putSample_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_putSample_GyroData.vi" Type="VI" URL="../VIs/m1m3_putSample_GyroData.vi"/>
-	<Item Name="m1m3_putSample_HardpointData.vi" Type="VI" URL="../VIs/m1m3_putSample_HardpointData.vi"/>
-	<Item Name="m1m3_putSample_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_putSample_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_putSample_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_putSample_HardpointStatus.vi"/>
+	<Item Name="m1m3_putSample_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_putSample_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_putSample_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_putSample_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_putSample_IMSData.vi" Type="VI" URL="../VIs/m1m3_putSample_IMSData.vi"/>
 	<Item Name="m1m3_putSample_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_putSample_InclinometerData.vi"/>
-	<Item Name="m1m3_putSample_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_putSample_MirrorForceData.vi"/>
 	<Item Name="m1m3_putSample_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_putSample_OuterLoopData.vi"/>
+	<Item Name="m1m3_putSample_PIDData.vi" Type="VI" URL="../VIs/m1m3_putSample_PIDData.vi"/>
 	<Item Name="m1m3_putSample_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_putSample_PowerSupplyData.vi"/>
 	<Item Name="m1m3_registerCallback_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_AccelerometerData.vi"/>
-	<Item Name="m1m3_registerCallback_FPGAData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_FPGAData.vi"/>
 	<Item Name="m1m3_registerCallback_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_ForceActuatorData.vi"/>
-	<Item Name="m1m3_registerCallback_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_registerCallback_GyroData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_GyroData.vi"/>
-	<Item Name="m1m3_registerCallback_HardpointData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_HardpointData.vi"/>
-	<Item Name="m1m3_registerCallback_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_registerCallback_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_HardpointStatus.vi"/>
+	<Item Name="m1m3_registerCallback_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_registerCallback_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_registerCallback_IMSData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_IMSData.vi"/>
 	<Item Name="m1m3_registerCallback_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_InclinometerData.vi"/>
-	<Item Name="m1m3_registerCallback_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_MirrorForceData.vi"/>
 	<Item Name="m1m3_registerCallback_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_OuterLoopData.vi"/>
+	<Item Name="m1m3_registerCallback_PIDData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_PIDData.vi"/>
 	<Item Name="m1m3_registerCallback_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_registerCallback_PowerSupplyData.vi"/>
 	<Item Name="m1m3_registerCallback_ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_ackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_.vi"/>
+	<Item Name="m1m3_registerCallback_command_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_AbortProfile.vi"/>
+	<Item Name="m1m3_registerCallback_command_AbortProfileackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_AbortProfileackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_AbortRaiseM1M3.vi"/>
 	<Item Name="m1m3_registerCallback_command_AbortRaiseM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_AbortRaiseM1M3ackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAOSCorrectionByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAOSCorrectionByBendingModesackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAOSCorrectionByForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAOSCorrectionByForcesackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAberrationByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationByBendingModesackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationByForces.vi"/>
-	<Item Name="m1m3_registerCallback_command_ApplyAberrationByForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationByForcesackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyAberrationForcesByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationForcesByBendingModesackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyAberrationForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyAberrationForcesackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyActiveOpticForcesByBendingModes.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyActiveOpticForcesByBendingModesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyActiveOpticForcesByBendingModesackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyActiveOpticForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyActiveOpticForcesackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyOffsetForces.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_registerCallback_command_ApplyOffsetForcesByMirrorForceackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyOffsetForcesByMirrorForceackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_ApplyOffsetForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ApplyOffsetForcesackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_registerCallback_command_ClearAOSCorrectionackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAOSCorrectionackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAberration.vi"/>
-	<Item Name="m1m3_registerCallback_command_ClearAberrationackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAberrationackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_registerCallback_command_ClearAberrationForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearAberrationForcesackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearActiveOpticForces.vi"/>
+	<Item Name="m1m3_registerCallback_command_ClearActiveOpticForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearActiveOpticForcesackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_registerCallback_command_ClearOffsetForcesackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ClearOffsetForcesackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Disable.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Disable.vi"/>
 	<Item Name="m1m3_registerCallback_command_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_DisableHardpointChase.vi"/>
 	<Item Name="m1m3_registerCallback_command_DisableHardpointChaseackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_DisableHardpointChaseackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_DisableHardpointCorrections.vi"/>
+	<Item Name="m1m3_registerCallback_command_DisableHardpointCorrectionsackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_DisableHardpointCorrectionsackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Disableackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Disableackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Enable.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Enable.vi"/>
 	<Item Name="m1m3_registerCallback_command_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnableHardpointChase.vi"/>
 	<Item Name="m1m3_registerCallback_command_EnableHardpointChaseackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnableHardpointChaseackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnableHardpointCorrections.vi"/>
+	<Item Name="m1m3_registerCallback_command_EnableHardpointCorrectionsackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnableHardpointCorrectionsackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Enableackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Enableackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnterEngineering.vi"/>
 	<Item Name="m1m3_registerCallback_command_EnterEngineeringackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_EnterEngineeringackcmd.vi"/>
@@ -510,12 +733,16 @@
 	<Item Name="m1m3_registerCallback_command_LowerM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_LowerM1M3ackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_MoveHardpointActuators.vi"/>
 	<Item Name="m1m3_registerCallback_command_MoveHardpointActuatorsackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_MoveHardpointActuatorsackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_None.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_None.vi"/>
-	<Item Name="m1m3_registerCallback_command_Noneackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Noneackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_PositionM1M3.vi"/>
 	<Item Name="m1m3_registerCallback_command_PositionM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_PositionM1M3ackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_RaiseM1M3.vi"/>
 	<Item Name="m1m3_registerCallback_command_RaiseM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_RaiseM1M3ackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_ResetPID.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ResetPID.vi"/>
+	<Item Name="m1m3_registerCallback_command_ResetPIDackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_ResetPIDackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_registerCallback_command_RunMirrorForceProfileackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_RunMirrorForceProfileackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_SetThermalSetpoint.vi"/>
+	<Item Name="m1m3_registerCallback_command_SetThermalSetpointackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_SetThermalSetpointackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Shutdown.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Shutdown.vi"/>
 	<Item Name="m1m3_registerCallback_command_Shutdownackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Shutdownackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_Standby.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_Standby.vi"/>
@@ -544,97 +771,190 @@
 	<Item Name="m1m3_registerCallback_command_TurnPowerOffackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_TurnPowerOffackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_command_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_TurnPowerOn.vi"/>
 	<Item Name="m1m3_registerCallback_command_TurnPowerOnackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_TurnPowerOnackcmd.vi"/>
-	<Item Name="m1m3_registerCallback_command_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_UncontrolledLowerM1M3.vi"/>
-	<Item Name="m1m3_registerCallback_command_UncontrolledLowerM1M3ackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_UncontrolledLowerM1M3ackcmd.vi"/>
+	<Item Name="m1m3_registerCallback_command_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_UpdatePID.vi"/>
+	<Item Name="m1m3_registerCallback_command_UpdatePIDackcmd.vi" Type="VI" URL="../VIs/m1m3_registerCallback_command_UpdatePIDackcmd.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AirSupplyWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedAberrationForces.vi"/>
-	<Item Name="m1m3_registerCallback_logEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedActiveOpticForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedElevationForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedSettingsMatchStart.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_AppliedVelocityForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CellLightWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_DetailedState.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ErrorCode.vi"/>
-	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorDataRejection.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorInfo.vi"/>
-	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ForceSetpointWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorInfo.vi"/>
-	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorMotionState.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointActuatorWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_HardpointMonitorWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_ILCWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_InclinometerSensorWarning.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PIDInfo.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_registerCallback_logEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_RejectedVelocityForces.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_SettingsApplied.vi"/>
 	<Item Name="m1m3_registerCallback_logEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_registerCallback_logEvent_SummaryState.vi"/>
+	<Item Name="m1m3_salCommander_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_salCommander_AbortProfile.vi"/>
+	<Item Name="m1m3_salCommander_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_salCommander_AbortRaiseM1M3.vi"/>
+	<Item Name="m1m3_salCommander_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_salCommander_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_salCommander_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_salCommander_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyActiveOpticForcesByBendingModes.vi"/>
+	<Item Name="m1m3_salCommander_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyOffsetForces.vi"/>
+	<Item Name="m1m3_salCommander_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_salCommander_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_salCommander_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_salCommander_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ClearActiveOpticForces.vi"/>
+	<Item Name="m1m3_salCommander_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salCommander_ClearOffsetForces.vi"/>
+	<Item Name="m1m3_salCommander_Disable.vi" Type="VI" URL="../VIs/m1m3_salCommander_Disable.vi"/>
+	<Item Name="m1m3_salCommander_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_salCommander_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_salCommander_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_salCommander_DisableHardpointCorrections.vi"/>
+	<Item Name="m1m3_salCommander_Enable.vi" Type="VI" URL="../VIs/m1m3_salCommander_Enable.vi"/>
+	<Item Name="m1m3_salCommander_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_salCommander_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_salCommander_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_salCommander_EnableHardpointCorrections.vi"/>
+	<Item Name="m1m3_salCommander_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_salCommander_EnterEngineering.vi"/>
+	<Item Name="m1m3_salCommander_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_salCommander_ExitEngineering.vi"/>
+	<Item Name="m1m3_salCommander_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_salCommander_LowerM1M3.vi"/>
+	<Item Name="m1m3_salCommander_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_salCommander_MoveHardpointActuators.vi"/>
+	<Item Name="m1m3_salCommander_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_salCommander_PositionM1M3.vi"/>
+	<Item Name="m1m3_salCommander_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_salCommander_RaiseM1M3.vi"/>
+	<Item Name="m1m3_salCommander_ResetPID.vi" Type="VI" URL="../VIs/m1m3_salCommander_ResetPID.vi"/>
+	<Item Name="m1m3_salCommander_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_salCommander_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_salCommander_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_salCommander_SetThermalSetpoint.vi"/>
+	<Item Name="m1m3_salCommander_Shutdown.vi" Type="VI" URL="../VIs/m1m3_salCommander_Shutdown.vi"/>
+	<Item Name="m1m3_salCommander_Standby.vi" Type="VI" URL="../VIs/m1m3_salCommander_Standby.vi"/>
+	<Item Name="m1m3_salCommander_Start.vi" Type="VI" URL="../VIs/m1m3_salCommander_Start.vi"/>
+	<Item Name="m1m3_salCommander_StopHardpointMotion.vi" Type="VI" URL="../VIs/m1m3_salCommander_StopHardpointMotion.vi"/>
+	<Item Name="m1m3_salCommander_TestAir.vi" Type="VI" URL="../VIs/m1m3_salCommander_TestAir.vi"/>
+	<Item Name="m1m3_salCommander_TestForceActuator.vi" Type="VI" URL="../VIs/m1m3_salCommander_TestForceActuator.vi"/>
+	<Item Name="m1m3_salCommander_TestHardpoint.vi" Type="VI" URL="../VIs/m1m3_salCommander_TestHardpoint.vi"/>
+	<Item Name="m1m3_salCommander_TranslateM1M3.vi" Type="VI" URL="../VIs/m1m3_salCommander_TranslateM1M3.vi"/>
+	<Item Name="m1m3_salCommander_TurnAirOff.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnAirOff.vi"/>
+	<Item Name="m1m3_salCommander_TurnAirOn.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnAirOn.vi"/>
+	<Item Name="m1m3_salCommander_TurnLightsOff.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnLightsOff.vi"/>
+	<Item Name="m1m3_salCommander_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnLightsOn.vi"/>
+	<Item Name="m1m3_salCommander_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnPowerOff.vi"/>
+	<Item Name="m1m3_salCommander_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_salCommander_TurnPowerOn.vi"/>
+	<Item Name="m1m3_salCommander_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_salCommander_UpdatePID.vi"/>
 	<Item Name="m1m3_salEvent_AccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_AccelerometerWarning.vi"/>
 	<Item Name="m1m3_salEvent_AirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_AirSupplyStatus.vi"/>
 	<Item Name="m1m3_salEvent_AirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_AirSupplyWarning.vi"/>
 	<Item Name="m1m3_salEvent_AppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedAberrationForces.vi"/>
-	<Item Name="m1m3_salEvent_AppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedActiveOpticsForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedAccelerationForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedActiveOpticForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedAzimuthForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedBalanceForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedCylinderForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedElevationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedElevationForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedOffsetForces.vi"/>
 	<Item Name="m1m3_salEvent_AppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedSettingsMatchStart.vi"/>
 	<Item Name="m1m3_salEvent_AppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedStaticForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedThermalForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedThermalForces.vi"/>
+	<Item Name="m1m3_salEvent_AppliedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_AppliedVelocityForces.vi"/>
 	<Item Name="m1m3_salEvent_CellLightStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_CellLightStatus.vi"/>
 	<Item Name="m1m3_salEvent_CellLightWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_CellLightWarning.vi"/>
 	<Item Name="m1m3_salEvent_CommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_CommandRejectionWarning.vi"/>
 	<Item Name="m1m3_salEvent_DetailedState.vi" Type="VI" URL="../VIs/m1m3_salEvent_DetailedState.vi"/>
 	<Item Name="m1m3_salEvent_DisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_DisplacementSensorWarning.vi"/>
 	<Item Name="m1m3_salEvent_ErrorCode.vi" Type="VI" URL="../VIs/m1m3_salEvent_ErrorCode.vi"/>
-	<Item Name="m1m3_salEvent_ForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorDataRejection.vi"/>
 	<Item Name="m1m3_salEvent_ForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorForceWarning.vi"/>
 	<Item Name="m1m3_salEvent_ForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorInfo.vi"/>
-	<Item Name="m1m3_salEvent_ForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorSetpointWarning.vi"/>
+	<Item Name="m1m3_salEvent_ForceActuatorState.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorState.vi"/>
+	<Item Name="m1m3_salEvent_ForceActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceActuatorWarning.vi"/>
+	<Item Name="m1m3_salEvent_ForceSetpointWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ForceSetpointWarning.vi"/>
 	<Item Name="m1m3_salEvent_GyroWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_GyroWarning.vi"/>
 	<Item Name="m1m3_salEvent_HardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorInfo.vi"/>
-	<Item Name="m1m3_salEvent_HardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorMotionState.vi"/>
+	<Item Name="m1m3_salEvent_HardpointActuatorState.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorState.vi"/>
+	<Item Name="m1m3_salEvent_HardpointActuatorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointActuatorWarning.vi"/>
 	<Item Name="m1m3_salEvent_HardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointMonitorInfo.vi"/>
+	<Item Name="m1m3_salEvent_HardpointMonitorState.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointMonitorState.vi"/>
+	<Item Name="m1m3_salEvent_HardpointMonitorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_HardpointMonitorWarning.vi"/>
 	<Item Name="m1m3_salEvent_ILCWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_ILCWarning.vi"/>
 	<Item Name="m1m3_salEvent_InclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_InclinometerSensorWarning.vi"/>
 	<Item Name="m1m3_salEvent_InterlockStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_InterlockStatus.vi"/>
 	<Item Name="m1m3_salEvent_InterlockWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_InterlockWarning.vi"/>
+	<Item Name="m1m3_salEvent_PIDInfo.vi" Type="VI" URL="../VIs/m1m3_salEvent_PIDInfo.vi"/>
 	<Item Name="m1m3_salEvent_PowerStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerStatus.vi"/>
 	<Item Name="m1m3_salEvent_PowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerSupplyStatus.vi"/>
 	<Item Name="m1m3_salEvent_PowerWarning.vi" Type="VI" URL="../VIs/m1m3_salEvent_PowerWarning.vi"/>
+	<Item Name="m1m3_salEvent_RejectedAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedAberrationForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedAccelerationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedAccelerationForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedActiveOpticForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedAzimuthForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedBalanceForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedBalanceForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedCylinderForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedCylinderForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedElevationForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedElevationForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedOffsetForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedStaticForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedStaticForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedThermalForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedThermalForces.vi"/>
+	<Item Name="m1m3_salEvent_RejectedVelocityForces.vi" Type="VI" URL="../VIs/m1m3_salEvent_RejectedVelocityForces.vi"/>
 	<Item Name="m1m3_salEvent_SettingVersions.vi" Type="VI" URL="../VIs/m1m3_salEvent_SettingVersions.vi"/>
 	<Item Name="m1m3_salEvent_SettingsApplied.vi" Type="VI" URL="../VIs/m1m3_salEvent_SettingsApplied.vi"/>
 	<Item Name="m1m3_salEvent_SummaryState.vi" Type="VI" URL="../VIs/m1m3_salEvent_SummaryState.vi"/>
+	<Item Name="m1m3_salProcessor_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_salProcessor_AbortProfile.vi"/>
 	<Item Name="m1m3_salProcessor_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_salProcessor_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_salProcessor_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_salProcessor_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_salProcessor_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_salProcessor_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_salProcessor_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_salProcessor_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_salProcessor_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_salProcessor_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_salProcessor_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_salProcessor_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_salProcessor_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ClearAberration.vi"/>
+	<Item Name="m1m3_salProcessor_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_salProcessor_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_salProcessor_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_salProcessor_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_salProcessor_Disable.vi" Type="VI" URL="../VIs/m1m3_salProcessor_Disable.vi"/>
 	<Item Name="m1m3_salProcessor_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_salProcessor_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_salProcessor_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_salProcessor_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_salProcessor_Enable.vi" Type="VI" URL="../VIs/m1m3_salProcessor_Enable.vi"/>
 	<Item Name="m1m3_salProcessor_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_salProcessor_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_salProcessor_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_salProcessor_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_salProcessor_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_salProcessor_EnterEngineering.vi"/>
 	<Item Name="m1m3_salProcessor_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ExitEngineering.vi"/>
 	<Item Name="m1m3_salProcessor_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_salProcessor_LowerM1M3.vi"/>
 	<Item Name="m1m3_salProcessor_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_salProcessor_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_salProcessor_None.vi" Type="VI" URL="../VIs/m1m3_salProcessor_None.vi"/>
 	<Item Name="m1m3_salProcessor_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_salProcessor_PositionM1M3.vi"/>
 	<Item Name="m1m3_salProcessor_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_salProcessor_RaiseM1M3.vi"/>
+	<Item Name="m1m3_salProcessor_ResetPID.vi" Type="VI" URL="../VIs/m1m3_salProcessor_ResetPID.vi"/>
+	<Item Name="m1m3_salProcessor_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_salProcessor_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_salProcessor_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_salProcessor_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_salProcessor_Shutdown.vi" Type="VI" URL="../VIs/m1m3_salProcessor_Shutdown.vi"/>
 	<Item Name="m1m3_salProcessor_Standby.vi" Type="VI" URL="../VIs/m1m3_salProcessor_Standby.vi"/>
 	<Item Name="m1m3_salProcessor_Start.vi" Type="VI" URL="../VIs/m1m3_salProcessor_Start.vi"/>
@@ -649,40 +969,43 @@
 	<Item Name="m1m3_salProcessor_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_salProcessor_TurnLightsOn.vi"/>
 	<Item Name="m1m3_salProcessor_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_salProcessor_TurnPowerOff.vi"/>
 	<Item Name="m1m3_salProcessor_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_salProcessor_TurnPowerOn.vi"/>
-	<Item Name="m1m3_salProcessor_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_salProcessor_UncontrolledLowerM1M3.vi"/>
+	<Item Name="m1m3_salProcessor_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_salProcessor_UpdatePID.vi"/>
 	<Item Name="m1m3_salTelemetrySub_AccelerometerData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_AccelerometerData.vi"/>
-	<Item Name="m1m3_salTelemetrySub_FPGAData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_FPGAData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_ForceActuatorData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_ForceActuatorData.vi"/>
-	<Item Name="m1m3_salTelemetrySub_ForceActuatorStatus.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_ForceActuatorStatus.vi"/>
 	<Item Name="m1m3_salTelemetrySub_GyroData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_GyroData.vi"/>
-	<Item Name="m1m3_salTelemetrySub_HardpointData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_HardpointData.vi"/>
-	<Item Name="m1m3_salTelemetrySub_HardpointMonitorStatus.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_HardpointMonitorStatus.vi"/>
-	<Item Name="m1m3_salTelemetrySub_HardpointStatus.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_HardpointStatus.vi"/>
+	<Item Name="m1m3_salTelemetrySub_HardpointActuatorData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_HardpointActuatorData.vi"/>
+	<Item Name="m1m3_salTelemetrySub_HardpointMonitorData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_HardpointMonitorData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_IMSData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_IMSData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_InclinometerData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_InclinometerData.vi"/>
-	<Item Name="m1m3_salTelemetrySub_MirrorForceData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_MirrorForceData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_OuterLoopData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_OuterLoopData.vi"/>
+	<Item Name="m1m3_salTelemetrySub_PIDData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_PIDData.vi"/>
 	<Item Name="m1m3_salTelemetrySub_PowerSupplyData.vi" Type="VI" URL="../VIs/m1m3_salTelemetrySub_PowerSupplyData.vi"/>
+	<Item Name="m1m3_waitForCompletion_AbortProfile.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_AbortProfile.vi"/>
 	<Item Name="m1m3_waitForCompletion_AbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_AbortRaiseM1M3.vi"/>
-	<Item Name="m1m3_waitForCompletion_ApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3_waitForCompletion_ApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3_waitForCompletion_ApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3_waitForCompletion_ApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAberrationByForces.vi"/>
+	<Item Name="m1m3_waitForCompletion_ApplyAberrationForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAberrationForces.vi"/>
+	<Item Name="m1m3_waitForCompletion_ApplyAberrationForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyAberrationForcesByBendingModes.vi"/>
+	<Item Name="m1m3_waitForCompletion_ApplyActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyActiveOpticForces.vi"/>
+	<Item Name="m1m3_waitForCompletion_ApplyActiveOpticForcesByBendingModes.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyActiveOpticForcesByBendingModes.vi"/>
 	<Item Name="m1m3_waitForCompletion_ApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyOffsetForces.vi"/>
-	<Item Name="m1m3_waitForCompletion_ClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ClearAOSCorrection.vi"/>
-	<Item Name="m1m3_waitForCompletion_ClearAberration.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ClearAberration.vi"/>
+	<Item Name="m1m3_waitForCompletion_ApplyOffsetForcesByMirrorForce.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ApplyOffsetForcesByMirrorForce.vi"/>
+	<Item Name="m1m3_waitForCompletion_ClearAberrationForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ClearAberrationForces.vi"/>
+	<Item Name="m1m3_waitForCompletion_ClearActiveOpticForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ClearActiveOpticForces.vi"/>
 	<Item Name="m1m3_waitForCompletion_ClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ClearOffsetForces.vi"/>
 	<Item Name="m1m3_waitForCompletion_Disable.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_Disable.vi"/>
 	<Item Name="m1m3_waitForCompletion_DisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_DisableHardpointChase.vi"/>
+	<Item Name="m1m3_waitForCompletion_DisableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_DisableHardpointCorrections.vi"/>
 	<Item Name="m1m3_waitForCompletion_Enable.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_Enable.vi"/>
 	<Item Name="m1m3_waitForCompletion_EnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_EnableHardpointChase.vi"/>
+	<Item Name="m1m3_waitForCompletion_EnableHardpointCorrections.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_EnableHardpointCorrections.vi"/>
 	<Item Name="m1m3_waitForCompletion_EnterEngineering.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_EnterEngineering.vi"/>
 	<Item Name="m1m3_waitForCompletion_ExitEngineering.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ExitEngineering.vi"/>
 	<Item Name="m1m3_waitForCompletion_LowerM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_LowerM1M3.vi"/>
 	<Item Name="m1m3_waitForCompletion_MoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_MoveHardpointActuators.vi"/>
-	<Item Name="m1m3_waitForCompletion_None.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_None.vi"/>
 	<Item Name="m1m3_waitForCompletion_PositionM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_PositionM1M3.vi"/>
 	<Item Name="m1m3_waitForCompletion_RaiseM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_RaiseM1M3.vi"/>
+	<Item Name="m1m3_waitForCompletion_ResetPID.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_ResetPID.vi"/>
+	<Item Name="m1m3_waitForCompletion_RunMirrorForceProfile.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_RunMirrorForceProfile.vi"/>
+	<Item Name="m1m3_waitForCompletion_SetThermalSetpoint.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_SetThermalSetpoint.vi"/>
 	<Item Name="m1m3_waitForCompletion_Shutdown.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_Shutdown.vi"/>
 	<Item Name="m1m3_waitForCompletion_Standby.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_Standby.vi"/>
 	<Item Name="m1m3_waitForCompletion_Start.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_Start.vi"/>
@@ -697,111 +1020,6 @@
 	<Item Name="m1m3_waitForCompletion_TurnLightsOn.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_TurnLightsOn.vi"/>
 	<Item Name="m1m3_waitForCompletion_TurnPowerOff.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_TurnPowerOff.vi"/>
 	<Item Name="m1m3_waitForCompletion_TurnPowerOn.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_TurnPowerOn.vi"/>
-	<Item Name="m1m3_waitForCompletion_UncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_UncontrolledLowerM1M3.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAccelerometerWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAccelerometerWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAirSupplyStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAirSupplyStatus.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAirSupplyWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAirSupplyWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedAberrationForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedAberrationForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedActiveOpticsForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedActiveOpticsForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedAzimuthForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedAzimuthForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedOffsetForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedSettingsMatchStart.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedSettingsMatchStart.vi"/>
-	<Item Name="m1m3shmflushSamplesEventAppliedStaticForces.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventAppliedStaticForces.vi"/>
-	<Item Name="m1m3shmflushSamplesEventCellLightStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCellLightStatus.vi"/>
-	<Item Name="m1m3shmflushSamplesEventCellLightWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCellLightWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventCommandRejectionWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventCommandRejectionWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventDetailedState.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventDetailedState.vi"/>
-	<Item Name="m1m3shmflushSamplesEventDisplacementSensorWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventDisplacementSensorWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventErrorCode.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventErrorCode.vi"/>
-	<Item Name="m1m3shmflushSamplesEventForceActuatorDataRejection.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorDataRejection.vi"/>
-	<Item Name="m1m3shmflushSamplesEventForceActuatorForceWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorForceWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventForceActuatorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorInfo.vi"/>
-	<Item Name="m1m3shmflushSamplesEventForceActuatorSetpointWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventForceActuatorSetpointWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventGyroWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventGyroWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventHardpointActuatorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointActuatorInfo.vi"/>
-	<Item Name="m1m3shmflushSamplesEventHardpointActuatorMotionState.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointActuatorMotionState.vi"/>
-	<Item Name="m1m3shmflushSamplesEventHardpointMonitorInfo.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventHardpointMonitorInfo.vi"/>
-	<Item Name="m1m3shmflushSamplesEventILCWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventILCWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventInclinometerSensorWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventInclinometerSensorWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventInterlockStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventInterlockStatus.vi"/>
-	<Item Name="m1m3shmflushSamplesEventInterlockWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventInterlockWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventPowerStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerStatus.vi"/>
-	<Item Name="m1m3shmflushSamplesEventPowerSupplyStatus.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerSupplyStatus.vi"/>
-	<Item Name="m1m3shmflushSamplesEventPowerWarning.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventPowerWarning.vi"/>
-	<Item Name="m1m3shmflushSamplesEventSettingVersions.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventSettingVersions.vi"/>
-	<Item Name="m1m3shmflushSamplesEventSettingsApplied.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventSettingsApplied.vi"/>
-	<Item Name="m1m3shmflushSamplesEventSummaryState.vi" Type="VI" URL="../VIs/m1m3shmflushSamplesEventSummaryState.vi"/>
-	<Item Name="m1m3shmgetCurrentTime.vi" Type="VI" URL="../VIs/m1m3shmgetCurrentTime.vi"/>
+	<Item Name="m1m3_waitForCompletion_UpdatePID.vi" Type="VI" URL="../VIs/m1m3_waitForCompletion_UpdatePID.vi"/>
 	<Item Name="m1m3shminitFlags.vi" Type="VI" URL="../VIs/m1m3shminitFlags.vi"/>
-	<Item Name="m1m3shmmonitorCommandAbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandAbortRaiseM1M3.vi"/>
-	<Item Name="m1m3shmmonitorCommandApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3shmmonitorCommandApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3shmmonitorCommandApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3shmmonitorCommandApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandApplyAberrationByForces.vi"/>
-	<Item Name="m1m3shmmonitorCommandApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandApplyOffsetForces.vi"/>
-	<Item Name="m1m3shmmonitorCommandClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandClearAOSCorrection.vi"/>
-	<Item Name="m1m3shmmonitorCommandClearAberration.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandClearAberration.vi"/>
-	<Item Name="m1m3shmmonitorCommandClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandClearOffsetForces.vi"/>
-	<Item Name="m1m3shmmonitorCommandDisable.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandDisable.vi"/>
-	<Item Name="m1m3shmmonitorCommandDisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandDisableHardpointChase.vi"/>
-	<Item Name="m1m3shmmonitorCommandEnable.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandEnable.vi"/>
-	<Item Name="m1m3shmmonitorCommandEnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandEnableHardpointChase.vi"/>
-	<Item Name="m1m3shmmonitorCommandEnterEngineering.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandEnterEngineering.vi"/>
-	<Item Name="m1m3shmmonitorCommandExitEngineering.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandExitEngineering.vi"/>
-	<Item Name="m1m3shmmonitorCommandLowerM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandLowerM1M3.vi"/>
-	<Item Name="m1m3shmmonitorCommandMoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandMoveHardpointActuators.vi"/>
-	<Item Name="m1m3shmmonitorCommandNone.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandNone.vi"/>
-	<Item Name="m1m3shmmonitorCommandPositionM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandPositionM1M3.vi"/>
-	<Item Name="m1m3shmmonitorCommandRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandRaiseM1M3.vi"/>
-	<Item Name="m1m3shmmonitorCommandShutdown.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandShutdown.vi"/>
-	<Item Name="m1m3shmmonitorCommandStandby.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandStandby.vi"/>
-	<Item Name="m1m3shmmonitorCommandStart.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandStart.vi"/>
-	<Item Name="m1m3shmmonitorCommandStopHardpointMotion.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandStopHardpointMotion.vi"/>
-	<Item Name="m1m3shmmonitorCommandTestAir.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTestAir.vi"/>
-	<Item Name="m1m3shmmonitorCommandTestForceActuator.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTestForceActuator.vi"/>
-	<Item Name="m1m3shmmonitorCommandTestHardpoint.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTestHardpoint.vi"/>
-	<Item Name="m1m3shmmonitorCommandTranslateM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTranslateM1M3.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnAirOff.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnAirOff.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnAirOn.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnAirOn.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnLightsOff.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnLightsOff.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnLightsOn.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnLightsOn.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnPowerOff.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnPowerOff.vi"/>
-	<Item Name="m1m3shmmonitorCommandTurnPowerOn.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandTurnPowerOn.vi"/>
-	<Item Name="m1m3shmmonitorCommandUncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3shmmonitorCommandUncontrolledLowerM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderAbortRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderAbortRaiseM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderApplyAOSCorrectionByBendingModes.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderApplyAOSCorrectionByBendingModes.vi"/>
-	<Item Name="m1m3shmsalCommanderApplyAOSCorrectionByForces.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderApplyAOSCorrectionByForces.vi"/>
-	<Item Name="m1m3shmsalCommanderApplyAberrationByBendingModes.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderApplyAberrationByBendingModes.vi"/>
-	<Item Name="m1m3shmsalCommanderApplyAberrationByForces.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderApplyAberrationByForces.vi"/>
-	<Item Name="m1m3shmsalCommanderApplyOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderApplyOffsetForces.vi"/>
-	<Item Name="m1m3shmsalCommanderClearAOSCorrection.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderClearAOSCorrection.vi"/>
-	<Item Name="m1m3shmsalCommanderClearAberration.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderClearAberration.vi"/>
-	<Item Name="m1m3shmsalCommanderClearOffsetForces.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderClearOffsetForces.vi"/>
-	<Item Name="m1m3shmsalCommanderDisable.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderDisable.vi"/>
-	<Item Name="m1m3shmsalCommanderDisableHardpointChase.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderDisableHardpointChase.vi"/>
-	<Item Name="m1m3shmsalCommanderEnable.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderEnable.vi"/>
-	<Item Name="m1m3shmsalCommanderEnableHardpointChase.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderEnableHardpointChase.vi"/>
-	<Item Name="m1m3shmsalCommanderEnterEngineering.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderEnterEngineering.vi"/>
-	<Item Name="m1m3shmsalCommanderExitEngineering.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderExitEngineering.vi"/>
-	<Item Name="m1m3shmsalCommanderLowerM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderLowerM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderMoveHardpointActuators.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderMoveHardpointActuators.vi"/>
-	<Item Name="m1m3shmsalCommanderNone.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderNone.vi"/>
-	<Item Name="m1m3shmsalCommanderPositionM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderPositionM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderRaiseM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderRaiseM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderShutdown.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderShutdown.vi"/>
-	<Item Name="m1m3shmsalCommanderStandby.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderStandby.vi"/>
-	<Item Name="m1m3shmsalCommanderStart.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderStart.vi"/>
-	<Item Name="m1m3shmsalCommanderStopHardpointMotion.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderStopHardpointMotion.vi"/>
-	<Item Name="m1m3shmsalCommanderTestAir.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTestAir.vi"/>
-	<Item Name="m1m3shmsalCommanderTestForceActuator.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTestForceActuator.vi"/>
-	<Item Name="m1m3shmsalCommanderTestHardpoint.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTestHardpoint.vi"/>
-	<Item Name="m1m3shmsalCommanderTranslateM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTranslateM1M3.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnAirOff.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnAirOff.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnAirOn.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnAirOn.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnLightsOff.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnLightsOff.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnLightsOn.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnLightsOn.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnPowerOff.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnPowerOff.vi"/>
-	<Item Name="m1m3shmsalCommanderTurnPowerOn.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderTurnPowerOn.vi"/>
-	<Item Name="m1m3shmsalCommanderUncontrolledLowerM1M3.vi" Type="VI" URL="../VIs/m1m3shmsalCommanderUncontrolledLowerM1M3.vi"/>
 </Library>

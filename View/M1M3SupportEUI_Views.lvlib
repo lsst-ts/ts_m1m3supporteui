@@ -5,12 +5,18 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Utilities" Type="Folder">
+		<Item Name="Boolean to String.vi" Type="VI" URL="../Utilities/Boolean to String.vi"/>
+		<Item Name="Close References.vi" Type="VI" URL="../Utilities/Close References.vi"/>
 		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
+		<Item Name="Obtain Timestamp.vi" Type="VI" URL="../Utilities/Obtain Timestamp.vi"/>
+		<Item Name="ObtainControlNames.vi" Type="VI" URL="../Utilities/ObtainControlNames.vi"/>
+		<Item Name="PlaceDataInControls.vi" Type="VI" URL="../Utilities/PlaceDataInControls.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
+		<Item Name="VariantTest.vi" Type="VI" URL="../Utilities/VariantTest.vi"/>
 	</Item>
 	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
