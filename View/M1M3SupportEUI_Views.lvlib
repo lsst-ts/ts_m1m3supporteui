@@ -19,6 +19,7 @@
 		<Item Name="VariantTest.vi" Type="VI" URL="../Utilities/VariantTest.vi"/>
 	</Item>
 	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
+	<Item Name="Air Control View.vi" Type="VI" URL="../Air Control View.vi"/>
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
