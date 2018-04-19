@@ -16,6 +16,8 @@
 		<Item Name="PlaceDataInControls.vi" Type="VI" URL="../Utilities/PlaceDataInControls.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
+		<Item Name="Turn Power Off Command.vi" Type="VI" URL="../Turn Power Off Command.vi"/>
+		<Item Name="Turn Power On Command.vi" Type="VI" URL="../Turn Power On Command.vi"/>
 		<Item Name="VariantTest.vi" Type="VI" URL="../Utilities/VariantTest.vi"/>
 	</Item>
 	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
@@ -31,6 +33,7 @@
 	<Item Name="Interlock View.vi" Type="VI" URL="../Interlock View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
 	<Item Name="Other Status.vi" Type="VI" URL="../Other Status.vi"/>
+	<Item Name="Power PID View.vi" Type="VI" URL="../Power PID View.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
 	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
