@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">369131520</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
+	<Item Name="ActuatorLocationPath.ctl" Type="VI" URL="../ActuatorLocationPath.ctl"/>
 	<Item Name="CommandTypes.ctl" Type="VI" URL="../CommandTypes.ctl"/>
 	<Item Name="ConnectionSettings.ctl" Type="VI" URL="../ConnectionSettings.ctl"/>
 	<Item Name="Display Displacement Types.ctl" Type="VI" URL="../Display Displacement Types.ctl"/>

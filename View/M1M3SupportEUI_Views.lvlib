@@ -14,6 +14,7 @@
 		<Item Name="Obtain Timestamp.vi" Type="VI" URL="../Utilities/Obtain Timestamp.vi"/>
 		<Item Name="ObtainControlNames.vi" Type="VI" URL="../Utilities/ObtainControlNames.vi"/>
 		<Item Name="PlaceDataInControls.vi" Type="VI" URL="../Utilities/PlaceDataInControls.vi"/>
+		<Item Name="PullValuesFromControls.vi" Type="VI" URL="../Utilities/PullValuesFromControls.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
 		<Item Name="Turn Power Off Command.vi" Type="VI" URL="../Turn Power Off Command.vi"/>
@@ -26,6 +27,7 @@
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
 	<Item Name="FA Graphic View.vi" Type="VI" URL="../FA Graphic View.vi"/>
+	<Item Name="FA OffsetForces View.vi" Type="VI" URL="../FA OffsetForces View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
 	<Item Name="FPGA Values View.vi" Type="VI" URL="../FPGA Values View.vi"/>
 	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
