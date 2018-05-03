@@ -9,7 +9,9 @@
 		<Item Name="Close References.vi" Type="VI" URL="../Utilities/Close References.vi"/>
 		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
+		<Item Name="GenerateControlList.vi" Type="VI" URL="../Utilities/GenerateControlList.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
+		<Item Name="GetControlRefsFromVi.vi" Type="VI" URL="../Utilities/GetControlRefsFromVi.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
 		<Item Name="Obtain Timestamp.vi" Type="VI" URL="../Utilities/Obtain Timestamp.vi"/>
 		<Item Name="ObtainControlNames.vi" Type="VI" URL="../Utilities/ObtainControlNames.vi"/>
@@ -26,8 +28,8 @@
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
+	<Item Name="FA Forces View.vi" Type="VI" URL="../FA Forces View.vi"/>
 	<Item Name="FA Graphic View.vi" Type="VI" URL="../FA Graphic View.vi"/>
-	<Item Name="FA OffsetForces View.vi" Type="VI" URL="../FA OffsetForces View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
 	<Item Name="FPGA Values View.vi" Type="VI" URL="../FPGA Values View.vi"/>
 	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
@@ -36,6 +38,7 @@
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>
 	<Item Name="Other Status.vi" Type="VI" URL="../Other Status.vi"/>
 	<Item Name="Power PID View.vi" Type="VI" URL="../Power PID View.vi"/>
+	<Item Name="RegExTest.vi" Type="VI" URL="../RegExTest.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
 	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>

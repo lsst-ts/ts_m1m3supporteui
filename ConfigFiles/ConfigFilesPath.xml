@@ -4,8 +4,8 @@
 <LvVariant>
 <Name>Value</Name>
 <Path>
-<Name>Actuator Location Path</Name>
-<Val>/opt/CODE/ts_m1m3supporteui/ConfigFiles/actuatorLocations.txt</Val>
+<Name>Config Files Path</Name>
+<Val>/opt/CODE/ts_m1m3supporteui/ConfigFiles</Val>
 </Path>
 </LvVariant>
 </LVData>
