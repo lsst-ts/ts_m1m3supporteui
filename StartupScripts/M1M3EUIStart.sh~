@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+gnome-terminal  --window-with-profile=M1M3EUI -e /opt/CODE/builds/ts_M1M3SupportEUI/scripts/startup.sh
+

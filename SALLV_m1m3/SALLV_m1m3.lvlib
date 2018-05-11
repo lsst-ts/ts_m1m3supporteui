@@ -4,6 +4,7 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">369131520</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Item Name="DataTypes" Type="Folder">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Item Name="AccelerometerData.ctl" Type="VI" URL="../DataTypes/AccelerometerData.ctl"/>
 		<Item Name="ForceActuatorData.ctl" Type="VI" URL="../DataTypes/ForceActuatorData.ctl"/>
 		<Item Name="GyroData.ctl" Type="VI" URL="../DataTypes/GyroData.ctl"/>

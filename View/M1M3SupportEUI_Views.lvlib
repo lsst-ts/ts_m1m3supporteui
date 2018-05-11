@@ -8,8 +8,10 @@
 		<Item Name="Boolean to String.vi" Type="VI" URL="../Utilities/Boolean to String.vi"/>
 		<Item Name="Close References.vi" Type="VI" URL="../Utilities/Close References.vi"/>
 		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
+		<Item Name="FA Data Type List.vi" Type="VI" URL="../Utilities/FA Data Type List.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="GenerateControlList.vi" Type="VI" URL="../Utilities/GenerateControlList.vi"/>
+		<Item Name="Get FA Data.vi" Type="VI" URL="../Utilities/Get FA Data.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
 		<Item Name="GetControlRefsFromVi.vi" Type="VI" URL="../Utilities/GetControlRefsFromVi.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
@@ -40,6 +42,7 @@
 	<Item Name="Power PID View.vi" Type="VI" URL="../Power PID View.vi"/>
 	<Item Name="RegExTest.vi" Type="VI" URL="../RegExTest.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
+	<Item Name="TestingEvents.vi" Type="VI" URL="../TestingEvents.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
 	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
 </Library>
