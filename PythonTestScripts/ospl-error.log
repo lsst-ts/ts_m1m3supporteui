@@ -96,3 +96,30 @@ Node        : m1m3testlap.lsst.org
 Process     : python3.6 <20970>
 Thread      : spliced 7f463bc42700
 Internals   : 6.7.170523OSS///OpenSplice domain service/spliced.c/633/0/1526069101.470439272/0
+========================================================================================
+Report      : ERROR
+Date        : Mon May 14 07:36:38 UTC 2018
+Description : dlopen of 'durability' failed: durability: cannot open shared object file: No such file or directory
+Node        : aclementsdell.lsst.org
+Process     : python3.6 <17684>
+Thread      : spliced 7f457cde6700
+Internals   : 6.7.170523OSS///os_libraryOpen/os_library.c/70/0/1526283398.378239399/0
+========================================================================================
+Report      : ERROR
+Date        : Mon May 14 07:36:38 UTC 2018
+Description : Problem opening 'durability'
+
+Node        : aclementsdell.lsst.org
+Process     : python3.6 <17684>
+Thread      : spliced 7f457cde6700
+Internals   : 6.7.170523OSS///OpenSplice domain service/spliced.c/633/0/1526283398.378268987/0
+========================================================================================
+Context     : DDS::OpenSplice::FooDataWriter_impl::write
+Date        : Mon May 14 07:37:56 UTC 2018
+Node        : aclementsdell.lsst.org
+Process     : python3.6 <17684>
+Thread      : 7f4484ff9700
+Internals   : FooDataWriter_impl.cpp/232/6.7.170523OSS///0
+----------------------------------------------------------------------------------------
+Report      : Already deleted: Object is already deleted.
+Internals   : DDS::OpenSplice::CppSuperClass::check/CppSuperClass.cpp/229/9/1526283476.350999734
