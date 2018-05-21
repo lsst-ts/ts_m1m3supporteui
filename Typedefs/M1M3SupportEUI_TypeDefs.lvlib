@@ -7,6 +7,7 @@
 	<Item Name="ActuatorLocationPath.ctl" Type="VI" URL="../ActuatorLocationPath.ctl"/>
 	<Item Name="CommandTypes.ctl" Type="VI" URL="../CommandTypes.ctl"/>
 	<Item Name="ConnectionSettings.ctl" Type="VI" URL="../ConnectionSettings.ctl"/>
+	<Item Name="Control Name Types.ctl" Type="VI" URL="../Control Name Types.ctl"/>
 	<Item Name="Display Displacement Types.ctl" Type="VI" URL="../Display Displacement Types.ctl"/>
 	<Item Name="EUI Events.ctl" Type="VI" URL="../EUI Events.ctl"/>
 	<Item Name="FA Data And Events.ctl" Type="VI" URL="../FA Data And Events.ctl"/>

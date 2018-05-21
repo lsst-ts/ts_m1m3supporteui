@@ -105,7 +105,6 @@ def init(mgr):
   logEvents.append("m1m3_logevent_AppliedForces")
   logEvents.append("m1m3_logevent_RejectedForces")
 
-
   # Telemetry Publishers
   telemetryTopics= []
   telemetryTopics.append("m1m3_AccelerometerData")
@@ -144,7 +143,7 @@ def init(mgr):
 ############################################################
 # returns 0 or 1 with a 5% chance of returning 1
 def generateBoolean(percentChance:int = 5):
-  return 1 if (random.randint(0,99) < percentChance) else 0 
+  return 1 if (random.randint(0, 100) < percentChance) else 0 
 
 ############################################################
 # Generating Telemetry for the Accelerometers
@@ -617,7 +616,7 @@ def generateCommandRejectionEvent(event, waittime):
     commandRejectionData.Reason = "You are not a Dalek, you cannot exterminate."
     commandRejectionData.priority = priority
     mgr.logEvent_CommandRejectionWarning(commandRejectionData, priority)
-    time.sleep(10)
+    time.sleep(random.randint(30, 60))
 
     event.wait(waittime)
   print("Command Rejection Thread shutdown complete.")
@@ -636,7 +635,7 @@ def generateErrorCodeEvent(event, waittime):
     errorCodeData.DetailedErrorCode = 2
     errorCodeData.priority = priority
     mgr.logEvent_ErrorCode(errorCodeData, priority)
-    time.sleep(10)
+    time.sleep(random.randint(30, 60))
     
     event.wait(waittime)
   print("Error Code Thread shutdown complete.")
@@ -971,6 +970,14 @@ def generateForceActuatorEvents(event, waittime):
         else:
           forceActuatorWarningData.MezzanineBackupCalibrationError[i] = 0
 
+      forceActuatorWarningData.AnyMezzanineEventTrapReset = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceActuatorWarningData.AnyMezzanineEventTrapReset = 1
+          forceActuatorWarningData.MezzanineEventTrapReset[i] = 1
+        else:
+          forceActuatorWarningData.MezzanineEventTrapReset[i] = 0
+
       forceActuatorWarningData.AnyMezzanineApplicationMissing = 0
       for i in range(0,156):
         if (generateBoolean() == 1):
@@ -1007,27 +1014,7 @@ def generateForceActuatorEvents(event, waittime):
         mgr.logEvent_ForceActuatorWarning(forceActuatorWarningData, priority)
 
     elif eventChoice == 5:
-
-      appliedForcesData = m1m3_logevent_AppliedForcesC()
-      appliedForcesData.Timestamp = timestamp
-      for i in range(0, 12):
-        appliedForcesData.XForces[i] = random.uniform(-1000.0, 1000.0)
-        
-      for i in range(0, 100):
-        appliedForcesData.YForces[i] = random.uniform(-1000.0, 1000.0)
-        
-      for i in range(0, 156):
-        appliedForcesData.ZForces[i] = random.uniform(-1000.0, 1000.0)
-
-      appliedForcesData.Fx = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.Fy = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.Fz = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.Mx = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.My = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.Mz = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.ForceMagnitude = random.uniform(-1000.0, 1000.0)
-      appliedForcesData.priority = priority
-      mgr.logEvent_AppliedForces(appliedForcesData, priority)
+      pass
 
     elif eventChoice == 6:
 
@@ -1055,6 +1042,39 @@ def generateForceActuatorEvents(event, waittime):
     time.sleep(random.randint(1, 20))
     event.wait(waittime)
   print("Force Actuator Events Thread shutdown complete.")
+
+############################################################
+# Generating Applied Forces Events for the Force Actuators
+def generateAppliedForcesEvent(event, waittime):
+  priority = 10
+  while not event.isSet():
+    d = datetime.today()
+    timestamp = time.mktime(d.timetuple())
+
+    appliedForcesData = m1m3_logevent_AppliedForcesC()
+    appliedForcesData.Timestamp = timestamp
+    for i in range(0, 12):
+      appliedForcesData.XForces[i] = random.uniform(-1000.0, 1000.0)
+        
+    for i in range(0, 100):
+      appliedForcesData.YForces[i] = random.uniform(-1000.0, 1000.0)
+        
+    for i in range(0, 156):
+      appliedForcesData.ZForces[i] = random.uniform(-1000.0, 1000.0)
+
+    appliedForcesData.Fx = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.Fy = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.Fz = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.Mx = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.My = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.Mz = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.ForceMagnitude = random.uniform(-1000.0, 1000.0)
+    appliedForcesData.priority = priority
+    mgr.logEvent_AppliedForces(appliedForcesData, priority)
+
+    time.sleep(.02)
+    event.wait(waittime)
+  print("Applied Forces Events Thread shutdown complete.")
 
 ############################################################
 # Generating Telemetry for the Force Actuators
@@ -2131,6 +2151,12 @@ forceActuatorDataThread = threading.Thread(name='ForceActuatorTelemetry',
                              args=(forceActuatorDataEvent, 0.001))
 forceActuatorDataThread.start()
 #########################
+appliedForcesEvent = threading.Event()
+appliedForcesThread = threading.Thread(name='AppliedForcesEvent',
+                             target=generateAppliedForcesEvent,
+                             args=(appliedForcesEvent, 0.001))
+appliedForcesThread.start()
+#########################
 forceActuatorEventsEvent = threading.Event()
 forceActuatorEventsThread = threading.Thread(name='ForceActuatorEvents',
                              target=generateForceActuatorEvents,
@@ -2196,6 +2222,7 @@ while(True):
     commandRejectionEvent.set()
     errorCodeEvent.set()
     forceActuatorDataEvent.set()
+    appliedForcesEvent.set()
     forceActuatorEventsEvent.set()
     gyroEvent.set()
     hardpointActEvent.set()
