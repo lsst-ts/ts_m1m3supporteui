@@ -104,6 +104,8 @@ def init(mgr):
   logEvents.append("m1m3_logevent_ForceActuatorWarning")
   logEvents.append("m1m3_logevent_AppliedForces")
   logEvents.append("m1m3_logevent_RejectedForces")
+  logEvents.append("m1m3_logevent_SettingsApplied")
+  logEvents.append("m1m3_logevent_SettingVersions")
 
   # Telemetry Publishers
   telemetryTopics= []
@@ -629,12 +631,33 @@ def generateErrorCodeEvent(event, waittime):
     timestamp = time.mktime(d.timetuple())
     priority = 10
 
-    errorCodeData = m1m3_logevent_ErrorCodeC()
-    errorCodeData.Timestamp = timestamp
-    errorCodeData.ErrorCode = 1
-    errorCodeData.DetailedErrorCode = 2
-    errorCodeData.priority = priority
-    mgr.logEvent_ErrorCode(errorCodeData, priority)
+    #randomly choose an event to issue
+    eventChoice = random.randint(1,4)
+
+    if eventChoice == 1:
+      errorCodeData = m1m3_logevent_ErrorCodeC()
+      errorCodeData.Timestamp = timestamp
+      errorCodeData.ErrorCode = random.randint(1,101)
+      errorCodeData.DetailedErrorCode = random.randint(1000, 1999)
+      errorCodeData.priority = priority
+      mgr.logEvent_ErrorCode(errorCodeData, priority)
+
+    elif eventChoice == 2:
+
+      settingsAppliedData = m1m3_logevent_SettingsAppliedC()
+      settingsAppliedData.Timestamp = timestamp
+      settingsAppliedData.Settings = "Set of Settings that have not been set"
+      settingsAppliedData.priority = priority
+      mgr.logEvent_SettingsApplied(settingsAppliedData, priority)
+
+    elif eventChoice == 3:
+      
+      settingVersionsData = m1m3_logevent_SettingVersionsC()
+      settingVersionsData.Timestamp = timestamp
+      settingVersionsData.RecommendedSettingsVersion = "Unrecommended Version of Settings"
+      settingVersionsData.priority = priority
+      mgr.logEvent_SettingVersions(settingVersionsData, priority)
+
     time.sleep(random.randint(30, 60))
     
     event.wait(waittime)
@@ -649,7 +672,7 @@ def generateForceActuatorEvents(event, waittime):
     priority = 10
 
     #randomly choose an event to issue
-    eventChoice = random.randint(1,6)
+    eventChoice = random.randint(1,7)
 
     if eventChoice == 1:
       forceActuatorForceWarningData = m1m3_logevent_ForceActuatorForceWarningC()
