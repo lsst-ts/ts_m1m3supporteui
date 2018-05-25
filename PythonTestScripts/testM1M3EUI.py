@@ -69,43 +69,44 @@ def init(mgr):
 
   # Air Commands
   airCommands = []
-  airCommands.append("m1m3_command_TurnAirOn")
-  airCommands.append("m1m3_command_TurnAirOff")
   airCommands.append("m1m3_command_TestAir")
+  airCommands.append("m1m3_command_TurnAirOff")
+  airCommands.append("m1m3_command_TurnAirOn")
 
   # Misc Commands
   miscCommands = []
+  miscCommands.append("m1m3_command_ResetPID")
   miscCommands.append("m1m3_command_TurnPowerOn")
   miscCommands.append("m1m3_command_TurnPowerOff")
-  miscCommands.append("m1m3_command_ResetPID")
   miscCommands.append("m1m3_command_UpdatePID")
 
   # Events
   logEvents = []
-  logEvents.append("m1m3_logevent_HardpointActuatorInfo")
-  logEvents.append("m1m3_logevent_HardpointActuatorState")
-  logEvents.append("m1m3_logevent_HardpointActuatorWarning")
-  logEvents.append("m1m3_logevent_HardpointMonitorInfo")
-  logEvents.append("m1m3_logevent_HardpointMonitorState")
-  logEvents.append("m1m3_logevent_InterlockStatus")
-  logEvents.append("m1m3_logevent_InterlockWarning")
-  logEvents.append("m1m3_logevent_DetailedState")
-  logEvents.append("m1m3_logevent_SummaryState")
   logEvents.append("m1m3_logevent_AirSupplyWarning")
   logEvents.append("m1m3_logevent_AirSupplyStatus")
-  logEvents.append("m1m3_logevent_PowerStatus")
-  logEvents.append("m1m3_logevent_PowerWarning")
-  logEvents.append("m1m3_logevent_PIDInfo")
+  logEvents.append("m1m3_logevent_AppliedForces")
   logEvents.append("m1m3_logevent_CommandRejectionWarning")
+  logEvents.append("m1m3_logevent_DetailedState")
   logEvents.append("m1m3_logevent_ErrorCode")
   logEvents.append("m1m3_logevent_ForceActuatorForceWarning")
   logEvents.append("m1m3_logevent_ForceActuatorInfo")
   logEvents.append("m1m3_logevent_ForceActuatorState")
   logEvents.append("m1m3_logevent_ForceActuatorWarning")
-  logEvents.append("m1m3_logevent_AppliedForces")
+  logEvents.append("m1m3_logevent_HardpointActuatorInfo")
+  logEvents.append("m1m3_logevent_HardpointActuatorState")
+  logEvents.append("m1m3_logevent_HardpointActuatorWarning")
+  logEvents.append("m1m3_logevent_HardpointMonitorInfo")
+  logEvents.append("m1m3_logevent_HardpointMonitorState")
+  logEvents.append("m1m3_logevent_HardpointMonitorWarning")
+  logEvents.append("m1m3_logevent_InterlockStatus")
+  logEvents.append("m1m3_logevent_InterlockWarning")
+  logEvents.append("m1m3_logevent_PIDInfo")
+  logEvents.append("m1m3_logevent_PowerStatus")
+  logEvents.append("m1m3_logevent_PowerWarning")
   logEvents.append("m1m3_logevent_RejectedForces")
   logEvents.append("m1m3_logevent_SettingsApplied")
   logEvents.append("m1m3_logevent_SettingVersions")
+  logEvents.append("m1m3_logevent_SummaryState")
 
   # Telemetry Publishers
   telemetryTopics= []
@@ -1198,137 +1199,53 @@ def generateHardpointEvents(event, waittime):
     priority = 10
 
     #randomly choose an event to issue
-    eventChoice = random.randint(1,6)
+    eventChoice = random.randint(1,7)
 
     if eventChoice == 1:
       HardpointActuatorInfoData = m1m3_logevent_HardpointActuatorInfoC()
       HardpointActuatorInfoData.Timestamp = timestamp
-      HardpointActuatorInfoData.ReferenceId[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferenceId[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferenceId[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferenceId[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferenceId[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferenceId[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.ReferencePosition[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.ModbusSubnet[0] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusSubnet[1] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusSubnet[2] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusSubnet[3] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusSubnet[4] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusSubnet[5] = random.randint(1, 4)
-      HardpointActuatorInfoData.ModbusAddress[0] = random.randint(0, 255)
-      HardpointActuatorInfoData.ModbusAddress[1] = random.randint(0, 255)
-      HardpointActuatorInfoData.ModbusAddress[2] = random.randint(0, 255)
-      HardpointActuatorInfoData.ModbusAddress[3] = random.randint(0, 255)
-      HardpointActuatorInfoData.ModbusAddress[4] = random.randint(0, 255)
-      HardpointActuatorInfoData.ModbusAddress[5] = random.randint(0, 255)
-      HardpointActuatorInfoData.XPosition[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.XPosition[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.XPosition[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.XPosition[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.XPosition[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.XPosition[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.YPosition[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ZPosition[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.ILCUniqueId[0] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCUniqueId[1] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCUniqueId[2] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCUniqueId[3] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCUniqueId[4] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCUniqueId[5] = random.randint(1, 999999)
-      HardpointActuatorInfoData.ILCApplicationType[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCApplicationType[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCApplicationType[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCApplicationType[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCApplicationType[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCApplicationType[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeType[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.ILCSelectedOptions[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.NetworkNodeOptions[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.MajorRevision[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.MinorRevision[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[0] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[1] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[2] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[3] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[4] = random.randint(1, 99)
-      HardpointActuatorInfoData.ADCScanRate[5] = random.randint(1, 99)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellCoefficient[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellOffset[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.MainLoadCellSensitivity[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellCoefficient[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellOffset[5] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[0] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[1] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[2] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[3] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[4] = random.uniform(0.0, 99.9)
-      HardpointActuatorInfoData.BackupLoadCellSensitivity[5] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ReferenceId[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ReferencePosition[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ModbusSubnet[i] = random.randint(1, 4)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ModbusAddress[i] = random.randint(0, 255)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.XPosition[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.YPosition[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ZPosition[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ILCUniqueId[i] = random.randint(1, 999999)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ILCApplicationType[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.NetworkNodeType[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ILCSelectedOptions[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.NetworkNodeOptions[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.MajorRevision[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.MinorRevision[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.ADCScanRate[i] = random.randint(1, 99)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.MainLoadCellCoefficient[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.MainLoadCellOffset[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.MainLoadCellSensitivity[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.BackupLoadCellCoefficient[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.BackupLoadCellOffset[i] = random.uniform(0.0, 99.9)
+      for i in range(0, 6):
+        HardpointActuatorInfoData.BackupLoadCellSensitivity[i] = random.uniform(0.0, 99.9)
       HardpointActuatorInfoData.priority = priority
       mgr.logEvent_HardpointActuatorInfo(HardpointActuatorInfoData, priority)
 
@@ -1336,18 +1253,10 @@ def generateHardpointEvents(event, waittime):
       
       hardpointActuatorStateData = m1m3_logevent_HardpointActuatorStateC()
       hardpointActuatorStateData.Timestamp = timestamp
-      hardpointActuatorStateData.ILCState[0] = random.randint(0,99)
-      hardpointActuatorStateData.ILCState[1] = random.randint(0,99)
-      hardpointActuatorStateData.ILCState[2] = random.randint(0,99)
-      hardpointActuatorStateData.ILCState[3] = random.randint(0,99)
-      hardpointActuatorStateData.ILCState[4] = random.randint(0,99)
-      hardpointActuatorStateData.ILCState[5] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[0] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[1] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[2] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[3] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[4] = random.randint(0,99)
-      hardpointActuatorStateData.MotionState[5] = random.randint(0,99)
+      for i in range(0, 6):
+        hardpointActuatorStateData.ILCState[i] = random.randint(0,1)
+      for i in range(0, 6):
+        hardpointActuatorStateData.MotionState[i] = random.randint(0,1)
       hardpointActuatorStateData.priority = priority
       mgr.logEvent_HardpointActuatorState(hardpointActuatorStateData, priority)
 
@@ -1359,7 +1268,7 @@ def generateHardpointEvents(event, waittime):
       hardpointActuatorWarningData.AnyWarning = 1
 
       hardpointActuatorWarningData.AnyMajorFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyMajorFault = 1
           hardpointActuatorWarningData.MajorFault[i] = 1
@@ -1367,7 +1276,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.MajorFault[i] = 0
 
       hardpointActuatorWarningData.AnyMinorFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyMinorFault = 1
           hardpointActuatorWarningData.MinorFault[i] = 1
@@ -1375,7 +1284,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.MinorFault[i] = 0
 
       hardpointActuatorWarningData.AnyFaultOverride = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyFaultOverride = 1
           hardpointActuatorWarningData.FaultOverride[i] = 1
@@ -1383,7 +1292,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.FaultOverride[i] = 0
 
       hardpointActuatorWarningData.AnyMainCalibrationError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyMainCalibrationError = 1
           hardpointActuatorWarningData.MainCalibrationError[i] = 1
@@ -1391,7 +1300,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.MainCalibrationError[i] = 0
 
       hardpointActuatorWarningData.AnyBackupCalibrationError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyBackupCalibrationError = 1
           hardpointActuatorWarningData.BackupCalibrationError[i] = 1
@@ -1399,7 +1308,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.BackupCalibrationError[i] = 0
 
       hardpointActuatorWarningData.AnyLimitSwitch1Operated = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyLimitSwitch1Operated = 1
           hardpointActuatorWarningData.LimitSwitch1Operated[i] = 1
@@ -1407,7 +1316,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.LimitSwitch1Operated[i] = 0
 
       hardpointActuatorWarningData.AnyLimitSwitch2Operated = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyLimitSwitch2Operated = 1
           hardpointActuatorWarningData.LimitSwitch2Operated[i] = 1
@@ -1415,7 +1324,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.LimitSwitch2Operated[i] = 0
 
       hardpointActuatorWarningData.AnyUniqueIdCRCError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyUniqueIdCRCError = 1
           hardpointActuatorWarningData.UniqueIdCRCError[i] = 1
@@ -1423,7 +1332,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.UniqueIdCRCError[i] = 0
 
       hardpointActuatorWarningData.AnyApplicationTypeMismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyApplicationTypeMismatch = 1
           hardpointActuatorWarningData.ApplicationTypeMismatch[i] = 1
@@ -1431,7 +1340,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.ApplicationTypeMismatch[i] = 0
 
       hardpointActuatorWarningData.AnyApplicationMissing = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyApplicationMissing = 1
           hardpointActuatorWarningData.ApplicationMissing[i] = 1
@@ -1439,7 +1348,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.ApplicationMissing[i] = 0
 
       hardpointActuatorWarningData.AnyApplicationCRCMismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyApplicationCRCMismatch = 1
           hardpointActuatorWarningData.ApplicationCRCMismatch[i] = 1
@@ -1447,7 +1356,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.ApplicationCRCMismatch[i] = 0
 
       hardpointActuatorWarningData.AnyOneWireMissing = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyOneWireMissing = 1
           hardpointActuatorWarningData.OneWireMissing[i] = 1
@@ -1455,7 +1364,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.OneWireMissing[i] = 0
 
       hardpointActuatorWarningData.AnyOneWire1Mismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyOneWire1Mismatch = 1
           hardpointActuatorWarningData.OneWire1Mismatch[i] = 1
@@ -1463,7 +1372,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.OneWire1Mismatch[i] = 0
 
       hardpointActuatorWarningData.AnyOneWire2Mismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyOneWire2Mismatch = 1
           hardpointActuatorWarningData.OneWire2Mismatch[i] = 1
@@ -1471,7 +1380,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.OneWire2Mismatch[i] = 0
 
       hardpointActuatorWarningData.AnyWatchdogReset = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyWatchdogReset = 1
           hardpointActuatorWarningData.WatchdogReset[i] = 1
@@ -1479,7 +1388,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.WatchdogReset[i] = 0
 
       hardpointActuatorWarningData.AnyBrownOut = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyBrownOut = 1
           hardpointActuatorWarningData.BrownOut[i] = 1
@@ -1487,7 +1396,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.BrownOut[i] = 0
 
       hardpointActuatorWarningData.AnyEventTrapReset = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyEventTrapReset = 1
           hardpointActuatorWarningData.EventTrapReset[i] = 1
@@ -1495,7 +1404,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.EventTrapReset[i] = 0
 
       hardpointActuatorWarningData.AnyMotorDriverFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyMotorDriverFault = 1
           hardpointActuatorWarningData.MotorDriverFault[i] = 1
@@ -1503,7 +1412,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.MotorDriverFault[i] = 0
 
       hardpointActuatorWarningData.AnySSRPowerFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnySSRPowerFault = 1
           hardpointActuatorWarningData.SSRPowerFault[i] = 1
@@ -1511,7 +1420,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.SSRPowerFault[i] = 0
 
       hardpointActuatorWarningData.AnyAuxPowerFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyAuxPowerFault = 1
           hardpointActuatorWarningData.AuxPowerFault[i] = 1
@@ -1519,7 +1428,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.AuxPowerFault[i] = 0
 
       hardpointActuatorWarningData.AnySMCPowerFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnySMCPowerFault = 1
           hardpointActuatorWarningData.SMCPowerFault[i] = 1
@@ -1527,7 +1436,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.SMCPowerFault[i] = 0
 
       hardpointActuatorWarningData.AnyILCFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyILCFault = 1
           hardpointActuatorWarningData.ILCFault[i] = 1
@@ -1535,7 +1444,7 @@ def generateHardpointEvents(event, waittime):
           hardpointActuatorWarningData.ILCFault[i] = 0
 
       hardpointActuatorWarningData.AnyBroadcastCounterWarning = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointActuatorWarningData.AnyBroadcastCounterWarning = 1
           hardpointActuatorWarningData.BroadcastCounterWarning[i] = 1
@@ -1549,78 +1458,30 @@ def generateHardpointEvents(event, waittime):
 
       hardpointMonitorInfoData = m1m3_logevent_HardpointMonitorInfoC()
       hardpointMonitorInfoData.Timestamp = timestamp
-      hardpointMonitorInfoData.ReferenceId[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.ReferenceId[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.ReferenceId[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.ReferenceId[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.ReferenceId[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.ReferenceId[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.ModbusSubnet[0] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusSubnet[1] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusSubnet[2] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusSubnet[3] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusSubnet[4] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusSubnet[5] = random.randint(1, 4)
-      hardpointMonitorInfoData.ModbusAddress[0] = random.randint(0, 255)
-      hardpointMonitorInfoData.ModbusAddress[1] = random.randint(0, 255)
-      hardpointMonitorInfoData.ModbusAddress[2] = random.randint(0, 255)
-      hardpointMonitorInfoData.ModbusAddress[3] = random.randint(0, 255)
-      hardpointMonitorInfoData.ModbusAddress[4] = random.randint(0, 255)
-      hardpointMonitorInfoData.ModbusAddress[5] = random.randint(0, 255)
-      hardpointMonitorInfoData.ILCUniqueId[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCUniqueId[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCUniqueId[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCUniqueId[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCUniqueId[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCUniqueId[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.ILCApplicationType[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.NetworkNodeType[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MajorRevision[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MinorRevision[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineUniqueId[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineFirmwareType[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMajorRevision[5] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[0] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[1] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[2] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[3] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[4] = random.randint(1, 99)
-      hardpointMonitorInfoData.MezzanineMinorRevision[5] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.ReferenceId[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.ModbusSubnet[i] = random.randint(1, 4)
+      for i in range(0,6):
+        hardpointMonitorInfoData.ModbusAddress[i] = random.randint(0, 255)
+      for i in range(0,6):
+        hardpointMonitorInfoData.ILCUniqueId[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.ILCApplicationType[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.NetworkNodeType[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MajorRevision[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MinorRevision[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MezzanineUniqueId[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MezzanineFirmwareType[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MezzanineMajorRevision[i] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorInfoData.MezzanineMinorRevision[i] = random.randint(1, 99)
       hardpointMonitorInfoData.priority = priority
       mgr.logEvent_HardpointMonitorInfo(hardpointMonitorInfoData, priority)
 
@@ -1628,12 +1489,8 @@ def generateHardpointEvents(event, waittime):
 
       hardpointMonitorStateData = m1m3_logevent_HardpointMonitorStateC()
       hardpointMonitorStateData.Timestamp = timestamp
-      hardpointMonitorStateData.ILCState[0] = random.randint(1, 99)
-      hardpointMonitorStateData.ILCState[1] = random.randint(1, 99)
-      hardpointMonitorStateData.ILCState[2] = random.randint(1, 99)
-      hardpointMonitorStateData.ILCState[3] = random.randint(1, 99)
-      hardpointMonitorStateData.ILCState[4] = random.randint(1, 99)
-      hardpointMonitorStateData.ILCState[5] = random.randint(1, 99)
+      for i in range(0,6):
+        hardpointMonitorStateData.ILCState[i] = random.randint(1, 99)
       hardpointMonitorStateData.priority = priority
       mgr.logEvent_HardpointMonitorState(hardpointMonitorStateData, priority)
 
@@ -1645,7 +1502,7 @@ def generateHardpointEvents(event, waittime):
       hardpointMonitorWarninginData.AnyWarning = 1 
 
       hardpointMonitorWarninginData.AnyMajorFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMajorFault = 1
           hardpointMonitorWarninginData.MajorFault[i] = 1
@@ -1653,7 +1510,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MajorFault[i] = 0
 
       hardpointMonitorWarninginData.AnyMinorFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMinorFault = 1
           hardpointMonitorWarninginData.MinorFault[i] =1
@@ -1661,7 +1518,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MinorFault[i] = 0
 
       hardpointMonitorWarninginData.AnyFaultOverride = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyFaultOverride = 1
           hardpointMonitorWarninginData.FaultOverride[i] = 1
@@ -1669,7 +1526,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.FaultOverride[i] = 0
 
       hardpointMonitorWarninginData.AnyInstrumentError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyInstrumentError = 1
           hardpointMonitorWarninginData.InstrumentError[i] = 1
@@ -1677,7 +1534,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.InstrumentError[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineError = 1
           hardpointMonitorWarninginData.MezzanineError[i] = 1
@@ -1685,7 +1542,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineError[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineBootloaderActive = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineBootloaderActive = 1
           hardpointMonitorWarninginData.MezzanineBootloaderActive[i] = 1
@@ -1693,7 +1550,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineBootloaderActive[i] = 0
 
       hardpointMonitorWarninginData.AnyUniqueIdCRCError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyUniqueIdCRCError = 1
           hardpointMonitorWarninginData.UniqueIdCRCError[i] = 1
@@ -1701,7 +1558,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.UniqueIdCRCError[i] = 0
 
       hardpointMonitorWarninginData.AnyApplicationTypeMismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyApplicationTypeMismatch = 1
           hardpointMonitorWarninginData.ApplicationTypeMismatch[i] = 1
@@ -1709,7 +1566,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.ApplicationTypeMismatch[i] = 0
 
       hardpointMonitorWarninginData.AnyApplicationMissing = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyApplicationMissing = 1
           hardpointMonitorWarninginData.ApplicationMissing[i] = 1
@@ -1717,7 +1574,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.ApplicationMissing[i] = 0
 
       hardpointMonitorWarninginData.AnyApplicationCRCMismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyApplicationCRCMismatch = 1
           hardpointMonitorWarninginData.ApplicationCRCMismatch[i] = 1
@@ -1725,7 +1582,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.ApplicationCRCMismatch[i] = 0
 
       hardpointMonitorWarninginData.AnyOneWireMissing = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyOneWireMissing = 1
           hardpointMonitorWarninginData.OneWireMissing[i] = 1
@@ -1733,7 +1590,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.OneWireMissing[i] = 0
 
       hardpointMonitorWarninginData.AnyOneWire1Mismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyOneWire1Mismatch = 1
           hardpointMonitorWarninginData.OneWire1Mismatch[i] = 1
@@ -1741,13 +1598,13 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.OneWire1Mismatch[i] = 0
 
       hardpointMonitorWarninginData.AnyOneWire2Mismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyOneWire2Mismatch = 1
           hardpointMonitorWarninginData.OneWire2Mismatch[i] = 1
 
       hardpointMonitorWarninginData.AnyWatchdogReset = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyWatchdogReset = 1
           hardpointMonitorWarninginData.WatchdogReset[i] = 1
@@ -1755,7 +1612,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.WatchdogReset[i] = 0
 
       hardpointMonitorWarninginData.AnyBrownOut = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyBrownOut = 1
           hardpointMonitorWarninginData.BrownOut[i] = 1
@@ -1763,7 +1620,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.BrownOut[i] = 0
 
       hardpointMonitorWarninginData.AnyEventTrapReset = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyEventTrapReset = 1
           hardpointMonitorWarninginData.EventTrapReset[i] = 1
@@ -1771,7 +1628,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.EventTrapReset[i] = 0
 
       hardpointMonitorWarninginData.AnySSRPowerFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnySSRPowerFault = 1
           hardpointMonitorWarninginData.SSRPowerFault[i] = 1
@@ -1779,7 +1636,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.SSRPowerFault[i] = 0
 
       hardpointMonitorWarninginData.AnyAuxPowerFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyAuxPowerFault = 1
           hardpointMonitorWarninginData.AuxPowerFault[i] = 1
@@ -1787,7 +1644,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.AuxPowerFault[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineS1AInterface1Fault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineS1AInterface1Fault = 1
           hardpointMonitorWarninginData.MezzanineS1AInterface1Fault[i] = 1
@@ -1795,7 +1652,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineS1AInterface1Fault[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineS1ALVDT1Fault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineS1ALVDT1Fault = 1
           hardpointMonitorWarninginData.MezzanineS1ALVDT1Fault[i] = 1
@@ -1803,7 +1660,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineS1ALVDT1Fault[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineS1AInterface2Fault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineS1AInterface2Fault = 1
           hardpointMonitorWarninginData.MezzanineS1AInterface2Fault[i] = 1
@@ -1811,7 +1668,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineS1AInterface2Fault[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineS1ALVDT2Fault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineS1ALVDT2Fault = 1
           hardpointMonitorWarninginData.MezzanineS1ALVDT2Fault[i] = 1
@@ -1819,7 +1676,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineS1ALVDT2Fault[i] = 0
       
       hardpointMonitorWarninginData.AnyMezzanineUniqueIdCRCError = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineUniqueIdCRCError = 1
           hardpointMonitorWarninginData.MezzanineUniqueIdCRCError[i] = 1
@@ -1827,7 +1684,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineUniqueIdCRCError[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineEventTrapReset = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineEventTrapReset = 1
           hardpointMonitorWarninginData.MezzanineEventTrapReset[i] = 1
@@ -1835,7 +1692,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineEventTrapReset[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineDCPRS422ChipFault = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineDCPRS422ChipFault = 1
           hardpointMonitorWarninginData.MezzanineDCPRS422ChipFault[i] = 1
@@ -1843,7 +1700,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineDCPRS422ChipFault[i] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineApplicationMissing = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineApplicationMissing = 1
           hardpointMonitorWarninginData.MezzanineApplicationMissing[i] = 1
@@ -1851,7 +1708,7 @@ def generateHardpointEvents(event, waittime):
           hardpointMonitorWarninginData.MezzanineApplicationMissing[1] = 0
 
       hardpointMonitorWarninginData.AnyMezzanineApplicationCRCMismatch = 0
-      for i in range(0,5):
+      for i in range(0,6):
         if (generateBoolean() == 1):
           hardpointMonitorWarninginData.AnyMezzanineApplicationCRCMismatch = 1
           hardpointMonitorWarninginData.MezzanineApplicationCRCMismatch[i] = 1
