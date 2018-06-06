@@ -82,22 +82,31 @@ def init(mgr):
 
   # Events
   logEvents = []
+  logEvents.append("m1m3_logevent_AccelerometerWarning")
   logEvents.append("m1m3_logevent_AirSupplyWarning")
   logEvents.append("m1m3_logevent_AirSupplyStatus")
   logEvents.append("m1m3_logevent_AppliedForces")
+  logEvents.append("m1m3_logevent_AppliedSettingsMatchStart")
+  logEvents.append("m1m3_logevent_CellLightStatus")
+  logEvents.append("m1m3_logevent_CellLightWarning")
   logEvents.append("m1m3_logevent_CommandRejectionWarning")
+  logEvents.append("m1m3_logevent_DisplacementSensorWarning")
   logEvents.append("m1m3_logevent_DetailedState")
   logEvents.append("m1m3_logevent_ErrorCode")
   logEvents.append("m1m3_logevent_ForceActuatorForceWarning")
   logEvents.append("m1m3_logevent_ForceActuatorInfo")
   logEvents.append("m1m3_logevent_ForceActuatorState")
   logEvents.append("m1m3_logevent_ForceActuatorWarning")
+  logEvents.append("m1m3_logevent_ForceSetpointWarning")
+  logEvents.append("m1m3_logevent_GyroWarning")
   logEvents.append("m1m3_logevent_HardpointActuatorInfo")
   logEvents.append("m1m3_logevent_HardpointActuatorState")
   logEvents.append("m1m3_logevent_HardpointActuatorWarning")
   logEvents.append("m1m3_logevent_HardpointMonitorInfo")
   logEvents.append("m1m3_logevent_HardpointMonitorState")
   logEvents.append("m1m3_logevent_HardpointMonitorWarning")
+  logEvents.append("m1m3_logevent_ILCWarning")
+  logEvents.append("m1m3_logevent_InclinometerSensorWarning")
   logEvents.append("m1m3_logevent_InterlockStatus")
   logEvents.append("m1m3_logevent_InterlockWarning")
   logEvents.append("m1m3_logevent_PIDInfo")
@@ -633,7 +642,7 @@ def generateErrorCodeEvent(event, waittime):
     priority = 10
 
     #randomly choose an event to issue
-    eventChoice = random.randint(1,4)
+    eventChoice = random.randint(1,5)
 
     if eventChoice == 1:
       errorCodeData = m1m3_logevent_ErrorCodeC()
@@ -659,6 +668,14 @@ def generateErrorCodeEvent(event, waittime):
       settingVersionsData.priority = priority
       mgr.logEvent_SettingVersions(settingVersionsData, priority)
 
+    elif eventChoice == 4:
+      
+      appliedSettingsMatchStartData = m1m3_logevent_AppliedSettingsMatchStartC()
+      appliedSettingsMatchStartData.Timestamp = timestamp
+      appliedSettingsMatchStartData.AppliedSettingsMatchStart = random.randint(0,101)
+      appliedSettingsMatchStartData.priority = priority
+      mgr.logEvent_AppliedSettingsMatchStart(appliedSettingsMatchStartData, priority)
+
     time.sleep(random.randint(30, 60))
     
     event.wait(waittime)
@@ -673,7 +690,7 @@ def generateForceActuatorEvents(event, waittime):
     priority = 10
 
     #randomly choose an event to issue
-    eventChoice = random.randint(1,7)
+    eventChoice = random.randint(1,8)
 
     if eventChoice == 1:
       forceActuatorForceWarningData = m1m3_logevent_ForceActuatorForceWarningC()
@@ -1038,6 +1055,7 @@ def generateForceActuatorEvents(event, waittime):
         mgr.logEvent_ForceActuatorWarning(forceActuatorWarningData, priority)
 
     elif eventChoice == 5:
+      # applied forces are supposed to be here, but for some reason I removed it, so it will stay removed.
       pass
 
     elif eventChoice == 6:
@@ -1062,6 +1080,137 @@ def generateForceActuatorEvents(event, waittime):
       rejectedForcesData.ForceMagnitude = random.uniform(-1000.0, 1000.0)
       rejectedForcesData.priority = priority
       mgr.logEvent_RejectedForces(rejectedForcesData, priority)
+
+    elif eventChoice == 7:
+
+      forceSetpointData = m1m3_logevent_ForceSetpointWarningC()
+      forceSetpointData.Timestamp = timestamp
+      forceSetpointData.AnyWarning = 1
+
+      forceSetpointData.AnySafetyLimitWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnySafetyLimitWarning = 1
+          forceSetpointData.SafetyLimitWarning[i] = 1
+        else: 
+          forceSetpointData.SafetyLimitWarning[i] = 0
+
+      forceSetpointData.XMomentWarning = generateBoolean()
+      forceSetpointData.YMomentWarning = generateBoolean()
+      forceSetpointData.ZMomentWarning = generateBoolean()
+
+      forceSetpointData.AnyNearNeighborWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyNearNeighborWarning = 1
+          forceSetpointData.NearNeighborWarning[i] = 1
+        else:
+          forceSetpointData.NearNeighborWarning[i] = 0
+
+      forceSetpointData.MagnitudeWarning = generateBoolean()
+
+      forceSetpointData.AnyFarNeighborWarning = 0 
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyFarNeighborWarning = 1
+          forceSetpointData.FarNeighborWarning[i] = 1
+        else:
+          forceSetpointData.FarNeighborWarning[i] = 0
+
+      forceSetpointData.AnyElevationForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyElevationForceWarning = 1
+          forceSetpointData.ElevationForceWarning[i] = 1
+        else:
+          forceSetpointData.ElevationForceWarning[i] = 0
+
+      forceSetpointData.AnyAzimuthForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyAzimuthForceWarning = 1
+          forceSetpointData.AzimuthForceWarning[i] = 1
+        else:
+          forceSetpointData.AzimuthForceWarning[i] = 0
+
+      forceSetpointData.AnyThermalForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyThermalForceWarning = 1
+          forceSetpointData.ThermalForceWarning[i] = 1
+        else:
+          forceSetpointData.ThermalForceWarning[i] = 0
+
+      forceSetpointData.AnyBalanceForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyBalanceForceWarning = 1
+          forceSetpointData.BalanceForceWarning[i] = 1
+        else:
+          forceSetpointData.BalanceForceWarning[i] = 0
+
+      forceSetpointData.AnyAccelerationForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyAccelerationForceWarning = 1
+          forceSetpointData.AccelerationForceWarning[i] = 1
+        else:
+          forceSetpointData.AccelerationForceWarning[i] = 0
+
+      forceSetpointData.ActiveOpticNetForceWarning = generateBoolean()
+
+      forceSetpointData.AnyActiveOpticForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyActiveOpticForceWarning = 1
+          forceSetpointData.ActiveOpticForceWarning[i] = 1
+        else:
+          forceSetpointData.ActiveOpticForceWarning[i] = 0
+
+      forceSetpointData.AnyStaticForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyStaticForceWarning = 1
+          forceSetpointData.StaticForceWarning[i] = 1
+        else:
+          forceSetpointData.StaticForceWarning[i] = 0
+
+      forceSetpointData.AberrationNetForceWarning = generateBoolean()
+
+      forceSetpointData.AnyAberrationForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyAberrationForceWarning = 1
+          forceSetpointData.AberrationForceWarning[i] = 1
+        else:
+          forceSetpointData.AberrationForceWarning[i] = 0
+
+      forceSetpointData.AnyOffsetForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyOffsetForceWarning = 1
+          forceSetpointData.OffsetForceWarning[i] = 1
+        else:
+          forceSetpointData.OffsetForceWarning[i] = 0
+
+      forceSetpointData.AnyVelocityForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyVelocityForceWarning = 1
+          forceSetpointData.VelocityForceWarning[i] = 1
+        else:
+          forceSetpointData.VelocityForceWarning[i] = 0
+
+      forceSetpointData.AnyForceWarning = 0
+      for i in range(0,156):
+        if (generateBoolean() == 1):
+          forceSetpointData.AnyForceWarning = 1
+          forceSetpointData.ForceWarning[i] = 1
+        else:
+          forceSetpointData.ForceWarning[i] = 0
+
+      forceSetpointData.priority=priority
+      mgr.logEvent_ForceSetpointWarning(forceSetpointData, priority)
 
     time.sleep(random.randint(1, 20))
     event.wait(waittime)
@@ -1747,6 +1896,35 @@ def generateHardpointMonitorDataTelemetry(event, waittime):
     event.wait(waittime)
 
 ############################################################
+# Generate ILC Warning Events
+def generateIlcWarningEvent(event, waittime) :
+  # initialize variables
+  priority = 10
+
+  while not event.isSet():
+    d = datetime.today()
+    timestamp = time.mktime(d.timetuple())
+
+    ilcWarningData = m1m3_logevent_ILCWarningC()
+    ilcWarningData.Timestamp = timestamp
+    ilcWarningData.ActuatorId = random.randint(0,156)
+    ilcWarningData.AnyWarning = generateBoolean()
+    ilcWarningData.ResponseTimeout = generateBoolean()
+    ilcWarningData.InvalidCRC = generateBoolean()
+    ilcWarningData.IllegalFunction = generateBoolean()
+    ilcWarningData.IllegalDataValue = generateBoolean()
+    ilcWarningData.InvalidLength = generateBoolean()
+    ilcWarningData.UnknownSubnet = generateBoolean()
+    ilcWarningData.UnknownAddress = generateBoolean()
+    ilcWarningData.UnknownFunction = generateBoolean()
+    ilcWarningData.UnknownProblem = generateBoolean()
+    ilcWarningData.priority = priority
+    mgr.logEvent_ILCWarning(ilcWarningData, priority)
+
+    time.sleep(2)
+    event.wait(waittime)
+
+############################################################
 # Generating Inclinometer and IMS telemetry
 def generateInclinometerAndIMSTelemetry(event, waittime) :
   # initialize variables
@@ -1820,6 +1998,143 @@ def generateInterlockEvents(event, waittime):
     time.sleep(0.5)
     event.wait(waittime)
   print("Interlock Thread shutdown complete.")
+
+############################################################
+# Misc. Events
+def generateMiscEvents(event, waittime):
+  priority = 10
+
+  while not event.isSet():
+    d = datetime.today()
+    timestamp = time.mktime(d.timetuple())
+
+    priority = 10
+
+    #randomly choose an event to issue
+    eventChoice = random.randint(1,7)
+
+    if eventChoice == 1:
+      accelerometerWarningData = m1m3_logevent_AccelerometerWarningC()
+      accelerometerWarningData.Timestamp = timestamp
+      accelerometerWarningData.AnyWarning = generateBoolean()
+      accelerometerWarningData.ResponseTimeout = generateBoolean()
+      accelerometerWarningData.priority = priority
+      mgr.logEvent_AccelerometerWarning(accelerometerWarningData, priority)
+
+    elif eventChoice == 2:
+      cellLightStatusData = m1m3_logevent_CellLightStatusC()
+      cellLightStatusData.Timestamp = timestamp
+      cellLightStatusData.CellLightsCommandedOn = generateBoolean()
+      cellLightStatusData.CellLightsOutputOn = generateBoolean()
+      cellLightStatusData.CellLightsOn = generateBoolean()
+      cellLightStatusData.priority = priority
+      mgr.logEvent_CellLightStatus(cellLightStatusData, priority)
+
+    elif eventChoice == 3:
+      cellLightWarningData = m1m3_logevent_CellLightWarningC()
+      cellLightWarningData.Timestamp = timestamp
+      cellLightWarningData.CellLightsOutputMismatch = generateBoolean()
+      cellLightWarningData.CellLightsSensorMismatch = generateBoolean()
+      cellLightWarningData.AnyWarning = 0
+      if (cellLightWarningData.CellLightsOutputMismatch or cellLightWarningData.CellLightsSensorMismatch):
+        cellLightWarningData.AnyWarning = 1
+      cellLightWarningData.priority = priority
+      mgr.logEvent_CellLightWarning(cellLightWarningData, priority)
+
+    elif eventChoice == 4:
+      displacementSensorWarningData = m1m3_logevent_DisplacementSensorWarningC()
+      displacementSensorWarningData.Timestamp = timestamp
+      displacementSensorWarningData.AnyWarning = generateBoolean()
+      displacementSensorWarningData.SensorReportsInvalidCommand = generateBoolean()
+      displacementSensorWarningData.SensorReportsCommunicationTimeoutError = generateBoolean()
+      displacementSensorWarningData.SensorReportsDataLengthError = generateBoolean()
+      displacementSensorWarningData.SensorReportsNumberOfParametersError = generateBoolean()
+      displacementSensorWarningData.SensorReportsParameterError = generateBoolean()
+      displacementSensorWarningData.SensorReportsCommunicationError = generateBoolean()
+      displacementSensorWarningData.SensorReportsIDNumberError = generateBoolean()
+      displacementSensorWarningData.SensorReportsExpansionLineError = generateBoolean()
+      displacementSensorWarningData.SensorReportsWriteControlError = generateBoolean()
+      displacementSensorWarningData.ResponseTimeout = generateBoolean()
+      displacementSensorWarningData.InvalidLength = generateBoolean()
+      displacementSensorWarningData.InvalidResponse = generateBoolean()
+      displacementSensorWarningData.UnknownCommand = generateBoolean()
+      displacementSensorWarningData.UnknownProblem = generateBoolean()
+      displacementSensorWarningData.priority = priority
+      mgr.logEvent_DisplacementSensorWarning(displacementSensorWarningData, priority)
+
+    elif eventChoice == 5:
+      gyroWarningData = m1m3_logevent_GyroWarningC()
+      gyroWarningData.Timestamp = timestamp
+      gyroWarningData.AnyWarning = generateBoolean()
+      gyroWarningData.GyroXStatusWarning = generateBoolean()
+      gyroWarningData.GyroYStatusWarning = generateBoolean()
+      gyroWarningData.GyroZStatusWarning = generateBoolean()
+      gyroWarningData.SequenceNumberWarning = generateBoolean()
+      gyroWarningData.CRCMismatchWarning = generateBoolean()
+      gyroWarningData.InvalidLengthWarning = generateBoolean()
+      gyroWarningData.InvalidHeaderWarning = generateBoolean()
+      gyroWarningData.IncompleteFrameWarning = generateBoolean()
+      gyroWarningData.GyroXSLDWarning = generateBoolean()
+      gyroWarningData.GyroXMODDACWarning = generateBoolean()
+      gyroWarningData.GyroXPhaseWarning = generateBoolean()
+      gyroWarningData.GyroXFlashWarning = generateBoolean()
+      gyroWarningData.GyroYSLDWarning = generateBoolean()
+      gyroWarningData.GyroYMODDACWarning = generateBoolean()
+      gyroWarningData.GyroYPhaseWarning = generateBoolean()
+      gyroWarningData.GyroYFlashWarning = generateBoolean()
+      gyroWarningData.GyroZSLDWarning = generateBoolean()
+      gyroWarningData.GyroZMODDACWarning = generateBoolean()
+      gyroWarningData.GyroZPhaseWarning = generateBoolean()
+      gyroWarningData.GyroZFlashWarning = generateBoolean()
+      gyroWarningData.GyroXSLDTemperatureStatusWarning = generateBoolean()
+      gyroWarningData.GyroYSLDTemperatureStatusWarning = generateBoolean()
+      gyroWarningData.GyroZSLDTemperatureStatusWarning = generateBoolean()
+      gyroWarningData.GCBTemperatureStatusWarning = generateBoolean()
+      gyroWarningData.TemperatureStatusWarning = generateBoolean()
+      gyroWarningData.GCBDSPSPIFlashStatusWarning = generateBoolean()
+      gyroWarningData.GCBFPGASPIFlashStatusWarning = generateBoolean()
+      gyroWarningData.DSPSPIFlashStatusWarning = generateBoolean()
+      gyroWarningData.FPGASPIFlashStatusWarning = generateBoolean()
+      gyroWarningData.GCB1_2VStatusWarning = generateBoolean()
+      gyroWarningData.GCB3_3VStatusWarning = generateBoolean()
+      gyroWarningData.GCB5VStatusWarning = generateBoolean()
+      gyroWarningData.V1_2StatusWarning = generateBoolean()
+      gyroWarningData.V3_3StatusWarning = generateBoolean()
+      gyroWarningData.V5StatusWarning = generateBoolean()
+      gyroWarningData.GCBFPGAStatusWarning = generateBoolean()
+      gyroWarningData.FPGAStatusWarning = generateBoolean()
+      gyroWarningData.HiSpeedSPORTStatusWarning = generateBoolean()
+      gyroWarningData.AuxSPORTStatusWarning = generateBoolean()
+      gyroWarningData.SufficientSoftwareResourcesWarning = generateBoolean()
+      gyroWarningData.GyroEOVoltsPositiveWarning = generateBoolean()
+      gyroWarningData.GyroEOVoltsNegativeWarning = generateBoolean()
+      gyroWarningData.GyroXVoltsWarning = generateBoolean()
+      gyroWarningData.GyroYVoltsWarning = generateBoolean()
+      gyroWarningData.GyroZVoltsWarning = generateBoolean()
+      gyroWarningData.GCBADCCommsWarning = generateBoolean()
+      gyroWarningData.MSYNCExternalTimingWarning = generateBoolean()
+      gyroWarningData.priority = priority
+      mgr.logEvent_GyroWarning(gyroWarningData, priority)
+
+
+    elif eventChoice == 6:
+      inclinometerSensorWarningData = m1m3_logevent_InclinometerSensorWarningC()
+      inclinometerSensorWarningData.Timestamp = timestamp
+      inclinometerSensorWarningData.AnyWarning = generateBoolean()
+      inclinometerSensorWarningData.SensorReportsIllegalFunction = generateBoolean()
+      inclinometerSensorWarningData.SensorReportsIllegalDataAddress = generateBoolean()
+      inclinometerSensorWarningData.ResponseTimeout = generateBoolean()
+      inclinometerSensorWarningData.InvalidCRC = generateBoolean()
+      inclinometerSensorWarningData.InvalidLength = generateBoolean()
+      inclinometerSensorWarningData.UnknownAddress = generateBoolean()
+      inclinometerSensorWarningData.UnknownFunction = generateBoolean()
+      inclinometerSensorWarningData.UnknownProblem = generateBoolean()
+      inclinometerSensorWarningData.priority = priority
+      mgr.logEvent_InclinometerSensorWarning(inclinometerSensorWarningData, priority)
+
+    time.sleep(random.uniform(1.0, 5.0))
+    event.wait(waittime)
+  print("Misc Events Thread shutdown complete.")
 
 ############################################################
 # Power Telemetery
@@ -2067,6 +2382,12 @@ hardpointMonitorThread = threading.Thread(name='HardpointMonitorTelemetry',
                                    args=(hardpointMonitorEvent, 0.001))
 hardpointMonitorThread.start()
 #########################
+ilcWarningEvent = threading.Event()
+ilcWarningThread = threading.Thread(name='ILCWarningEvent',
+                             target=generateIlcWarningEvent,
+                             args=(ilcWarningEvent, 0.001))
+ilcWarningThread.start()
+#########################
 imsEvent = threading.Event()
 imsThread = threading.Thread(name='InclinometerAndImsTelemetry',
                              target=generateInclinometerAndIMSTelemetry,
@@ -2078,6 +2399,12 @@ interlockThread = threading.Thread(name='InterlockEvents',
                                    target=generateInterlockEvents,
                                    args=(interlockEvent, 0.001))
 interlockThread.start()
+#########################
+miscEvent = threading.Event()
+miscThread = threading.Thread(name='MiscEvents',
+                                   target=generateMiscEvents,
+                                   args=(miscEvent, 0.001))
+miscThread.start()
 #########################
 powerEvent = threading.Event()
 powerThread = threading.Thread(name='PowerTelemetryEvents',
@@ -2108,9 +2435,11 @@ while(True):
     hardpointActEvent.set()
     hardpointEventsEvent.set()
     hardpointMonitorEvent.set()
+    ilcWarningEvent.set()
     imsEvent.set()
     interlockEvent.set()
     powerEvent.set()
+    miscEvent.set()
     outerloopEvent.set()
     break
   else:

@@ -8,12 +8,18 @@
 		<Item Name="Boolean to String.vi" Type="VI" URL="../Utilities/Boolean to String.vi"/>
 		<Item Name="Close References.vi" Type="VI" URL="../Utilities/Close References.vi"/>
 		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
+		<Item Name="Data Type to FA Array.vi" Type="VI" URL="../Utilities/Data Type to FA Array.vi"/>
+		<Item Name="DataTypeData.vi" Type="VI" URL="../Utilities/DataTypeData.vi"/>
 		<Item Name="FA Data Type List.vi" Type="VI" URL="../Utilities/FA Data Type List.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
 		<Item Name="GenerateControlList.vi" Type="VI" URL="../Utilities/GenerateControlList.vi"/>
+		<Item Name="Get FA Cluster.vi" Type="VI" URL="../Utilities/Get FA Cluster.vi"/>
 		<Item Name="Get FA Data.vi" Type="VI" URL="../Utilities/Get FA Data.vi"/>
+		<Item Name="Get HP Data.vi" Type="VI" URL="../Utilities/Get HP Data.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
 		<Item Name="GetControlRefsFromVi.vi" Type="VI" URL="../Utilities/GetControlRefsFromVi.vi"/>
+		<Item Name="HP Data Type List.vi" Type="VI" URL="../Utilities/HP Data Type List.vi"/>
+		<Item Name="Interelock to String.vi" Type="VI" URL="../Utilities/Interelock to String.vi"/>
 		<Item Name="Limit Array.vi" Type="VI" URL="../Utilities/Limit Array.vi"/>
 		<Item Name="Obtain Timestamp.vi" Type="VI" URL="../Utilities/Obtain Timestamp.vi"/>
 		<Item Name="ObtainControlNames.vi" Type="VI" URL="../Utilities/ObtainControlNames.vi"/>
@@ -23,6 +29,7 @@
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
 		<Item Name="Turn Power Off Command.vi" Type="VI" URL="../Turn Power Off Command.vi"/>
 		<Item Name="Turn Power On Command.vi" Type="VI" URL="../Turn Power On Command.vi"/>
+		<Item Name="Variant Array to String Array.vi" Type="VI" URL="../Utilities/Variant Array to String Array.vi"/>
 		<Item Name="VariantTest.vi" Type="VI" URL="../Utilities/VariantTest.vi"/>
 	</Item>
 	<Item Name="Accel Values View.vi" Type="VI" URL="../Accel Values View.vi"/>
@@ -34,8 +41,8 @@
 	<Item Name="FA Forces View.vi" Type="VI" URL="../FA Forces View.vi"/>
 	<Item Name="FA Graphic View.vi" Type="VI" URL="../FA Graphic View.vi"/>
 	<Item Name="FA Values View.vi" Type="VI" URL="../FA Values View.vi"/>
-	<Item Name="FPGA Values View.vi" Type="VI" URL="../FPGA Values View.vi"/>
 	<Item Name="HP Values View.vi" Type="VI" URL="../HP Values View.vi"/>
+	<Item Name="ILC Values View.vi" Type="VI" URL="../ILC Values View.vi"/>
 	<Item Name="Inclinometer Graph View.vi" Type="VI" URL="../Inclinometer Graph View.vi"/>
 	<Item Name="Interlock View.vi" Type="VI" URL="../Interlock View.vi"/>
 	<Item Name="M1M3SupportEUI_View.vi" Type="VI" URL="../M1M3SupportEUI_View.vi"/>

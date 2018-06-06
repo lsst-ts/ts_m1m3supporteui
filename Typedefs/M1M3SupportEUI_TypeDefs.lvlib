@@ -11,6 +11,7 @@
 	<Item Name="Display Displacement Types.ctl" Type="VI" URL="../Display Displacement Types.ctl"/>
 	<Item Name="EUI Events.ctl" Type="VI" URL="../EUI Events.ctl"/>
 	<Item Name="FA Data And Events.ctl" Type="VI" URL="../FA Data And Events.ctl"/>
+	<Item Name="HP Events.ctl" Type="VI" URL="../HP Events.ctl"/>
 	<Item Name="HardwareSettings.ctl" Type="VI" URL="../HardwareSettings.ctl"/>
 	<Item Name="LogPath.ctl" Type="VI" URL="../LogPath.ctl"/>
 	<Item Name="M1M3 Support Events.ctl" Type="VI" URL="../M1M3 Support Events.ctl"/>
