@@ -37,6 +37,7 @@
 	<Item Name="Application Control View.vi" Type="VI" URL="../Application Control View.vi"/>
 	<Item Name="Application Status View.vi" Type="VI" URL="../Application Status View.vi"/>
 	<Item Name="Displacement Graph View.vi" Type="VI" URL="../Displacement Graph View.vi"/>
+	<Item Name="FA Bending Profile View.vi" Type="VI" URL="../FA Bending Profile View.vi"/>
 	<Item Name="FA ForceAndMoments.vi" Type="VI" URL="../FA ForceAndMoments.vi"/>
 	<Item Name="FA Forces View.vi" Type="VI" URL="../FA Forces View.vi"/>
 	<Item Name="FA Graphic View.vi" Type="VI" URL="../FA Graphic View.vi"/>

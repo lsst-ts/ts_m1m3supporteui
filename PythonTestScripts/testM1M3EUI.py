@@ -66,6 +66,7 @@ def init(mgr):
   hardpointCommands.append("m1m3_command_StopHardpointMotion")
   hardpointCommands.append("m1m3_command_PositionM1M3")
   hardpointCommands.append("m1m3_command_TranslateM1M3")
+  hardpointCommands.append("m1m3_command_TestHardpoint")
 
   # Air Commands
   airCommands = []
@@ -73,9 +74,20 @@ def init(mgr):
   airCommands.append("m1m3_command_TurnAirOff")
   airCommands.append("m1m3_command_TurnAirOn")
 
+  # Force Actuator Commands
+  forceActuatorCommands = []
+  forceActuatorCommands.append("m1m3_command_AbortProfile")
+  forceActuatorCommands.append("m1m3_command_ApplyAberrationForceByBendingModes")
+  forceActuatorCommands.append("m1m3_command_ApplyActiveOpticForcesByBendingModes")
+  forceActuatorCommands.append("m1m3_command_ClearAberrationForces")
+  forceActuatorCommands.append("m1m3_command_ClearActiveOpticForces")
+  forceActuatorCommands.append("m1m3_command_RunMirrorForceProfile")
+  forceActuatorCommands.append("m1m3_command_TestForceActuator")
+
   # Misc Commands
   miscCommands = []
   miscCommands.append("m1m3_command_ResetPID")
+  miscCommands.append("m1m3_command_SetThermalSetpoint")
   miscCommands.append("m1m3_command_TurnPowerOn")
   miscCommands.append("m1m3_command_TurnPowerOff")
   miscCommands.append("m1m3_command_UpdatePID")
@@ -140,6 +152,9 @@ def init(mgr):
   for airCommand in airCommands:
     print("starting " + airCommand)
     mgr.salProcessor(airCommand)
+  for forceActuatorCommand in forceActuatorCommands:
+    print("starting " + forceActuatorCommand)
+    mgr.salProcessor(forceActuatorCommand)
   for miscCommand in miscCommands:
     print("starting " + miscCommand)
     mgr.salProcessor(miscCommand)
@@ -232,15 +247,25 @@ def processCommands(event, waittime):
   stopHardpointMotionData = m1m3_command_StopHardpointMotionC()
   positionM1M3Data = m1m3_command_PositionM1M3C()
   translateM1M3Data = m1m3_command_TranslateM1M3C()
+  testHardpointData = m1m3_command_TestHardpointC()
 
-  turnAirOnData = m1m3_command_TurnAirOnC()
-  turnAirOffData = m1m3_command_TurnAirOffC()
   testAirData = m1m3_command_TestAirC()
+  turnAirOffData = m1m3_command_TurnAirOffC()
+  turnAirOnData = m1m3_command_TurnAirOnC()
 
-  turnPowerOnData = m1m3_command_TurnPowerOnC()
-  turnPowerOffData = m1m3_command_TurnPowerOffC()
-  updatePIDData = m1m3_command_UpdatePIDC()
+  abortProfileData= m1m3_command_AbortProfileC()
+  applyAberrationForcesByBendingModesData = m1m3_command_ApplyAberrationForcesByBendingModesC()
+  applyActiveOpticForcesByBendingModesData = m1m3_command_ApplyActiveOpticForcesByBendingModesC()
+  clearAberrationForcesData = m1m3_command_ClearAberrationForcesC()
+  clearActiveOpticForcesData = m1m3_command_ClearActiveOpticForcesC()
+  runMirrorForceProfileData = m1m3_command_RunMirrorForceProfileC()
+  testForceActuatorData = m1m3_command_TestForceActuatorC()
+
   resetPIDData = m1m3_command_ResetPIDC()
+  setThermalSetpointData = m1m3_command_SetThermalSetpointC()
+  turnPowerOffData = m1m3_command_TurnPowerOffC()
+  turnPowerOnData = m1m3_command_TurnPowerOnC()
+  updatePIDData = m1m3_command_UpdatePIDC()
 
   print("m1m3 test controller ready")
 
@@ -537,6 +562,77 @@ def processCommands(event, waittime):
       mgr.ackCommand_TranslateM1M3(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
     #########################
+    # check for TestHardpoint
+    cmdId = mgr.acceptCommand_TestHardpoint(testHardpointData)
+    if cmdId > 0:
+      print("Test Hardpoint Actuator = " + str(testHardpointData.HardpointActuator))
+      time.sleep(0.001)
+      mgr.ackCommand_TestHardpoint(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for TestForceActuator
+    cmdId = mgr.acceptCommand_TestForceActuator(testForceActuatorData)
+    if cmdId > 0:
+      print("Test Force Actuator = " + str(testForceActuatorData.ForceActuator))
+      time.sleep(0.001)
+      mgr.ackCommand_TestForceActuator(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for AbortProfile
+    cmdId = mgr.acceptCommand_AbortProfile(abortProfileData)
+    if cmdId > 0:
+      print("Abort Profile Command Executed")
+      time.sleep(0.001)
+      mgr.ackCommand_AbortProfile(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for RunMirrorForceProfile
+    cmdId = mgr.acceptCommand_RunMirrorForceProfile(runMirrorForceProfileData)
+    if cmdId > 0:
+      print("Run Mirror Force Profile X Force = " + str(list(runMirrorForceProfileData.XForce)))
+      print("Run Mirror Force Profile Y Force = " + str(list(runMirrorForceProfileData.YForce)))
+      print("Run Mirror Force Profile Z Force = " + str(list(runMirrorForceProfileData.ZForce)))
+      print("Run Mirror Force Profile X Moment = " + str(list(runMirrorForceProfileData.XMoment)))
+      print("Run Mirror Force Profile Y Moment = " + str(list(runMirrorForceProfileData.YMoment)))
+      print("Run Mirror Force Profile Z Moment = " + str(list(runMirrorForceProfileData.ZMoment)))
+      time.sleep(0.001)
+      mgr.ackCommand_RunMirrorForceProfile(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Clear Aberration Forces
+    cmdId = mgr.acceptCommand_ClearAberrationForces(clearAberrationForcesData)
+    if cmdId > 0:
+      print("Clear Aberration Forces Command Executed")
+      time.sleep(0.001)
+      mgr.ackCommand_ClearAberrationForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Clear Acitve Optic Forces
+    cmdId = mgr.acceptCommand_ClearActiveOpticForces(clearActiveOpticForcesData)
+    if cmdId > 0:
+      print("Clear Active Optic Forces Command Executed")
+      time.sleep(0.001)
+      mgr.ackCommand_ClearActiveOpticForces(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Apply Aberration Forces by Bending Modes
+    cmdId = mgr.acceptCommand_ApplyAberrationForcesByBendingModes(applyAberrationForcesByBendingModesData)
+    if cmdId > 0:
+      print("Apply Aberration Forces By Bending Modes Command Executed")
+      print(str(list(applyAberrationForcesByBendingModesData.Coefficients)))
+      time.sleep(0.001)
+      mgr.ackCommand_ApplyAberrationForcesByBendingModes(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for Apply Active Optic Forces by Bending Modes
+    cmdId = mgr.acceptCommand_ApplyActiveOpticForcesByBendingModes(applyActiveOpticForcesByBendingModesData)
+    if cmdId > 0:
+      print("Apply Active Optic Forces By Bending Modes Command Executed")
+      print(str(list(applyActiveOpticForcesByBendingModesData.Coefficients)))
+      time.sleep(0.001)
+      mgr.ackCommand_ApplyActiveOpticForcesByBendingModes(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
     # check for TurnAirOn
     cmdId = mgr.acceptCommand_TurnAirOn(turnAirOnData)
     if cmdId > 0:
@@ -610,6 +706,14 @@ def processCommands(event, waittime):
       print("PID = " + str(resetPIDData.PID))
       time.sleep(0.001)
       mgr.ackCommand_ResetPID(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
+
+    #########################
+    # check for SetThermalSetpoint
+    cmdId = mgr.acceptCommand_SetThermalSetpoint(setThermalSetpointData)
+    if cmdId > 0:
+      print("SetPoint = " + str(setThermalSetpointData.Setpoint))
+      time.sleep(0.001)
+      mgr.ackCommand_SetThermalSetpoint(cmdId, SAL__CMD_COMPLETE, 0, "Done : OK");
 
     event.wait(waittime)
   print("Command Thread shutdown complete.")
