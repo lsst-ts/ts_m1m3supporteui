@@ -2346,3 +2346,47 @@ Node        : m1m3testlap.lsst.org
 Process     : python3.6 <5979>
 Thread      : spliced 7fd010a6c700
 Internals   : 6.7.170523OSS///OpenSplice domain service/spliced.c/633/0/1528736879.378105857/0
+========================================================================================
+Report      : ERROR
+Date        : Mon Jun 18 10:47:40 MST 2018
+Description : dlopen of 'durability' failed: durability: cannot open shared object file: No such file or directory
+Node        : m1m3testlap.lsst.org
+Process     : python3.6 <6362>
+Thread      : spliced 7f11a71ec700
+Internals   : 6.7.170523OSS///os_libraryOpen/os_library.c/70/0/1529344060.095346847/0
+========================================================================================
+Report      : ERROR
+Date        : Mon Jun 18 10:47:40 MST 2018
+Description : Problem opening 'durability'
+
+Node        : m1m3testlap.lsst.org
+Process     : python3.6 <6362>
+Thread      : spliced 7f11a71ec700
+Internals   : 6.7.170523OSS///OpenSplice domain service/spliced.c/633/0/1529344060.107070450/0
+========================================================================================
+Context     : DDS::OpenSplice::FooDataWriter_impl::write
+Date        : Mon Jun 18 10:58:46 MST 2018
+Node        : m1m3testlap.lsst.org
+Process     : python3.6 <6362>
+Thread      : 7f11087f8700
+Internals   : FooDataWriter_impl.cpp/232/6.7.170523OSS///0
+----------------------------------------------------------------------------------------
+Report      : Already deleted: Object is already deleted.
+Internals   : DDS::OpenSplice::CppSuperClass::check/CppSuperClass.cpp/229/9/1529344726.772289446
+========================================================================================
+Report      : ERROR
+Date        : Mon Jun 18 11:04:30 MST 2018
+Description : dlopen of 'durability' failed: durability: cannot open shared object file: No such file or directory
+Node        : m1m3testlap.lsst.org
+Process     : python3.6 <6989>
+Thread      : spliced 7ff7f95c3700
+Internals   : 6.7.170523OSS///os_libraryOpen/os_library.c/70/0/1529345070.058067045/0
+========================================================================================
+Report      : ERROR
+Date        : Mon Jun 18 11:04:30 MST 2018
+Description : Problem opening 'durability'
+
+Node        : m1m3testlap.lsst.org
+Process     : python3.6 <6989>
+Thread      : spliced 7ff7f95c3700
+Internals   : 6.7.170523OSS///OpenSplice domain service/spliced.c/633/0/1529345070.058127914/0
