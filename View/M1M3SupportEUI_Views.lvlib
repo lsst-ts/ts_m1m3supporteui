@@ -8,10 +8,12 @@
 		<Item Name="Boolean to String.vi" Type="VI" URL="../Utilities/Boolean to String.vi"/>
 		<Item Name="Close References.vi" Type="VI" URL="../Utilities/Close References.vi"/>
 		<Item Name="Create Correct Arrays.vi" Type="VI" URL="../Utilities/Create Correct Arrays.vi"/>
+		<Item Name="Data Type to FA Array 2.vi" Type="VI" URL="../Utilities/Data Type to FA Array 2.vi"/>
 		<Item Name="Data Type to FA Array.vi" Type="VI" URL="../Utilities/Data Type to FA Array.vi"/>
 		<Item Name="DataTypeData.vi" Type="VI" URL="../Utilities/DataTypeData.vi"/>
 		<Item Name="FA Data Type List.vi" Type="VI" URL="../Utilities/FA Data Type List.vi"/>
 		<Item Name="FA Number Array.vi" Type="VI" URL="../Utilities/FA Number Array.vi"/>
+		<Item Name="FAValuesXYZC.vi" Type="VI" URL="../FAValuesXYZC.vi"/>
 		<Item Name="GenerateControlList.vi" Type="VI" URL="../Utilities/GenerateControlList.vi"/>
 		<Item Name="Get FA Cluster.vi" Type="VI" URL="../Utilities/Get FA Cluster.vi"/>
 		<Item Name="Get FA Data.vi" Type="VI" URL="../Utilities/Get FA Data.vi"/>
