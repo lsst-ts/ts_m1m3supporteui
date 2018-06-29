@@ -54,7 +54,6 @@
 	<Item Name="Power PID View.vi" Type="VI" URL="../Power PID View.vi"/>
 	<Item Name="RegExTest.vi" Type="VI" URL="../RegExTest.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
-	<Item Name="TestingEvents.vi" Type="VI" URL="../TestingEvents.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
 	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
 </Library>
