@@ -202,7 +202,7 @@
 				<Property Name="Bld_previewCacheID" Type="Str">{ED2F2A03-DB7F-11E7-B351-509A4C4F3C9F}</Property>
 				<Property Name="Bld_supportedLanguageCount" Type="Int">1</Property>
 				<Property Name="Bld_supportedLanguage[0]" Type="Str">English</Property>
-				<Property Name="Bld_version.build" Type="Int">28</Property>
+				<Property Name="Bld_version.build" Type="Int">29</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="DestinationCount" Type="Int">4</Property>
 				<Property Name="Destination[0].destName" Type="Str">M1M3SupportEUI</Property>
@@ -218,7 +218,7 @@
 				<Property Name="Destination[3].path" Type="Path">../builds/NI_AB_PROJECTNAME</Property>
 				<Property Name="Destination[3].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="SourceCount" Type="Int">19</Property>
-				<Property Name="Source[0].itemID" Type="Str">{806F2576-309A-11E8-8669-509A4C4F3C9F}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{BD1ADC32-7C44-11E8-8669-509A4C4F3C9F}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[10].Container.applyInclusion" Type="Bool">true</Property>
 				<Property Name="Source[10].Container.depDestIndex" Type="Int">0</Property>
@@ -309,6 +309,7 @@
 				<Property Name="Source[9].itemID" Type="Ref">/My Computer/M1M3SupportEUI_Views.lvlib/Warning Fault Tree View.vi</Property>
 				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[9].type" Type="Str">VI</Property>
+				<Property Name="TgtF_enableDebugging" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">M1M3SupportEUIBuild</Property>
 				<Property Name="TgtF_internalName" Type="Str">M1M3SupportEUIBuild</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright 2017 </Property>
