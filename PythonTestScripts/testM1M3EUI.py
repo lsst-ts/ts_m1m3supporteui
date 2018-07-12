@@ -12,6 +12,7 @@ import time
 from datetime import datetime
 from enum import Enum
 from SALPY_m1m3 import *
+from SALPY_vms import *
 
 # current detailed states used by M1M3 Support
 class M1M3State(Enum):
@@ -36,12 +37,14 @@ class M1M3State(Enum):
 SAL__CMD_COMPLETE=303
 # Initializing SAL
 mgr = SAL_m1m3()
+vmsMgr = SAL_vms()
 
-def init(mgr):
+def init(mgr, vmsMgr):
   print("Initializing SAL Manager... (may take a while)")
 
   # turn off the debug messages 
   mgr.setDebugLevel(0)
+  vmsMgr.setDebugLevel(0)
 
   # State Commands
   stateCommands = []
@@ -129,6 +132,14 @@ def init(mgr):
   logEvents.append("m1m3_logevent_SettingVersions")
   logEvents.append("m1m3_logevent_SummaryState")
 
+  # VMS Events
+  vmsEvents = []
+  vmsEvents.append("vms_logevent_AcquisitionRate")
+  vmsEvents.append("vms_logevent_AppliedSettingsMatchStart")
+  vmsEvents.append("vms_logevent_ErrorCode")
+  vmsEvents.append("vms_logevent_SettingVersions")
+  vmsEvents.append("vms_logevent_SummaryState")
+
   # Telemetry Publishers
   telemetryTopics= []
   telemetryTopics.append("m1m3_AccelerometerData")
@@ -141,6 +152,10 @@ def init(mgr):
   telemetryTopics.append("m1m3_OuterLoopData")
   telemetryTopics.append("m1m3_PIDData")
   telemetryTopics.append("m1m3_PowerSupplyData")
+
+  # VMS telemetry topics
+  vmsTelemetryTopics = []
+  vmsTelemetryTopics.append("vms_M1M3")
 
   # load all topics into the SAL manager
   for stateCommand in stateCommands:
@@ -161,9 +176,15 @@ def init(mgr):
   for logEvent in logEvents:
     print("starting " + logEvent)
     mgr.salEvent(logEvent)
+  for vmsEvent in vmsEvents:
+    print("starting " + vmsEvent)
+    vmsMgr.salEvent(vmsEvent)
   for telemetryTopic in telemetryTopics:
     print("starting " + telemetryTopic)
     mgr.salTelemetryPub(telemetryTopic)
+  for vmsTelemetryTopic in vmsTelemetryTopics:
+    print("starting " + vmsTelemetryTopic)
+    vmsMgr.salTelemetryPub(vmsTelemetryTopic)
 
   print("Done Initializing")
 
@@ -2408,9 +2429,96 @@ def generateOuterloopTelemetry(event, waittime):
   print("Outerloop Thread shutdown complete.")
 
 ############################################################
+# VMS Events
+def generateVmsEvents(event, waittime):
+
+  while not event.isSet():
+    d = datetime.today()
+    timestamp = time.mktime(d.timetuple())
+
+    priority = 10
+
+    #randomly choose an event to issue
+    eventChoice = random.randint(1,6)
+
+    if eventChoice == 1:
+      
+      acquisitionRateData = vms_logevent_AcquisitionRateC()
+      acquisitionRateData.Timestamp = timestamp
+      acquisitionRateData.RateInHz = random.uniform(0.0, 100.0)
+      acquisitionRateData.priority = priority
+      vmsMgr.logEvent_AcquisitionRate(acquisitionRateData, priority)
+
+    elif eventChoice == 2:
+
+      appliedSettingsMatchStartData = vms_logevent_AppliedSettingsMatchStartC()
+      appliedSettingsMatchStartData.appliedSettingsMatchStartIsTrue = generateBoolean()
+      appliedSettingsMatchStartData.priority = priority
+      vmsMgr.logEvent_AppliedSettingsMatchStart(appliedSettingsMatchStartData, priority)
+
+    elif eventChoice == 3:
+
+      errorCodeData = vms_logevent_ErrorCodeC()
+      errorCodeData.errorCode = random.randint(0, 256)
+      errorCodeData.priority = priority
+      vmsMgr.logEvent_ErrorCode(errorCodeData, priority)
+      
+    elif eventChoice == 4:
+
+      settingVersionsData = vms_logevent_SettingVersionsC()
+      settingVersionsData.recommendedSettingVersion = "Like a version, used for the very first time."
+      settingVersionsData.priority = priority
+      vmsMgr.logEvent_SettingVersions(settingVersionsData, priority)
+
+    elif eventChoice == 5:
+
+      vmsSummaryStateData = vms_logevent_SummaryStateC()
+      vmsSummaryStateData.SummaryStateValue = 0
+      vmsSummaryStateData.priority = priority
+      vmsMgr.logEvent_SummaryState(vmsSummaryStateData, priority)
+
+    time.sleep(random.randint(1, 5))
+    event.wait(waittime)
+  print("VMS Event thread shutdown complete.")
+
+############################################################
+# VMS Telemetery
+def generateVmsTelemetry(event, waittime):
+
+  while not event.isSet():
+    d = datetime.today()
+    timestamp = time.mktime(d.timetuple())
+
+    vmsTelemetryData = vms_M1M3C()
+    vmsTelemetryData.Timestamp = timestamp
+    for i in range(0,50):
+      vmsTelemetryData.Sensor1XAcceleration[i] = random.uniform(0.0, 33.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor1YAcceleration[i] = random.uniform(34.0, 66.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor1ZAcceleration[i] = random.uniform(67.0, 100.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor2XAcceleration[i] = random.uniform(101.0, 133.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor2YAcceleration[i] = random.uniform(134.0, 166.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor2ZAcceleration[i] = random.uniform(167.0, 200.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor3XAcceleration[i] = random.uniform(201.0, 233.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor3YAcceleration[i] = random.uniform(234.0, 266.0)
+    for i in range(0,50):
+      vmsTelemetryData.Sensor3ZAcceleration[i] = random.uniform(267.0, 300.0)
+
+    retval = vmsMgr.putSample_M1M3(vmsTelemetryData)
+    time.sleep(0.01)
+    event.wait(waittime)
+  print("VMS Telemetry thread shutdown complete.")
+
+############################################################
 # "Main Thread"
-# Initialize Manager:
-init(mgr)
+# Initialize both M1M3 & VMS Manager:
+init(mgr, vmsMgr)
 
 # create and start all children
 #########################
@@ -2521,6 +2629,18 @@ outerloopThread = threading.Thread(name='OuterloopTelemetry',
                                    target=generateOuterloopTelemetry,
                                    args=(outerloopEvent, 0.001))
 outerloopThread.start()
+#########################
+vmsEvent = threading.Event()
+vmsEventThread = threading.Thread(name='VmsEvents',
+                                   target=generateVmsEvents,
+                                   args=(vmsEvent, 0.001))
+vmsEventThread.start()
+#########################
+vmsTelemetryEvent = threading.Event()
+vmsTelemetryThread = threading.Thread(name='VmsTelemetry',
+                                   target=generateVmsTelemetry,
+                                   args=(vmsTelemetryEvent, 0.001))
+vmsTelemetryThread.start()
 
 # prompt user for stop, when 'stop' then stop.
 while(True):
@@ -2545,6 +2665,8 @@ while(True):
     powerEvent.set()
     miscEvent.set()
     outerloopEvent.set()
+    vmsEvent.set()
+    vmsTelemetryEvent.set()
     break
   else:
     print("I don't understand " + stopEntry)
@@ -2554,6 +2676,3 @@ print("All Threads told to shutdown.")
 mgr.salShutdown()
 print("SAL manager shutdown complete")
 exit()
-
-
-

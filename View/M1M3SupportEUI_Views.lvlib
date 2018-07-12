@@ -19,6 +19,7 @@
 		<Item Name="Get FA Data.vi" Type="VI" URL="../Utilities/Get FA Data.vi"/>
 		<Item Name="Get HP Data.vi" Type="VI" URL="../Utilities/Get HP Data.vi"/>
 		<Item Name="Get Timestamp Cushion.vi" Type="VI" URL="../Utilities/Get Timestamp Cushion.vi"/>
+		<Item Name="Get VMS Data.vi" Type="VI" URL="../Utilities/Get VMS Data.vi"/>
 		<Item Name="GetControlRefsFromVi.vi" Type="VI" URL="../Utilities/GetControlRefsFromVi.vi"/>
 		<Item Name="HP Data Type List.vi" Type="VI" URL="../Utilities/HP Data Type List.vi"/>
 		<Item Name="Interelock to String.vi" Type="VI" URL="../Utilities/Interelock to String.vi"/>
@@ -30,6 +31,7 @@
 		<Item Name="SingleArrayToString.vi" Type="VI" URL="../Utilities/SingleArrayToString.vi"/>
 		<Item Name="StateToString.vi" Type="VI" URL="../Utilities/StateToString.vi"/>
 		<Item Name="Subpanel Helper.vi" Type="VI" URL="../Subpanel Helper.vi"/>
+		<Item Name="TranslateCoordinates.vi" Type="VI" URL="../TranslateCoordinates.vi"/>
 		<Item Name="Turn Power Off Command.vi" Type="VI" URL="../Turn Power Off Command.vi"/>
 		<Item Name="Turn Power On Command.vi" Type="VI" URL="../Turn Power On Command.vi"/>
 		<Item Name="Variant Array to String Array.vi" Type="VI" URL="../Utilities/Variant Array to String Array.vi"/>
@@ -54,6 +56,8 @@
 	<Item Name="Power PID View.vi" Type="VI" URL="../Power PID View.vi"/>
 	<Item Name="RegExTest.vi" Type="VI" URL="../RegExTest.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
+	<Item Name="TestGraph.vi" Type="VI" URL="../TestGraph.vi"/>
+	<Item Name="VMS View.vi" Type="VI" URL="../VMS View.vi"/>
 	<Item Name="Warning Fault Tree View.vi" Type="VI" URL="../Warning Fault Tree View.vi"/>
 	<Item Name="m1m3SupportEUIViewRTM.rtm" Type="Document" URL="../m1m3SupportEUIViewRTM.rtm"/>
 </Library>
