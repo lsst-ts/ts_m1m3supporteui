@@ -2521,7 +2521,7 @@ def generateOuterloopTelemetry(event, waittime):
     outerloopData.ExecutionTime = random.randint(0,99)
 
     retval = mgr.putSample_OuterLoopData(outerloopData)
-    time.sleep(random.randint(1, 5))
+    time.sleep(0.02) #random.randint(1, 5))
     event.wait(waittime)
 
   print("Outerloop Thread shutdown complete.")
