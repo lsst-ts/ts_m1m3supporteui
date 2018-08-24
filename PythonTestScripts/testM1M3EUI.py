@@ -849,17 +849,36 @@ def generateErrorCodeEvent(event, waittime):
     d = datetime.today()
     timestamp = time.mktime(d.timetuple())
     priority = 10
+    detailedEndErrorCodeDic = {
+      6101 : 3,
+      6102 : 16,
+      6103 : 9,
+      6104 : 13,
+      6105 : 21,
+      6106 : 3,
+      6107 : 9,
+      6108 : 2,
+      6109 : 2,
+      6110 : 2,
+      6150 : 2
+    }
+
+    errorCodeData = m1m3_logevent_ErrorCodeC()
+    errorCodeData.Timestamp = timestamp
+    errorCode = random.randint(6101,6112)
+    if (errorCode == 6111):
+      errorCode = 6150
+    errorCodeData.ErrorCode = errorCode
+    endDetailErrorCode = detailedEndErrorCodeDic[errorCode]
+    errorCodeData.DetailedErrorCode = random.randint(1, endDetailErrorCode)
+    errorCodeData.priority = priority
+    mgr.logEvent_ErrorCode(errorCodeData, priority)
 
     #randomly choose an event to issue
     eventChoice = random.randint(1,5)
 
     if eventChoice == 1:
-      errorCodeData = m1m3_logevent_ErrorCodeC()
-      errorCodeData.Timestamp = timestamp
-      errorCodeData.ErrorCode = random.randint(1,101)
-      errorCodeData.DetailedErrorCode = random.randint(1000, 1999)
-      errorCodeData.priority = priority
-      mgr.logEvent_ErrorCode(errorCodeData, priority)
+      pass
 
     elif eventChoice == 2:
 
@@ -885,7 +904,7 @@ def generateErrorCodeEvent(event, waittime):
       appliedSettingsMatchStartData.priority = priority
       mgr.logEvent_AppliedSettingsMatchStart(appliedSettingsMatchStartData, priority)
 
-    time.sleep(random.randint(30, 60))
+    time.sleep(2) #random.randint(30, 60))
     
     event.wait(waittime)
   print("Error Code Thread shutdown complete.")
