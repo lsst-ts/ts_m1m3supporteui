@@ -1,6 +1,0 @@
-[submodule "common_configurationeditor"]
-	path = common_configurationeditor
-	url = https://github.com/lsst-ts/common_configurationeditor.git
-[submodule "common_configurationreader"]
-	path = common_configurationreader
-	url = https://github.com/lsst-ts/common_configurationreader.git
