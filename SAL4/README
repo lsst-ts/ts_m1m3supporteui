@@ -1,0 +1,8 @@
+The SAL LabVIEW Monitor that builds here is the bridge between 
+SAL3 based EUI and SAL4 semantics.
+
+When the MTM1M3 XML changes, rebuild as usual with the salgenerator, then copy
+the SAL_MTM1M3* files here. Then make sure the directory is accessible as
+$SAL_WORK_DIR/m1m3/labview and rebuild the monitor with 
+
+    make -f Makefile.sacpp_MTM1M3_labview

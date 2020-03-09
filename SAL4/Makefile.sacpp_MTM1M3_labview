@@ -1,0 +1,136 @@
+#----------------------------------------------------------------------------
+#       Macros
+#----------------------------------------------------------------------------
+CFG = Release
+
+ifeq ($(CFG), Release)
+CC            = gcc
+CXX           = g++
+LVVERSION     = LabVIEW-2016-64
+CPPFLAGS      = -g $(PICFLAGS) $(GENFLAGS) $(SAL_CPPFLAGS) -std=c++11 -D_REENTRANT -Wall -Wno-write-strings -I"." -I"$(OSPL_HOME)/examples/include" -I"$(OSPL_HOME)/examples" -I"$(OSPL_HOME)/include" -I"$(OSPL_HOME)/include/sys" -I"$(OSPL_HOME)/include/dcps/C++/SACPP" -I"$(SAL_HOME)/include" -I../../MTM1M3/cpp/src -I../../../m1m3/labview -I../../MTM1M3/cpp  -I/usr/local/./natinst/$(LVVERSION)/cintools #-DSAL_SUBSYSTEM_ID_IS_KEYED
+LD            = $(CXX) $(CCFLAGS) $(CPPFLAGS)
+AR            = ar
+PICFLAGS      = -fPIC
+OBJEXT        = .o
+SHLIBEXT      = .so
+OUTPUT_OPTION = -o "$@"
+COMPILE.c     = $(CC) $(CFLAGS) $(CPPFLAGS) -c
+COMPILE.cc    = $(CXX) $(CCFLAGS) $(CPPFLAGS) -c
+LDFLAGS       = -g -shared -fPIC -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib -L../../MTM1M3/cpp
+# -L"$(SAL_HOME)/lib" -llibSAL_m1m3
+EXEFLAGS      = -g -fPIC -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib -L../../MTM1M3/cpp
+# -L"$(SAL_HOME)/lib" -llibSAL_m1m3
+CCC           = $(CXX)
+MAKEFILE      = Makefile.sacpp_MTM1M3_labview
+DEPENDENCIES  = 
+BTARGETDIR    = ./
+BINLIB        = $(BTARGETDIR)SALLV_m1m3$(SHLIBEXT)
+DAEMON        = $(BTARGETDIR)SALLV_MTM1M3_Monitor
+CAT           = cat
+MV            = mv -f
+RM            = rm -rf
+CP            = cp -p
+NUL           = /dev/null
+MKDIR         = mkdir -p
+TESTDIRSTART  = test -d
+TESTDIREND    = ||
+TOUCH         = touch
+EXEEXT        = 
+LIBPREFIX     = lib
+LIBSUFFIX     = 
+GENFLAGS      = -g
+LDLIBS        = -lpthread
+LDLIBS2        = -l"sacpp_MTM1M3_types$(LIBSUFFIX)" -l"dcpssacpp" -l"dcpsgapi" -l"ddsuser" -l"ddskernel" -l"ddsserialization" -l"ddsconfparser" -l"ddsconf" -l"ddsdatabase" -l"ddsutil" -l"ddsos" -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
+OBJS1          = .obj/SAL_m1m3_salShm$(OBJEXT)
+OBJS2          = .obj/CheckStatus$(OBJEXT) .obj/SAL_MTM1M3$(OBJEXT) .obj/SAL_MTM1M3_salShmMonitor$(OBJEXT)
+SRC           = CheckStatus.cpp SAL_MTM1M3.cpp SAL_m1m3_salShm.cpp SAL_MTM1M3_salShmMonitor.cpp
+LINK.cc       = $(LD) $(LDFLAGS)
+LINK2.cc       = $(CXX) $(EXEFLAGS)
+EXPORTFLAGS   = 
+endif
+ifeq ($(CFG), Debug)
+CC            = gcc
+CXX           = g++
+LD            = $(CXX) $(CCFLAGS) $(CPPFLAGS)
+AR            = ar
+PICFLAGS      = -fPIC
+OBJEXT        = .o
+OUTPUT_OPTION = -o "$@"
+COMPILE.c     = $(CC) $(CFLAGS) $(CPPFLAGS) -c -g
+COMPILE.cc    = $(CXX) $(CCFLAGS) $(CPPFLAGS) -c -g
+LDFLAGS       = -g -L"." -L"$(OSPL_HOME)/lib" -Wl,-rpath,\$$ORIGIN -Wl,-rpath,\$$ORIGIN/$(OSPL_HOME)/lib
+CCC           = $(CXX)
+MAKEFILE      = Makefile.sacpp_MTM1M3_labview
+DEPENDENCIES  = 
+BTARGETDIR    = ./
+BIN           = $(BTARGETDIR)sacpp_MTM1M3_labview$(SHLIBEXT)
+CAT           = cat
+MV            = mv -f
+RM            = rm -rf
+CP            = cp -p
+NUL           = /dev/null
+MKDIR         = mkdir -p
+TESTDIRSTART  = test -d
+TESTDIREND    = ||
+TOUCH         = touch
+EXEEXT        = 
+LIBPREFIX     = lib
+LIBSUFFIX     = 
+GENFLAGS      = -g
+EXPORTFLAGS   = 
+endif
+
+#----------------------------------------------------------------------------
+#       Local targets
+#----------------------------------------------------------------------------
+
+all: $(BINLIB) $(DAEMON)
+
+$(BINLIB): $(OBJS1)
+	@$(TESTDIRSTART) "$(BTARGETDIR)" $(TESTDIREND) $(MKDIR) "$(BTARGETDIR)"
+	$(LINK.cc) $(OBJS1) $(LDLIBS) $(OUTPUT_OPTION)
+
+$(DAEMON): $(OBJS2)
+	@$(TESTDIRSTART) "$(BTARGETDIR)" $(TESTDIREND) $(MKDIR) "$(BTARGETDIR)"
+	$(LINK2.cc) $(OBJS2) $(LDLIBS2) $(OUTPUT_OPTION)
+
+generated: $(GENERATED_DIRTY)
+	@-:
+
+.obj/CheckStatus$(OBJEXT): CheckStatus.cpp
+	@$(TESTDIRSTART) ".obj" $(TESTDIREND) $(MKDIR) ".obj"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) CheckStatus.cpp
+
+.obj/SAL_MTM1M3$(OBJEXT): SAL_MTM1M3.cpp
+	@$(TESTDIRSTART) ".obj" $(TESTDIREND) $(MKDIR) ".obj"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) SAL_MTM1M3.cpp
+
+.obj/SAL_MTM1M3_salShmMonitor$(OBJEXT): SAL_MTM1M3_salShmMonitor.cpp
+	@$(TESTDIRSTART) ".obj" $(TESTDIREND) $(MKDIR) ".obj"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) SAL_MTM1M3_salShmMonitor.cpp
+
+.obj/SAL_m1m3_salShm$(OBJEXT): SAL_m1m3_salShm.cpp
+	@$(TESTDIRSTART) ".obj" $(TESTDIREND) $(MKDIR) ".obj"
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) SAL_m1m3_salShm.cpp
+
+clean:
+	-$(RM) $(OBJS)
+
+realclean: clean
+	-$(RM) $(BIN)
+	-$(RM) .obj/
+
+check-syntax:
+	$(COMPILE.cc) $(EXPORTFLAGS) -Wall -Wextra -pedantic -fsyntax-only $(CHK_SOURCES)
+
+#----------------------------------------------------------------------------
+#       Dependencies
+#----------------------------------------------------------------------------
+
+$(DEPENDENCIES):
+	@$(TOUCH) $(DEPENDENCIES)
+
+depend:
+	-VDIR=.obj/ $(MPC_ROOT)/depgen.pl  $(CFLAGS) $(CCFLAGS) $(CPPFLAGS) -f $(DEPENDENCIES) $(SRC) 2> $(NUL)
+
+include $(DEPENDENCIES)
